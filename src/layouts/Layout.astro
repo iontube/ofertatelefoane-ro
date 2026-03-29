@@ -1,0 +1,193 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  noindex?: boolean;
+}
+const { title, description, canonical = Astro.url.href, noindex = false } = Astro.props;
+const siteName = 'OfertaTelefoane.ro';
+const siteUrl = 'https://ofertatelefoane.ro';
+---
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
+  <link rel="canonical" href={canonical} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:site_name" content={siteName} />
+  <meta property="og:locale" content="ro_RO" />
+  <meta property="og:image" content={`${siteUrl}/og-image.png`} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={`${siteUrl}/og-image.png`} />
+
+  <!-- Preload fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" media="print" onload="this.media='all'" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#101828" />
+
+  <style is:global>
+    @import '../styles/global.css';
+  </style>
+</head>
+<body>
+  <slot />
+
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Consimtamant cookies">
+    <div class="cookie-banner__inner">
+      <div class="cookie-banner__text">
+        Folosim cookies pentru a-ti oferi cea mai buna experienta. Citeste <a href="/politica-cookies/">politica de cookies</a>.
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="cookie-banner__accept" id="cookieAccept">Accept</button>
+        <button class="cookie-banner__decline" id="cookieDecline">Refuz</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Inapoi sus">&#8593;</button>
+
+  <script is:inline>
+    // Cookie consent
+    (function(){
+      var consent = localStorage.getItem('cookie_consent');
+      if(!consent){
+        document.getElementById('cookieBanner').classList.add('show');
+      }
+      document.getElementById('cookieAccept').addEventListener('click',function(){
+        localStorage.setItem('cookie_consent','accepted');
+        document.getElementById('cookieBanner').classList.remove('show');
+      });
+      document.getElementById('cookieDecline').addEventListener('click',function(){
+        localStorage.setItem('cookie_consent','declined');
+        document.getElementById('cookieBanner').classList.remove('show');
+      });
+    })();
+
+    // Scroll to top
+    (function(){
+      var btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll',function(){
+        btn.classList.toggle('show', window.scrollY > 600);
+      });
+      btn.addEventListener('click',function(){
+        window.scrollTo({top:0,behavior:'smooth'});
+      });
+    })();
+
+    // FAQ toggles
+    document.querySelectorAll('.faq-item__q').forEach(function(q){
+      q.addEventListener('click',function(){
+        var item = this.parentElement;
+        item.classList.toggle('active');
+        this.setAttribute('aria-expanded', item.classList.contains('active'));
+      });
+    });
+
+    // Mobile menu
+    (function(){
+      var burger = document.getElementById('navBurger');
+      var drawer = document.getElementById('navDrawer');
+      var scrim = document.getElementById('navScrim');
+      var closeBtn = document.getElementById('navPanelClose');
+      if(!burger || !drawer) return;
+      function open(){ drawer.classList.add('open'); document.body.style.overflow='hidden'; }
+      function close(){ drawer.classList.remove('open'); document.body.style.overflow=''; }
+      burger.addEventListener('click', open);
+      scrim.addEventListener('click', close);
+      closeBtn.addEventListener('click', close);
+      drawer.querySelectorAll('.nav__panel a').forEach(function(a){ a.addEventListener('click', close); });
+    })();
+
+    // Fade-in on scroll
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      var observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            e.target.classList.add('visible');
+            observer.unobserve(e.target);
+          }
+        });
+      },{threshold:0.1});
+      document.querySelectorAll('.fade-in').forEach(function(el){observer.observe(el);});
+    }
+
+    // User rating
+    (function(){
+      var stars = document.querySelectorAll('#ratingStars button');
+      var thanks = document.getElementById('ratingThanks');
+      var avgEl = document.getElementById('ratingAvg');
+      var countEl = document.getElementById('ratingCount');
+      if(!stars.length) return;
+      var userVote = localStorage.getItem('site_rating_vote');
+
+      function updateDisplay(avg, count){
+        avgEl.textContent = avg;
+        countEl.textContent = count;
+      }
+
+      // Load current rating from API
+      fetch('/api/rating').then(function(r){return r.json();}).then(function(d){
+        updateDisplay(d.avg, d.count);
+      }).catch(function(){
+        updateDisplay('4.8', '127');
+      });
+
+      if(userVote){
+        var v = parseInt(userVote);
+        stars.forEach(function(s){if(parseInt(s.dataset.star) <= v) s.classList.add('active');});
+      }
+      stars.forEach(function(btn){
+        btn.addEventListener('mouseenter',function(){
+          var val = parseInt(this.dataset.star);
+          stars.forEach(function(s){s.classList.toggle('hover', parseInt(s.dataset.star) <= val);});
+        });
+        btn.addEventListener('mouseleave',function(){
+          stars.forEach(function(s){s.classList.remove('hover');});
+        });
+        btn.addEventListener('click',function(){
+          if(userVote) return;
+          var val = parseInt(this.dataset.star);
+          userVote = val;
+          localStorage.setItem('site_rating_vote', val);
+          stars.forEach(function(s){
+            s.classList.toggle('active', parseInt(s.dataset.star) <= val);
+            s.style.cursor = 'default';
+          });
+          thanks.style.display = 'block';
+          fetch('/api/rating',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({value:val})})
+            .then(function(r){return r.json();})
+            .then(function(d){if(d.avg) updateDisplay(d.avg, d.count);});
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

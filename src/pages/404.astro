@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout title="Pagina nu a fost gasita - OfertaTelefoane.ro" description="Pagina pe care o cauti nu exista sau a fost mutata." noindex={true}>
+<Nav />
+<main style="min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:3rem 1rem;">
+  <div>
+    <h1 style="font-size:4rem;color:#0055b8;margin-bottom:1rem;">404</h1>
+    <h2 style="margin-bottom:1rem;">Pagina nu a fost gasita</h2>
+    <p style="color:#6b7280;margin-bottom:2rem;max-width:400px;">Pagina pe care o cauti nu exista, a fost mutata sau link-ul este gresit.</p>
+    <a href="/" class="btn btn--primary">Inapoi la pagina principala</a>
+  </div>
+</main>
+<Footer />
+</Layout>

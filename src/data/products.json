@@ -1,0 +1,470 @@
+{
+  "premium": [
+    {
+      "name": "Samsung Galaxy Z Fold7",
+      "slug": "samsung-galaxy-z-fold7",
+      "image": "/images/products/samsung-galaxy-z-fold7.webp",
+      "affiliate": "/out/samsung-galaxy-z-fold7",
+      "specs": {
+        "procesor": "Snapdragon 8 Elite for Galaxy",
+        "display": "7.6\" Dynamic AMOLED 2X, 120Hz (interior) + 6.3\" (exterior)",
+        "ram": "16 GB",
+        "stocare": "1 TB",
+        "baterie": "5000 mAh",
+        "incarcare": "45W wired, 15W wireless",
+        "camera": "50MP + 12MP + 10MP, 4MP sub-display",
+        "conectivitate": "5G, Wi-Fi 7, Bluetooth 5.4",
+        "os": "Android 15 cu One UI 7"
+      },
+      "pret_estimativ": "~11.000 lei",
+      "rating": 4.8,
+      "tip_utilizator": "Profesionisti si early adopters care vor productivitate maxima"
+    },
+    {
+      "name": "Samsung Galaxy Z Fold6",
+      "slug": "samsung-galaxy-z-fold6",
+      "image": "/images/products/samsung-galaxy-z-fold6.webp",
+      "affiliate": "/out/samsung-galaxy-z-fold6",
+      "specs": {
+        "procesor": "Snapdragon 8 Gen 3 for Galaxy",
+        "display": "7.6\" Dynamic AMOLED 2X, 120Hz (interior) + 6.3\" (exterior)",
+        "ram": "12 GB",
+        "stocare": "512 GB",
+        "baterie": "4400 mAh",
+        "incarcare": "25W wired, 15W wireless",
+        "camera": "50MP + 12MP + 10MP, 4MP sub-display",
+        "conectivitate": "5G, Wi-Fi 7, Bluetooth 5.3",
+        "os": "Android 14 cu One UI 6.1.1"
+      },
+      "pret_estimativ": "~8.500 lei",
+      "rating": 4.6,
+      "tip_utilizator": "Utilizatori care vor un foldable matur la pret mai bun"
+    },
+    {
+      "name": "Apple iPhone 17 Pro Max",
+      "slug": "apple-iphone-17-pro-max",
+      "image": "/images/products/apple-iphone-17-pro-max.webp",
+      "affiliate": "/out/apple-iphone-17-pro-max",
+      "specs": {
+        "procesor": "Apple A19 Pro",
+        "display": "6.9\" ProMotion OLED, 120Hz, Always-On",
+        "ram": "12 GB",
+        "stocare": "2 TB",
+        "baterie": "4850 mAh",
+        "incarcare": "45W wired, 25W MagSafe",
+        "camera": "48MP + 48MP + 12MP, senzor periscop 5x",
+        "conectivitate": "5G, Wi-Fi 7, Bluetooth 5.4",
+        "os": "iOS 19"
+      },
+      "pret_estimativ": "~12.500 lei",
+      "rating": 4.9,
+      "tip_utilizator": "Cei care vor cel mai bun iPhone, fara compromisuri"
+    },
+    {
+      "name": "Apple iPhone 16 Pro Max",
+      "slug": "apple-iphone-16-pro-max",
+      "image": "/images/products/apple-iphone-16-pro-max.webp",
+      "affiliate": "/out/apple-iphone-16-pro-max",
+      "specs": {
+        "procesor": "Apple A18 Pro",
+        "display": "6.9\" ProMotion OLED, 120Hz, Always-On",
+        "ram": "8 GB",
+        "stocare": "1 TB",
+        "baterie": "4685 mAh",
+        "incarcare": "40W wired, 25W MagSafe",
+        "camera": "48MP + 48MP + 12MP, zoom optic 5x",
+        "conectivitate": "5G, Wi-Fi 7, Bluetooth 5.3",
+        "os": "iOS 18"
+      },
+      "pret_estimativ": "~9.500 lei",
+      "rating": 4.8,
+      "tip_utilizator": "Fani Apple care vor experienta Pro la pret mai accesibil decat 17 Pro Max"
+    },
+    {
+      "name": "Google Pixel 10 Pro XL",
+      "slug": "google-pixel-10-pro-xl",
+      "image": "/images/products/google-pixel-10-pro-xl.webp",
+      "affiliate": "/out/google-pixel-10-pro-xl",
+      "specs": {
+        "procesor": "Google Tensor G5",
+        "display": "6.9\" LTPO OLED, 120Hz",
+        "ram": "16 GB",
+        "stocare": "1 TB",
+        "baterie": "5200 mAh",
+        "incarcare": "37W wired, 23W wireless",
+        "camera": "50MP + 48MP ultrawide + 48MP telephoto 5x",
+        "conectivitate": "5G, Wi-Fi 7, Bluetooth 5.4",
+        "os": "Android 16"
+      },
+      "pret_estimativ": "~7.500 lei",
+      "rating": 4.7,
+      "tip_utilizator": "Pasionati de fotografie si fani AI/Google ecosystem"
+    }
+  ],
+  "top": [
+    {
+      "name": "Samsung Galaxy S25 Ultra",
+      "slug": "samsung-galaxy-s25-ultra",
+      "image": "/images/products/samsung-galaxy-s25-ultra.webp",
+      "affiliate": "/out/samsung-galaxy-s25-ultra",
+      "specs": {
+        "procesor": "Snapdragon 8 Elite for Galaxy",
+        "display": "6.9\" Dynamic AMOLED 2X, 120Hz, QHD+",
+        "ram": "12 GB",
+        "stocare": "1 TB",
+        "baterie": "5000 mAh",
+        "incarcare": "45W wired, 15W wireless",
+        "camera": "200MP + 50MP + 10MP + 12MP",
+        "conectivitate": "5G, Wi-Fi 7, Bluetooth 5.4",
+        "os": "Android 15 cu One UI 7"
+      },
+      "pret_estimativ": "~8.000 lei",
+      "rating": 4.9,
+      "tip_utilizator": "Power users care vor totul: camera, performanta, S Pen"
+    },
+    {
+      "name": "Samsung Galaxy Z Flip7",
+      "slug": "samsung-galaxy-z-flip7",
+      "image": "/images/products/samsung-galaxy-z-flip7.webp",
+      "affiliate": "/out/samsung-galaxy-z-flip7",
+      "specs": {
+        "procesor": "Snapdragon 8 Elite for Galaxy",
+        "display": "6.7\" Dynamic AMOLED 2X, 120Hz + 3.9\" exterior",
+        "ram": "12 GB",
+        "stocare": "512 GB",
+        "baterie": "4000 mAh",
+        "incarcare": "25W wired, 15W wireless",
+        "camera": "50MP + 12MP, 10MP front",
+        "conectivitate": "5G, Wi-Fi 7, Bluetooth 5.4",
+        "os": "Android 15 cu One UI 7"
+      },
+      "pret_estimativ": "~6.000 lei",
+      "rating": 4.5,
+      "tip_utilizator": "Utilizatori care vor un telefon compact si stilat"
+    },
+    {
+      "name": "Samsung Galaxy S24+",
+      "slug": "samsung-galaxy-s24-plus",
+      "image": "/images/products/samsung-galaxy-s24-plus.webp",
+      "affiliate": "/out/samsung-galaxy-s24-plus",
+      "specs": {
+        "procesor": "Snapdragon 8 Gen 3 / Exynos 2400",
+        "display": "6.7\" Dynamic AMOLED 2X, 120Hz, QHD+",
+        "ram": "12 GB",
+        "stocare": "256 GB",
+        "baterie": "4900 mAh",
+        "incarcare": "45W wired, 15W wireless",
+        "camera": "50MP + 12MP + 10MP",
+        "conectivitate": "5G, Wi-Fi 7, Bluetooth 5.3",
+        "os": "Android 14 cu One UI 6.1"
+      },
+      "pret_estimativ": "~4.500 lei",
+      "rating": 4.6,
+      "tip_utilizator": "Cei care vor flagship Samsung la pret redus fata de Ultra"
+    },
+    {
+      "name": "Apple iPhone 16 Plus",
+      "slug": "apple-iphone-16-plus",
+      "image": "/images/products/apple-iphone-16-plus.webp",
+      "affiliate": "/out/apple-iphone-16-plus",
+      "specs": {
+        "procesor": "Apple A18",
+        "display": "6.7\" OLED, 60Hz",
+        "ram": "8 GB",
+        "stocare": "256 GB",
+        "baterie": "4674 mAh",
+        "incarcare": "40W wired, 25W MagSafe",
+        "camera": "48MP + 12MP, Camera Control button",
+        "conectivitate": "5G, Wi-Fi 7, Bluetooth 5.3",
+        "os": "iOS 18"
+      },
+      "pret_estimativ": "~5.500 lei",
+      "rating": 4.5,
+      "tip_utilizator": "Fani Apple care vor ecran mare si autonomie buna"
+    },
+    {
+      "name": "Apple iPhone 15 Plus",
+      "slug": "apple-iphone-15-plus",
+      "image": "/images/products/apple-iphone-15-plus.webp",
+      "affiliate": "/out/apple-iphone-15-plus",
+      "specs": {
+        "procesor": "Apple A16 Bionic",
+        "display": "6.7\" OLED, 60Hz",
+        "ram": "6 GB",
+        "stocare": "512 GB",
+        "baterie": "4383 mAh",
+        "incarcare": "27W wired, 15W MagSafe",
+        "camera": "48MP + 12MP",
+        "conectivitate": "5G, Wi-Fi 6, Bluetooth 5.3",
+        "os": "iOS 17 (actualizabil la iOS 19)"
+      },
+      "pret_estimativ": "~4.200 lei",
+      "rating": 4.4,
+      "tip_utilizator": "Utilizatori care vor iPhone mare la pret redus"
+    },
+    {
+      "name": "Google Pixel 10 Pro",
+      "slug": "google-pixel-10-pro",
+      "image": "/images/products/google-pixel-10-pro.webp",
+      "affiliate": "/out/google-pixel-10-pro",
+      "specs": {
+        "procesor": "Google Tensor G5",
+        "display": "6.3\" LTPO OLED, 120Hz",
+        "ram": "16 GB",
+        "stocare": "256 GB",
+        "baterie": "4700 mAh",
+        "incarcare": "37W wired, 23W wireless",
+        "camera": "50MP + 48MP ultrawide + 48MP telephoto 5x",
+        "conectivitate": "5G, Wi-Fi 7, Bluetooth 5.4",
+        "os": "Android 16"
+      },
+      "pret_estimativ": "~5.000 lei",
+      "rating": 4.7,
+      "tip_utilizator": "Fotografi si utilizatori care vor cel mai bun software AI"
+    }
+  ],
+  "buget": [
+    {
+      "name": "Google Pixel 9a",
+      "slug": "google-pixel-9a",
+      "image": "/images/products/google-pixel-9a.webp",
+      "affiliate": "/out/google-pixel-9a",
+      "specs": {
+        "procesor": "Google Tensor G4",
+        "display": "6.3\" OLED, 120Hz",
+        "ram": "8 GB",
+        "stocare": "128 GB",
+        "baterie": "5100 mAh",
+        "incarcare": "23W wired, 7.5W wireless",
+        "camera": "48MP + 13MP ultrawide",
+        "conectivitate": "5G, Wi-Fi 7, Bluetooth 5.3",
+        "os": "Android 15"
+      },
+      "pret_estimativ": "~2.200 lei",
+      "rating": 4.6,
+      "tip_utilizator": "Cel mai bun raport calitate-pret pentru fotografie"
+    },
+    {
+      "name": "Samsung Galaxy S25 FE",
+      "slug": "samsung-galaxy-s25-fe",
+      "image": "/images/products/samsung-galaxy-s25-fe.webp",
+      "affiliate": "/out/samsung-galaxy-s25-fe",
+      "specs": {
+        "procesor": "Snapdragon 8 Gen 3",
+        "display": "6.7\" Dynamic AMOLED 2X, 120Hz",
+        "ram": "8 GB",
+        "stocare": "128 GB",
+        "baterie": "4700 mAh",
+        "incarcare": "25W wired, 15W wireless",
+        "camera": "50MP + 12MP + 8MP",
+        "conectivitate": "5G, Wi-Fi 6E, Bluetooth 5.3",
+        "os": "Android 15 cu One UI 7"
+      },
+      "pret_estimativ": "~2.800 lei",
+      "rating": 4.5,
+      "tip_utilizator": "Fani Samsung care vor experienta flagship la pret accesibil"
+    },
+    {
+      "name": "Xiaomi 15T",
+      "slug": "xiaomi-15t",
+      "image": "/images/products/xiaomi-15t.webp",
+      "affiliate": "/out/xiaomi-15t",
+      "specs": {
+        "procesor": "MediaTek Dimensity 9400",
+        "display": "6.67\" AMOLED, 144Hz, 1.5K",
+        "ram": "12 GB",
+        "stocare": "256 GB",
+        "baterie": "5500 mAh",
+        "incarcare": "67W wired",
+        "camera": "108MP + 8MP ultrawide + 2MP macro",
+        "conectivitate": "5G, Wi-Fi 6E, Bluetooth 5.4",
+        "os": "Android 15 cu HyperOS 2"
+      },
+      "pret_estimativ": "~2.400 lei",
+      "rating": 4.4,
+      "tip_utilizator": "Gameri si utilizatori care vor incarcare rapida si ecran fluid"
+    },
+    {
+      "name": "OnePlus Nord 5",
+      "slug": "oneplus-nord-5",
+      "image": "/images/products/oneplus-nord-5.webp",
+      "affiliate": "/out/oneplus-nord-5",
+      "specs": {
+        "procesor": "Snapdragon 8 Gen 3",
+        "display": "6.7\" AMOLED, 120Hz",
+        "ram": "12 GB",
+        "stocare": "512 GB",
+        "baterie": "5500 mAh",
+        "incarcare": "100W SUPERVOOC",
+        "camera": "50MP + 8MP ultrawide",
+        "conectivitate": "5G, Wi-Fi 7, Bluetooth 5.4",
+        "os": "Android 15 cu OxygenOS 15"
+      },
+      "pret_estimativ": "~2.000 lei",
+      "rating": 4.5,
+      "tip_utilizator": "Utilizatori care vor incarcare ultra-rapida si stocare generoasa"
+    },
+    {
+      "name": "HONOR Magic 8 Lite",
+      "slug": "honor-magic-8-lite",
+      "image": "/images/products/honor-magic-8-lite.webp",
+      "affiliate": "/out/honor-magic-8-lite",
+      "specs": {
+        "procesor": "Snapdragon 6 Gen 3",
+        "display": "6.78\" AMOLED, 120Hz",
+        "ram": "8 GB",
+        "stocare": "512 GB",
+        "baterie": "6000 mAh",
+        "incarcare": "35W wired",
+        "camera": "108MP + 5MP depth",
+        "conectivitate": "4G, Wi-Fi 5, Bluetooth 5.1",
+        "os": "Android 14 cu MagicOS 8"
+      },
+      "pret_estimativ": "~1.300 lei",
+      "rating": 4.3,
+      "tip_utilizator": "Cei care vor baterie uriasa si stocare mare la pret mic"
+    },
+    {
+      "name": "Motorola edge 70",
+      "slug": "motorola-edge-70",
+      "image": "/images/products/motorola-edge-70.webp",
+      "affiliate": "/out/motorola-edge-70",
+      "specs": {
+        "procesor": "MediaTek Dimensity 7350",
+        "display": "6.7\" pOLED, 120Hz",
+        "ram": "12 GB",
+        "stocare": "512 GB",
+        "baterie": "5300 mAh",
+        "incarcare": "68W TurboPower",
+        "camera": "50MP + 13MP ultrawide",
+        "conectivitate": "5G, Wi-Fi 6E, Bluetooth 5.3",
+        "os": "Android 15 cu Hello UX"
+      },
+      "pret_estimativ": "~1.800 lei",
+      "rating": 4.3,
+      "tip_utilizator": "Utilizatori care vor un telefon complet la buget mediu"
+    }
+  ],
+  "ieftin": [
+    {
+      "name": "Samsung Galaxy A26",
+      "slug": "samsung-galaxy-a26",
+      "image": "/images/products/samsung-galaxy-a26.webp",
+      "affiliate": "/out/samsung-galaxy-a26",
+      "specs": {
+        "procesor": "Exynos 1480",
+        "display": "6.7\" Super AMOLED, 120Hz",
+        "ram": "8 GB",
+        "stocare": "256 GB",
+        "baterie": "5000 mAh",
+        "incarcare": "25W wired",
+        "camera": "50MP + 8MP + 2MP",
+        "conectivitate": "5G, Wi-Fi 6, Bluetooth 5.3",
+        "os": "Android 15 cu One UI 7"
+      },
+      "pret_estimativ": "~1.400 lei",
+      "rating": 4.3,
+      "tip_utilizator": "Utilizatori care vor Samsung fiabil la pret mic"
+    },
+    {
+      "name": "HONOR Magic7 Lite",
+      "slug": "honor-magic7-lite",
+      "image": "/images/products/honor-magic7-lite.webp",
+      "affiliate": "/out/honor-magic7-lite",
+      "specs": {
+        "procesor": "Snapdragon 6 Gen 1",
+        "display": "6.78\" AMOLED, 120Hz",
+        "ram": "8 GB",
+        "stocare": "256 GB",
+        "baterie": "6600 mAh",
+        "incarcare": "35W wired",
+        "camera": "108MP + 5MP depth",
+        "conectivitate": "4G, Wi-Fi 5, Bluetooth 5.1",
+        "os": "Android 14 cu MagicOS 8"
+      },
+      "pret_estimativ": "~1.100 lei",
+      "rating": 4.2,
+      "tip_utilizator": "Campionul autonomiei la pret accesibil"
+    },
+    {
+      "name": "realme 14 Pro 5G",
+      "slug": "realme-14-pro-5g",
+      "image": "/images/products/realme-14-pro-5g.webp",
+      "affiliate": "/out/realme-14-pro-5g",
+      "specs": {
+        "procesor": "Snapdragon 7s Gen 3",
+        "display": "6.7\" AMOLED, 120Hz",
+        "ram": "8 GB",
+        "stocare": "256 GB",
+        "baterie": "6000 mAh",
+        "incarcare": "45W wired",
+        "camera": "50MP OIS + 8MP ultrawide",
+        "conectivitate": "5G, Wi-Fi 6, Bluetooth 5.2",
+        "os": "Android 15 cu realme UI 6"
+      },
+      "pret_estimativ": "~1.300 lei",
+      "rating": 4.3,
+      "tip_utilizator": "Utilizatori care vor 5G si camera buna la pret redus"
+    },
+    {
+      "name": "Motorola Moto g86",
+      "slug": "motorola-moto-g86",
+      "image": "/images/products/motorola-moto-g86.webp",
+      "affiliate": "/out/motorola-moto-g86",
+      "specs": {
+        "procesor": "Snapdragon 6s Gen 3",
+        "display": "6.67\" pOLED, 120Hz",
+        "ram": "8 GB",
+        "stocare": "256 GB",
+        "baterie": "5000 mAh",
+        "incarcare": "30W TurboPower",
+        "camera": "50MP OIS + 8MP ultrawide",
+        "conectivitate": "5G, Wi-Fi 6E, Bluetooth 5.3",
+        "os": "Android 15"
+      },
+      "pret_estimativ": "~1.200 lei",
+      "rating": 4.2,
+      "tip_utilizator": "Utilizatori care vor ecran pOLED premium la buget mic"
+    },
+    {
+      "name": "Apple iPhone XR",
+      "slug": "apple-iphone-xr",
+      "image": "/images/products/apple-iphone-xr.webp",
+      "affiliate": "/out/apple-iphone-xr",
+      "specs": {
+        "procesor": "Apple A12 Bionic",
+        "display": "6.1\" Liquid Retina LCD",
+        "ram": "3 GB",
+        "stocare": "64 GB",
+        "baterie": "2942 mAh",
+        "incarcare": "18W wired, 7.5W wireless",
+        "camera": "12MP, f/1.8",
+        "conectivitate": "4G, Wi-Fi 5, Bluetooth 5.0",
+        "os": "iOS 16 (fara update-uri noi)"
+      },
+      "pret_estimativ": "~700 lei",
+      "rating": 3.8,
+      "tip_utilizator": "Intrare in ecosistemul Apple la pret minim"
+    },
+    {
+      "name": "Huawei P30 Pro",
+      "slug": "huawei-p30-pro",
+      "image": "/images/products/huawei-p30-pro.webp",
+      "affiliate": "/out/huawei-p30-pro",
+      "specs": {
+        "procesor": "Kirin 980",
+        "display": "6.47\" OLED, FHD+",
+        "ram": "8 GB",
+        "stocare": "128 GB",
+        "baterie": "4200 mAh",
+        "incarcare": "40W wired, 15W wireless",
+        "camera": "40MP + 20MP + 8MP periscop 5x",
+        "conectivitate": "4G, Wi-Fi 5, Bluetooth 5.0, NFC",
+        "os": "Android 10 cu EMUI (fara Google Services)"
+      },
+      "pret_estimativ": "~800 lei",
+      "rating": 3.9,
+      "tip_utilizator": "Fotografi care accepta lipsa Google Services"
+    }
+  ]
+}

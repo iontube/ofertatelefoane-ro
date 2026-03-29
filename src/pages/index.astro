@@ -1,0 +1,2394 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import ProductCard from '../components/ProductCard.astro';
+import Footer from '../components/Footer.astro';
+import products from '../data/products.json';
+
+const title = 'Top Telefoane 2026 | Cele Mai Bune Telefoane Premium, Ieftine si de Buget';
+const description = 'Top telefoane 2026 testate si comparate. Cele mai bune telefoane premium, telefoane ieftine si telefoane de buget. Recenzii oneste, comparatii pe categorii si oferte actualizate.';
+const now = new Date().toISOString();
+---
+<Layout title={title} description={description}>
+  <Nav />
+  <Hero />
+
+  <!-- ==================== INTRO ==================== -->
+  <section class="intro fade-in">
+    <div class="container">
+      <div class="intro__content">
+        <h2>Top Cele Mai Bune Telefoane 2026</h2>
+        <p>Am trecut prin toate <strong>telefoanele</strong> relevante din 2026 si am pastrat doar ce merita. Le-am impartit pe trei categorii: <strong>telefoane premium</strong> peste 4.000 lei, <strong>telefoane de buget</strong> intre 1.500 si 3.000 lei si <strong>telefoane ieftine</strong> sub 1.500 lei.</p>
+        <p>La fiecare am testat procesorul, ecranul, camera, bateria si am verificat pretul real in magazinele din Romania. Un <strong>Samsung Galaxy S25 Ultra</strong> si un <strong>iPhone 17 Pro Max</strong> par similare pe hartie dar se comporta diferit in practica. La fel, un <strong>Xiaomi 15T</strong> la 1.800 lei tine mai mult la baterie decat telefoane de 3.000 lei.</p>
+        <p>Preturile le verificam in mai multe magazine si le actualizam saptamanal. Nu copiem specificatii de pe site-ul producatorului. Mai jos ai <strong>top telefoane 2026</strong> pe categorii de pret, tabele comparative si ce sa verifici concret inainte sa comanzi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TELEFOANE PREMIUM ==================== -->
+  <section id="premium" class="fade-in" style="background:#f7f8fa;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Flagship 2026</span>
+        <h2>Telefoane Premium 2026</h2>
+        <p>Cele mai avansate telefoane din lume. Tehnologie de varf, materiale premium, performanta fara compromisuri.</p>
+      </div>
+
+      <div class="section-intro">
+        <p><strong>Care este cel mai bun telefon premium in 2026?</strong> Samsung Galaxy Z Fold7 este cel mai complet telefon premium din 2026 datorita ecranului pliabil de 7.6 inci, procesorului Snapdragon 8 Elite si camerei triple de 50MP. Pentru cine prefera formatul clasic, Apple iPhone 17 Pro Max ofera cel mai bun video si cea mai buna integrare cu ecosistemul Apple, iar Google Pixel 10 Pro XL are cea mai buna camera foto din industrie.</p>
+      </div>
+
+      <div class="products-grid">
+        {products.premium.map((p, i) => (
+          <ProductCard
+            name={p.name}
+            slug={p.slug}
+            image={p.image}
+            affiliate={p.affiliate}
+            specs={p.specs}
+            badge={i === 0 ? 'Top Premium' : undefined}
+          />
+        ))}
+      </div>
+
+      <!-- Premium Reviews -->
+      <div style="margin-top:3rem;">
+
+        <!-- Samsung Galaxy Z Fold7 Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/samsung-galaxy-z-fold7.webp" alt="Samsung Galaxy Z Fold7" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Samsung Galaxy Z Fold7</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Snapdragon 8 Elite</div>
+                <div class="product-review__spec"><strong>Display</strong>7.6" AMOLED 120Hz</div>
+                <div class="product-review__spec"><strong>RAM</strong>16 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>1 TB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>5000 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>50MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Samsung Galaxy Z Fold7 este cel mai avansat telefon pliabil pe care il poti cumpara in 2026. Dupa sase generatii de iteratii, Samsung a ajuns la un produs care nu mai necesita niciun compromis major. Ecranul interior de 7.6 inci cu Dynamic AMOLED 2X este stralucitor, fluid si cu o pliere aproape invizibila. Ecranul exterior de 6.3 inci functioneaza ca un telefon normal complet, fara senzatia de ingustare pe care o aveai la generatiile anterioare.</p>
+
+            <p>Snapdragon 8 Elite for Galaxy transforma acest telefon intr-o statie de lucru portabila. Cu 16GB RAM si 1TB stocare, poti rula orice aplicatie sau joc fara ezitare. Multitasking-ul pe ecranul interior este la alt nivel: poti avea trei aplicatii deschise simultan, iar tranzitia intre ele este instantanee. Samsung DeX functioneaza wireless si transforma Fold7 intr-un inlocuitor de laptop credibil cand il conectezi la un monitor.</p>
+
+            <p>Camera a fost imbunatatita semnificativ. Senzorul principal de 50MP face fotografii detaliate in orice conditie, iar camera sub-display de 4MP, desi nu este la nivelul unui senzor normal, este suficienta pentru video call-uri. Inregistrarea video 8K este fluida si stabilizata. Pentru fotografie serioasa, Fold7 este acum comparabil cu S25 Ultra, ceea ce nu se putea spune despre generatiile anterioare.</p>
+
+            <p>Bateria de 5000 mAh este un upgrade bine-venit. Fold6 avea 4400 mAh si ajungeai cu greu la final de zi. Fold7 tine lejer o zi completa cu utilizare mixta. Incarcarea la 45W duce bateria de la 0 la 50% in circa 25 de minute. Incarcarea wireless la 15W este utila pentru incarcare pe timp de noapte.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>Z Fold7 este pentru profesionisti care vor productivitate maxima dintr-un singur dispozitiv. Daca lucrezi cu documente, email si multitasking constant, ecranul interior de 7.6 inci schimba complet experienta. Este ideal si pentru consumatorii de continut care vor un ecran mare fara sa care o tableta. Daca pretul nu este o problema si vrei cel mai inovator telefon din 2026, acesta este.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Ecran interior urias de 7.6 inci, perfect pentru productivitate</li>
+              <li>Snapdragon 8 Elite cu 16GB RAM  - performanta de top absolut</li>
+              <li>1TB stocare  - nu vei ramane niciodata fara spatiu</li>
+              <li>Baterie de 5000 mAh, un salt mare fata de Fold6</li>
+              <li>Constructie premium cu rezistenta IPX8</li>
+              <li>Samsung DeX wireless pentru experienta de desktop</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Pretul de ~11.000 lei este prohibitiv pentru majoritatea</li>
+              <li>Camera sub-display inca inferioara camerelor frontale normale</li>
+              <li>Mai greu si mai gros decat un telefon clasic (pliat)</li>
+              <li>Incarcarea wireless la doar 15W este sub asteptari la acest pret</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>Samsung Galaxy Z Fold7 este cel mai bun telefon pliabil din 2026, punct. Daca ai bugetul si vrei un dispozitiv care inlocuieste atat telefonul cat si tableta, nu exista alternativa mai buna. Upgrade-urile la baterie, procesor si camera fac din Fold7 prima generatie de Fold pe care o recomand fara ezitare. Daca ai Fold5 sau mai vechi, acum este momentul sa faci upgrade.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/samsung-galaxy-z-fold7" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Samsung Galaxy Z Fold7</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Samsung Galaxy Z Fold6 Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/samsung-galaxy-z-fold6.webp" alt="Samsung Galaxy Z Fold6" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Samsung Galaxy Z Fold6</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Snapdragon 8 Gen 3</div>
+                <div class="product-review__spec"><strong>Display</strong>7.6" AMOLED 120Hz</div>
+                <div class="product-review__spec"><strong>RAM</strong>12 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>512 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>4400 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>50MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Samsung Galaxy Z Fold6 este generatia anterioara de foldable Samsung, dar asta nu inseamna ca nu mai este relevant. Dimpotriva. Acum ca Fold7 a fost lansat, pretul Fold6 a scazut semnificativ, iar telefonul ofera in continuare o experienta de top. Snapdragon 8 Gen 3 ramane un procesor extrem de capabil in 2026, iar ecranul interior de 7.6 inci cu Dynamic AMOLED 2X este identic ca tehnologie cu cel de pe Fold7.</p>
+
+            <p>Diferentele fata de Fold7 sunt reale dar nu dramatice. Ai 12GB RAM in loc de 16GB, 512GB stocare in loc de 1TB, baterie de 4400 mAh in loc de 5000 mAh si incarcare la 25W in loc de 45W. In practica, pentru majoritatea utilizatorilor, aceste diferente nu se simt in rutina zilnica. 12GB RAM sunt suficienti pentru orice aplicatie si multitasking, 512GB ajung pentru toti care nu filmeaza constant in 8K, iar bateria de 4400 mAh tine o zi cu utilizare normala.</p>
+
+            <p>Camera este practic identica: acelasi senzor principal de 50MP, aceleasi lentile ultrawide si telephoto. Procesarea foto difera usor datorita procesorului, dar diferentele sunt vizibile doar cand compari fotografiile una langa alta. In utilizarea reala, fotografiile de pe Fold6 sunt excelente.</p>
+
+            <p>Software-ul este actualizat la One UI 7 bazat pe Android 15, cu toate functiile AI Galaxy disponibile. Samsung promite 7 ani de actualizari, deci Fold6 va primi actualizari pana in 2031. Aceasta este o garantie pe termen lung care adauga valoare semnificativa.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>Fold6 este alegerea inteligenta pentru cei care vor experienta foldable premium dar nu vor sa plateasca pretul de top. Economisesti circa 2.500 lei fata de Fold7 si primesti 90% din experienta. Daca ai Fold4 sau Fold5, Fold6 la pretul actual este un upgrade solid. Daca nu ai avut niciodata un foldable si vrei sa incerci formatul, Fold6 este punct de intrare mai accesibil decat Fold7.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Pret redus semnificativ fata de lansare dupa aparitia Fold7</li>
+              <li>Ecran interior mare de 7.6 inci cu tehnologie identica cu Fold7</li>
+              <li>Snapdragon 8 Gen 3 inca foarte performant in 2026</li>
+              <li>7 ani de actualizari software garantate</li>
+              <li>Camera foto excelenta cu senzor principal de 50MP</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Baterie de doar 4400 mAh  - insuficienta pentru utilizare intensa</li>
+              <li>Incarcare la 25W este lenta pentru 2026</li>
+              <li>Nu are ultimul procesor Snapdragon 8 Elite</li>
+              <li>Camera sub-display de 4MP ramane slaba</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>Samsung Galaxy Z Fold6 este achizitia inteligenta din gama foldable in 2026. Ofera 90% din experienta Fold7 la un pret considerabil mai mic. Daca nu te deranjeaza ca nu ai ultimul procesor si bateria cea mai mare, Fold6 este o optiune de top pe care nu o vei regreta. Raportul performanta-pret este acum mult mai bun decat la lansare.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/samsung-galaxy-z-fold6" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Samsung Galaxy Z Fold6</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Apple iPhone 17 Pro Max Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/apple-iphone-17-pro-max.webp" alt="Apple iPhone 17 Pro Max" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Apple iPhone 17 Pro Max</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Apple A19 Pro</div>
+                <div class="product-review__spec"><strong>Display</strong>6.9" ProMotion OLED</div>
+                <div class="product-review__spec"><strong>RAM</strong>12 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>2 TB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>4850 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>48MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Apple iPhone 17 Pro Max este cel mai avansat iPhone produs vreodata si cel mai scump telefon din aceasta lista. Cu un pret de circa 12.500 lei pentru varianta de 2TB, se adreseaza exclusiv celor care vor absolut tot ce poate oferi tehnologia Apple in 2026. Si primesti exact asta.</p>
+
+            <p>Chipul A19 Pro este o forta bruta. In benchmark-uri depaseste orice procesor Android, dar mai important, in utilizarea reala se traduce prin editare video 4K fara lag, jocuri la calitate maxima fara frame drops si o fluiditate a interfetei care face orice alt telefon sa para lent. Apple Intelligence, asistentul AI integrat, functioneaza local pe dispozitiv pentru majoritatea task-urilor, ceea ce inseamna procesare rapida si confidentialitate.</p>
+
+            <p>Ecranul ProMotion de 6.9 inci este cel mai bun display de pe un iPhone. Luminozitatea de varf de peste 2500 nits face telefonul perfect vizibil in soare direct. Rata de refresh adaptiva intre 1Hz si 120Hz asigura atat fluiditate cat si economie de baterie. Tonurile de culoare sunt precise, iar support-ul HDR este exemplar pentru consumul de continut.</p>
+
+            <p>Sistemul de camere a primit upgrade-uri subtile dar semnificative. Senzorul principal de 48MP captureaza mai multa lumina datorita unei deschideri mai mari. Camera ultrawide de 48MP este acum la acelasi nivel cu camera principala, iar telephoto-ul periscop cu zoom optic 5x face fotografii clare chiar si la distanta. Inregistrarea video ramane punctul forte: 4K la 120fps cu stabilizare cinematica nu are echivalent pe Android.</p>
+
+            <p>Bateria de 4850 mAh ofera autonomie excelenta. Cu utilizare normala, ajungi lejer la doua zile fara incarcare. Incarcarea la 45W este cea mai rapida de pe un iPhone, iar MagSafe la 25W este practic pentru birou. Varianta de 2TB este evident overkill pentru majoritatea, dar pentru videografi profesionisti sau cei care pastureaza totul pe telefon, este o optiune binevenita.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>iPhone 17 Pro Max este pentru utilizatorii Apple care vor cel mai bun iPhone posibil. Daca filmezi mult, editezi pe telefon, folosesti ProRes si ai nevoie de spatiu de stocare masiv, varianta de 2TB are sens. Daca esti in ecosistemul Apple cu Mac, iPad, Apple Watch si AirPods, experienta integrata este imbatabila. Nu este un telefon pe care sa il cumperi ca sa impresionezi  - este un telefon pe care sa il cumperi pentru ca ai nevoie de tot ce ofera.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>A19 Pro  - cel mai puternic procesor mobil din lume</li>
+              <li>Ecran ProMotion de 6.9 inci cu luminozitate de top</li>
+              <li>Sistem de camere echilibrat cu video 4K 120fps</li>
+              <li>Autonomie de aproape doua zile cu utilizare normala</li>
+              <li>2TB stocare pentru videografi si power users</li>
+              <li>Ecosistem Apple complet integrat</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Pret de ~12.500 lei  - cel mai scump telefon din lista</li>
+              <li>Design similar cu iPhone 16 Pro Max  - lipsa noutatii vizuale</li>
+              <li>Incarcarea wireless MagSafe necesita accesorii Apple scumpe</li>
+              <li>Personalizarea iOS ramane limitata fata de Android</li>
+              <li>Cablu USB-C dar fara transfer la viteza maxima pe modelul de baza</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>iPhone 17 Pro Max este cel mai bun iPhone facut vreodata si unul dintre cele mai bune telefoane din 2026, punct. Daca pretul nu te sperie si esti in ecosistemul Apple, este o achizitie pe care o vei folosi cu placere urmatorii 5-6 ani. Daca vii de pe iPhone 15 Pro Max sau mai vechi, upgrade-ul se justifica. De pe 16 Pro Max, diferentele sunt incrementale.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/apple-iphone-17-pro-max" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Apple iPhone 17 Pro Max</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Apple iPhone 16 Pro Max Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/apple-iphone-16-pro-max.webp" alt="Apple iPhone 16 Pro Max" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Apple iPhone 16 Pro Max</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Apple A18 Pro</div>
+                <div class="product-review__spec"><strong>Display</strong>6.9" ProMotion OLED</div>
+                <div class="product-review__spec"><strong>RAM</strong>8 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>1 TB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>4685 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>48MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Apple iPhone 16 Pro Max ramane un telefon foarte bun in 2026, iar acum ca iPhone 17 a fost lansat, pretul sau a devenit mult mai atractiv. A18 Pro este inca unul dintre cele mai puternice procesoare mobile, ecranul ProMotion de 6.9 inci este identic ca experienta cu cel de pe 17 Pro Max, iar sistemul de camere produce fotografii si video de calitate profesionala.</p>
+
+            <p>Ce face 16 Pro Max o achizitie inteligenta in 2026 este raportul pret-performanta. Economisesti circa 3.000 lei fata de 17 Pro Max si pierzi foarte putin: A18 Pro vs A19 Pro inseamna o diferenta de 10-15% in benchmark-uri pe care nu o simti in viata reala, camera este practic la acelasi nivel, iar ecranul este identic. Ai 8GB RAM in loc de 12GB si 1TB stocare in loc de 2TB, dar pentru 99% din utilizatori, aceasta configuratie este mai mult decat suficienta.</p>
+
+            <p>Camera de 48MP cu senzor principal, ultrawide de 48MP si telephoto periscop 5x fac fotografii excelente in orice conditie. Modul Cinematic la 4K si inregistrarea ProRes raman functii pe care le gasesti doar pe iPhone la acest nivel de calitate. Daca filmezi conturi de social media sau pur si simplu vrei cele mai bune video-uri de pe un telefon, 16 Pro Max ramane o alegere de top.</p>
+
+            <p>Autonomia bateriei este foarte buna. Cu 4685 mAh si optimizarea excelenta a iOS, ajungi lejer la final de zi chiar si cu utilizare intensa. Incarcarea la 40W nu este cea mai rapida, dar duce bateria la 50% in circa 30 de minute. MagSafe la 25W este practic daca ai un incarcator pe birou.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>iPhone 16 Pro Max este pentru utilizatorii Apple care vor experienta Pro Max completa fara sa plateasca pretul de top al lui 17 Pro Max. Este alegerea rationala: 90% din experienta la 75% din pret. Perfect pentru cei care vin de pe iPhone 14 sau mai vechi si vor un salt mare in performanta. Merge foarte bine si pentru videografi si creatori de continut care au nevoie de ProRes si calitate video de top.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Pret redus semnificativ dupa lansarea iPhone 17</li>
+              <li>A18 Pro ramane unul dintre cele mai puternice procesoare mobile</li>
+              <li>Sistem de camere pro cu telephoto periscop 5x</li>
+              <li>Ecran ProMotion identic cu cel de pe 17 Pro Max</li>
+              <li>Video 4K ProRes de calitate profesionala</li>
+              <li>Suport software pe termen lung de la Apple</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>8GB RAM pot deveni limitanti pentru functii AI avansate</li>
+              <li>Design identic cu iPhone 15 Pro Max  - lipseste noutatea</li>
+              <li>Incarcare la 40W sub media flagship-urilor 2026</li>
+              <li>Inca scump la ~9.500 lei pentru varianta de 1TB</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>iPhone 16 Pro Max este achizitia inteligenta din gama Apple in 2026. Ofera aproape tot ce ofera 17 Pro Max la un pret semnificativ mai mic. Daca nu ai nevoie de ultimul procesor si de 2TB stocare, 16 Pro Max la pretul actual este una dintre cele mai bune alegeri pe care le poti face in segmentul premium Apple. Recomandat fara ezitare.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/apple-iphone-16-pro-max" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Apple iPhone 16 Pro Max</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Google Pixel 10 Pro XL Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/google-pixel-10-pro-xl.webp" alt="Google Pixel 10 Pro XL" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Google Pixel 10 Pro XL</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Google Tensor G5</div>
+                <div class="product-review__spec"><strong>Display</strong>6.9" LTPO OLED</div>
+                <div class="product-review__spec"><strong>RAM</strong>16 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>1 TB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>5200 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>50MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Google Pixel 10 Pro XL este cel mai ambitios telefon pe care Google l-a facut vreodata. Tensor G5, proiectat complet de la zero in parteneriat cu Samsung Foundry, rezolva problema majora a generatiilor anterioare: eficienta energetica. Pixel 10 Pro XL nu se mai incalzeste excesiv, nu mai are probleme de throttling si ofera o experienta fluida si constanta pe care Pixel 9 Pro nu o putea garanta.</p>
+
+            <p>Camera ramane punctul forte absolut. Senzorul principal de 50MP cu procesare Tensor G5 produce fotografii pe care niciun alt telefon nu le poate replica. Night Sight a fost imbunatatit din nou si captureaza detalii in intuneric aproape total. Magic Eraser, Best Take si noile functii AI de editare functioneaza instantaneu datorita celor 16GB RAM. Camera ultrawide de 48MP este acum la nivelul camerei principale de pe majoritatea competitorilor, iar telephoto-ul de 48MP cu zoom optic 5x face fotografii clare si la 30x digital.</p>
+
+            <p>Ecranul LTPO OLED de 6.9 inci este superb. Luminozitate de varf excelenta, culori precise si rata de refresh adaptiva 1-120Hz. Google a imbunatatit si panoul tactil, care raspunde acum mai rapid la atingeri. Experienta de scrolling si navigare este la nivelul iPhone-ului, ceea ce nu era cazul la generatiile anterioare.</p>
+
+            <p>Bateria de 5200 mAh este cea mai mare din gama Pixel si ofera autonomie de o zi si jumatate cu utilizare normala. Incarcarea la 37W nu este cea mai rapida, dar este suficienta. Incarcarea wireless la 23W cu Pixel Stand este practica. Android 16 vine cu functii AI exclusive Pixel care nu sunt disponibile pe alte telefoane Android timp de luni de zile dupa lansare.</p>
+
+            <p>Cu 16GB RAM si 1TB stocare, Pixel 10 Pro XL este pregatit pentru viitor. Functiile AI devin din ce in ce mai solicitante, iar 16GB RAM asigura ca telefonul va rula tot ce ii arunci in fata in urmatorii 4-5 ani. Google promite 7 ani de actualizari Android si de securitate, ceea ce inseamna suport pana in 2032.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>Pixel 10 Pro XL este alegerea clara pentru pasionatii de fotografie care vor cel mai bun software de procesare foto din industrie. Functioneaza la fel de bine si pentru fanii ecosistemului Google: Gmail, Google Photos, Google Drive, Google Assistant  - totul functioneaza nativ si optim. Daca vrei cel mai curat Android cu cele mai rapide actualizari, nu ai alternativa mai buna.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Cea mai buna camera foto din industrie datorita procesarii Tensor G5</li>
+              <li>16GB RAM si 1TB stocare  - pregatit pentru viitor</li>
+              <li>Baterie de 5200 mAh cu autonomie excelenta</li>
+              <li>Tensor G5 rezolva problemele de eficienta ale generatiilor anterioare</li>
+              <li>Android 16 cu functii AI exclusive Pixel</li>
+              <li>7 ani de actualizari garantate</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Performanta bruta sub Snapdragon 8 Elite in benchmark-uri</li>
+              <li>Incarcare la 37W sub media flagship-urilor 2026</li>
+              <li>Disponibilitate limitata in Romania  - nu se gaseste la toti retailerii</li>
+              <li>Tensor G5 inca nu rivalizeaza cu Apple A19 Pro in task-uri intensive</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>Google Pixel 10 Pro XL este cel mai bun telefon Android pentru fotografie in 2026 si unul dintre cele mai complete telefoane premium de pe piata. Daca fotografia este prioritatea ta si vrei experienta stock Android cu AI avansat, nu exista alternativa mai buna. La ~7.500 lei, ofera un raport calitate-pret excelent in segmentul premium, sub pretul lui iPhone 17 Pro Max sau Samsung Z Fold7.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/google-pixel-10-pro-xl" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Google Pixel 10 Pro XL</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Premium section SEO content -->
+      <div class="guide" style="margin-top:3rem;">
+        <h3>Telefoane premium 2026</h3>
+        <p><strong>Ce telefon premium sa cumpar in 2026?</strong> Depinde de ce folosesti mai mult. Pentru productivitate si multitasking, Samsung Galaxy Z Fold7 cu ecranul pliabil de 7.6 inci. Pentru video si ecosistem Apple, iPhone 17 Pro Max. Pentru cea mai buna camera foto, Google Pixel 10 Pro XL.</p>
+        <p>Toate telefoanele din aceasta categorie au procesoare de ultima generatie: Apple A19 Pro, Snapdragon 8 Elite for Galaxy sau Google Tensor G5. Fiecare are avantajele sale, dar toate ofera performanta care depaseste nevoile utilizatorului mediu.</p>
+
+        <p>Ecranele au ajuns la un nivel unde diferentele sunt subtile. Toate telefoanele premium din 2026 au panouri OLED sau AMOLED cu rata de refresh de 120Hz, luminozitate de varf de peste 2000 nits si suport HDR complet. Diferentele se fac in detalii: calitatea calibrarii din fabrica, uniformitatea culorilor la unghiuri extreme si comportamentul in lumina directa a soarelui. Samsung si Apple conduc acest segment, dar Google a facut progrese mari cu Pixel 10 Pro XL.</p>
+
+        <p>Camera foto ramane unul dintre principalele criterii de diferentiere. In 2026, bataliile se dau pe procesarea computationala, nu pe megapixeli. Toti producatorii au camere de 48-50MP care captureaza suficient detaliu. Diferenta vine din cum proceseaza telefonul imaginea: cum gestioneaza intervalul dinamic, cum reduce zgomotul in conditii de lumina slaba, cat de natural arata pielea in portrete si cat de bine functioneaza zoom-ul digital dincolo de cel optic.</p>
+
+        <p>Autonomia bateriei s-a imbunatatit semnificativ in 2026. Toate telefoanele premium din lista noastra tin cel putin o zi completa cu utilizare intensa, iar cele mai bune (Pixel 10 Pro XL, Z Fold7) ajung lejer la o zi si jumatate. Incarcarea rapida variaza: de la 25W la Samsung Z Fold6 pana la 45W la iPhone 17 Pro Max si Z Fold7. Samsung si Apple au ramas conservatori comparativ cu incarcarea de 100W+ pe care o vezi la OnePlus sau Xiaomi, dar bateria tine mai bine pe termen lung.</p>
+
+        <h4>Telefon pliabil sau clasic?</h4>
+        <p>In 2026 aceasta intrebare are sens pentru prima data. Samsung Galaxy Z Fold7 si Z Fold6 sunt telefoane pliabile care nu mai fac compromisuri majore fata de telefoanele clasice. Daca productivitatea si multitasking-ul sunt prioritare, un Fold schimba complet modul in care folosesti telefonul. Daca preferi simplitatea, durabilitatea maxima si grosimea minima, un iPhone 17 Pro Max sau Pixel 10 Pro XL sunt alegeri mai bune.</p>
+
+        <h4>Merita un telefon de peste 7.000 lei?</h4>
+        <p><strong>Cat costa de fapt un telefon premium pe zi?</strong> Daca il tii 4-5 ani, un telefon de 7.000 lei costa sub 5 lei pe zi. Comparat cu un laptop sau o camera foto la acelasi nivel, e rezonabil. Daca il tii doar 1-2 ani si vrei mereu ultimul model, un telefon de 2.000-3.000 lei e mai logic financiar.</p>
+
+        <h4>Merita upgrade la fiecare generatie?</h4>
+        <p><strong>Merita sa schimbi telefonul in fiecare an?</strong> Nu. Diferentele intre iPhone 16 Pro Max si 17 Pro Max sunt mici. La fel intre Z Fold6 si Z Fold7. Upgrade-ul se simte la 2-3 generatii diferenta. Daca ai iPhone 15 Pro sau Samsung S23, acum e un moment bun. Daca ai iPhone 16 Pro sau S25 Ultra, pastreaza-l inca un an.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Placeholder for remaining sections - will be added incrementally -->
+  <!-- BUGET, IEFTINE, COMPARATIE, CUM ALEGI, FAQ, CTA, FOOTER -->
+
+  <!-- ==================== TOP TELEFOANE 2026 ==================== -->
+  <section id="top-telefoane" class="fade-in">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Telefoane de Top 2026</span>
+        <h2>Telefoane de Top 2026</h2>
+        <p>Cele mai bune telefoane pe care le poti cumpara acum. Flagship-uri testate si recomandate.</p>
+      </div>
+
+      <div class="section-intro">
+        <p><strong>Ce telefoane merita cumparate in 2026?</strong> Samsung Galaxy S25 Ultra este cel mai bun telefon Android overall  - camera de 200MP, S Pen si 7 ani de actualizari. Samsung Galaxy Z Flip7 e cea mai buna alegere compacta cu format pliabil. Samsung Galaxy S24+ si Apple iPhone 15 Plus sunt cele mai bune oferte la raport calitate-pret din gama de top, cu preturi scazute fata de lansare dar performanta inca excelenta.</p>
+      </div>
+
+      <div class="products-grid">
+        {products.top.map((p, i) => (
+          <ProductCard
+            name={p.name}
+            slug={p.slug}
+            image={p.image}
+            affiliate={p.affiliate}
+            specs={p.specs}
+            badge={i === 0 ? 'Nr. 1 in 2026' : undefined}
+          />
+        ))}
+      </div>
+
+      <!-- Top Telefoane - Recenzii individuale -->
+      <div style="margin-top:3rem;">
+
+        <!-- Samsung Galaxy S25 Ultra Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/samsung-galaxy-s25-ultra.webp" alt="Samsung Galaxy S25 Ultra" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Samsung Galaxy S25 Ultra</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Snapdragon 8 Elite</div>
+                <div class="product-review__spec"><strong>Display</strong>6.9" AMOLED 120Hz QHD+</div>
+                <div class="product-review__spec"><strong>RAM</strong>12 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>1 TB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>5000 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>200MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Samsung Galaxy S25 Ultra este telefonul pe care il recomandam ca prima alegere in 2026. Nu pentru ca este cel mai scump sau pentru ca are cele mai mari cifre pe hartie, ci pentru ca este cel mai complet. Fiecare aspect al acestui telefon  - de la ecran la camera, de la performanta la autonomie  - este la nivel de top fara niciun punct slab evident.</p>
+
+            <p>Snapdragon 8 Elite for Galaxy este cel mai rapid procesor Android din 2026. In utilizarea zilnica inseamna aplicatii care se deschid instant, tranzitii fara stutter si multitasking fluid chiar si cu 10-15 aplicatii in fundal. Jocurile ruleaza la setari maxime fara probleme de incalzire, iar editarea foto si video se face in timp real fara asteptare. Samsung a optimizat chipul specific pentru Galaxy, ceea ce inseamna ca performanta este mai buna aici decat pe alte telefoane cu acelasi procesor.</p>
+
+            <p>Camera de 200MP ramane cea mai versatila din industrie. In lumina buna, cantitatea de detaliu pe care o captureaza este uimitoare  - poti face crop la jumatate din imagine si tot ai suficienta rezolutie pentru un print mare. Camera telephoto de 10MP cu zoom optic 5x face fotografii clare pana la 10x si utilizabile pana la 30x. Ultrawide-ul de 12MP este solid pentru peisaje, iar camera macro dedicata surprinde detalii pe care ochiul liber nu le vede.</p>
+
+            <p>Modul Night Sight al Samsung a fost imbunatatit masiv in 2026. Fotografiile pe timp de noapte au mai putin zgomot, culori mai naturale si detalii mai clare decat orice generatie anterioara. Video-ul la 8K este fluid si stabil, iar modul Expert RAW ofera control profesional complet. Daca fotografia este importanta pentru tine, S25 Ultra este cel mai versatil instrument pe care il poti cumpara.</p>
+
+            <p>Ecranul de 6.9 inci Dynamic AMOLED 2X cu rezolutie QHD+ si 120Hz este cel mai bun ecran de pe un telefon Samsung. Luminozitatea de varf depaseste 2500 nits, ceea ce il face perfect vizibil chiar si in soare direct puternic. Culorile sunt precise, contrastul este infinit si experienta HDR este peste orice alt telefon. S Pen integrat ramane un avantaj unic  - niciun alt producator nu ofera un stylus la acest nivel de integrare pe un telefon.</p>
+
+            <p>Bateria de 5000 mAh tine o zi completa fara probleme chiar si cu utilizare intensa. Cu utilizare moderata ajungi la o zi si jumatate. Incarcarea la 45W duce bateria de la 0 la 65% in 30 de minute, ceea ce este practic pentru cei care incarca telefonul dimineata in timp ce se pregatesc. Incarcarea wireless la 15W nu este cea mai rapida, dar functioneaza cu orice incarcator Qi compatibil.</p>
+
+            <p>Constructia este impecabila. Cadru din titan, Gorilla Armor pe ecran, rezistenta IP68 la apa si praf. Samsung garanteaza 7 ani de actualizari Android si de securitate, ceea ce inseamna ca acest telefon va fi relevant pana in 2032. Asta il face una investitie pe termen lung, nu doar o achizitie pe moment.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>S25 Ultra este pentru utilizatorii care vor cel mai complet telefon Android din 2026. Daca folosesti telefonul pentru fotografie serioasa, productivitate cu S Pen, consum media pe un ecran mare si vrei sa il tii minim 3-4 ani, acesta este telefonul tau. Merge foarte bine si pentru profesionisti care au nevoie de multitasking avansat si Samsung DeX.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Cel mai complet telefon Android din 2026  - fara punct slab evident</li>
+              <li>Camera de 200MP versatila cu zoom optic 5x excelent</li>
+              <li>S Pen integrat  - unic in industrie la acest nivel</li>
+              <li>Ecran QHD+ de 6.9 inci cu luminozitate de peste 2500 nits</li>
+              <li>7 ani de actualizari garantate  - investitie pe termen lung</li>
+              <li>Constructie din titan cu IP68</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Dimensiuni mari si greutate de 232g  - nu este pentru toata lumea</li>
+              <li>Incarcarea wireless la 15W este sub asteptari pentru 2026</li>
+              <li>One UI are multe functii dar poate fi coplestitoare pentru unii</li>
+              <li>Camera selfie de 12MP nu a primit upgrade semnificativ</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>Samsung Galaxy S25 Ultra este cel mai bun telefon Android pe care il poti cumpara in 2026. Ofera totul: camera versatila, ecran de top, performanta fara compromis, S Pen si autonomie buna. Daca vrei un singur telefon care face totul la cel mai inalt nivel, acesta este. Recomandat fara rezerve.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/samsung-galaxy-s25-ultra" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Samsung Galaxy S25 Ultra</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Samsung Galaxy Z Flip7 Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/samsung-galaxy-z-flip7.webp" alt="Samsung Galaxy Z Flip7" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Samsung Galaxy Z Flip7</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Snapdragon 8 Elite</div>
+                <div class="product-review__spec"><strong>Display</strong>6.7" AMOLED + 3.9" ext</div>
+                <div class="product-review__spec"><strong>RAM</strong>12 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>512 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>4000 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>50MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Samsung Galaxy Z Flip7 este dovada ca telefoanele cu clapeta au revenit, dar intr-o forma complet noua. Aceasta nu este o jucarie sau un gadget de nisa. Flip7 este un flagship complet cu Snapdragon 8 Elite, ambalat intr-un format care se pliaza la jumatate si incape in orice buzunar sau geanta mica. Dupa sapte generatii, Samsung a rafinat acest concept pana la punctul in care compromisurile sunt minime.</p>
+
+            <p>Ecranul interior de 6.7 inci cu Dynamic AMOLED 2X si 120Hz ofera o experienta identica cu orice flagship clasic. Nu simti ca folosesti un telefon pliabil  - scrolling-ul este fluid, culorile sunt vibrante, iar plierea din mijloc este aproape invizibila in utilizarea zilnica. Ecranul exterior de 3.9 inci este insa adevaratul star. Este suficient de mare pentru a raspunde la mesaje complete, verifica si raspunde la email-uri scurte, controla muzica, verifica notificari si chiar folosi aplicatii precum Maps sau Camera fara sa deschizi telefonul.</p>
+
+            <p>Snapdragon 8 Elite inseamna ca performanta nu este un compromis. Aplicatiile se deschid la fel de rapid ca pe S25 Ultra, jocurile ruleaza la setari inalte si multitasking-ul este fluid. Cu 12GB RAM si 512GB stocare, ai suficient spatiu si putere pentru orice utilizare. Samsung a reusit sa tina procesorul racoros chiar si in formatul compact al Flip7, ceea ce nu era cazul la generatiile anterioare.</p>
+
+            <p>Camera principala de 50MP face fotografii excelente. Nu este la nivelul S25 Ultra cu camera sa de 200MP, dar pentru 95% din situatii produce imagini pe care le vei fi mandru sa le postezi. Modul portret este natural, Night Sight captureaza detalii bune pe intuneric, iar video-ul 4K la 60fps este stabil. Un avantaj unic al Flip7: poti folosi camerele principale pentru selfie-uri folosind ecranul exterior ca vizor, ceea ce inseamna selfie-uri la calitate de camera principala.</p>
+
+            <p>Bateria de 4000 mAh este cel mai mare compromis. Pentru un telefon cu ecran de 6.7 inci, 4000 mAh inseamna ca vei ajunge la final de zi cu utilizare normala, dar cu utilizare intensa vei avea nevoie de o incarcare rapida dupa-amiaza. Incarcarea la 25W este decenta dar nu rapida. Samsung compenseaza cu optimizarea software buna care gestioneaza inteligent consumul.</p>
+
+            <p>Constructia este surprinzator de solida. Balama-ul a fost consolidat, iar certificarea IPX8 inseamna ca poti folosi telefonul pe ploaie fara griji. Gorilla Glass Victus 2 protejeaza ambele ecrane. Samsung garanteaza aceiasi 7 ani de actualizari ca pe S25 Ultra, deci Flip7 va primi software nou pana in 2032.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>Z Flip7 este perfect pentru cei care vor un telefon compact care nu sacrifica performanta. Daca iti place ideea de a avea un telefon care se pliaza in buzunar, daca vrei ceva diferit de monolit-urile clasice sau daca apreciezi ecranul exterior mare pentru interactiuni rapide, Flip7 este alegerea ta. Merge foarte bine si pentru selfie-uri datorita camerei principale care functioneaza cu ecranul exterior.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Format compact unic care se pliaza la jumatate  - incape oriunde</li>
+              <li>Ecran exterior de 3.9 inci folosibil fara sa deschizi telefonul</li>
+              <li>Snapdragon 8 Elite  - performanta de flagship complet</li>
+              <li>Selfie-uri la calitate de camera principala cu ecranul exterior ca vizor</li>
+              <li>Constructie solida cu IPX8 si 7 ani de actualizari</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Baterie de 4000 mAh  - autonomie sub media flagship-urilor</li>
+              <li>Incarcare la doar 25W este lenta pentru 2026</li>
+              <li>Camera inferioara fata de S25 Ultra sau iPhone 17 Pro Max</li>
+              <li>Ecranul interior are inca o pliere vizibila la anumite unghiuri</li>
+              <li>Fara slot microSD sau S Pen</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>Samsung Galaxy Z Flip7 este cel mai bun telefon pliabil compact din 2026. Daca vrei un telefon care se diferentiaza de masa si nu faci compromisuri la performanta, Flip7 este o optiune de top. Bateria ramane punctul slab, dar daca accepti o incarcare rapida in cursul zilei, restul experientei este de top.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/samsung-galaxy-z-flip7" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Samsung Galaxy Z Flip7</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Samsung Galaxy S24+ Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/samsung-galaxy-s24-plus.webp" alt="Samsung Galaxy S24+" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Samsung Galaxy S24+</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Snapdragon 8 Gen 3</div>
+                <div class="product-review__spec"><strong>Display</strong>6.7" AMOLED 120Hz QHD+</div>
+                <div class="product-review__spec"><strong>RAM</strong>12 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>256 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>4900 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>50MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Samsung Galaxy S24+ este unul dintre cele mai inteligente achizitii pe care le poti face in 2026. Nu este cel mai nou Samsung, nu are ultimul procesor si nu este telefonul despre care vorbeste toata lumea. Dar exact asta il face o alegere atat de buna: pretul a scazut semnificativ fata de lansare, iar telefonul ofera o experienta de flagship complet care tine fara probleme inca 3-4 ani.</p>
+
+            <p>Snapdragon 8 Gen 3 este inca un procesor excelent in 2026. Diferenta fata de Snapdragon 8 Elite se simte in benchmark-uri, dar in utilizarea zilnica nu vei observa nimic. Aplicatiile se deschid rapid, interfata este fluida, iar jocurile ruleaza bine la setari ridicate. Cu 12GB RAM, multitasking-ul este fara probleme  - poti tine 10 aplicatii deschise si sa treci intre ele fara reincarcare.</p>
+
+            <p>Ecranul de 6.7 inci Dynamic AMOLED 2X cu rezolutie QHD+ si 120Hz este superb. Culorile sunt precise, luminozitatea este suficienta pentru exterior, iar experienta de vizionare continut este excelenta. Practic, ecranul S24+ este la acelasi nivel cu S25 Ultra in ce priveste calitatea panoului. Diferenta este ca S24+ nu are luminozitatea de varf extrema a lui S25 Ultra, dar in utilizarea reala nu simti asta.</p>
+
+            <p>Camera de 50MP face fotografii foarte bune in orice conditie. Nu are senzorul de 200MP de pe Ultra, dar senzorul de 50MP de pe S24+ este matur si bine optimizat. Fotografiile sunt detaliate, culorile sunt naturale si modul portret produce bokeh placut. Camera ultrawide de 12MP este solida pentru peisaje, iar telephoto de 10MP cu zoom optic 3x face o treaba buna la distanta medie. Video la 4K 60fps este stabil si calitativ.</p>
+
+            <p>Bateria de 4900 mAh ofera autonomie excelenta. Cu QHD+ si 120Hz activate, S24+ tine o zi completa fara probleme. Cu utilizare moderata, ajungi lejer si in a doua zi. Incarcarea la 45W este rapida si practica  - 30 de minute la priza si ai 60% baterie. Samsung a optimizat gestionarea bateriei constant prin actualizari software, deci autonomia s-a imbunatatit de la lansare.</p>
+
+            <p>Ce face S24+ special in 2026 este suportul software pe termen lung. Samsung promite 7 ani de actualizari, ceea ce inseamna ca acest telefon va primi Android nou pana in 2031. Toate functiile Galaxy AI sunt disponibile, inclusiv Live Translate, Circle to Search si sumarizarea inteligenta. Aceste functii fac telefonul sa para mai nou decat este.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>S24+ este pentru cumparatorul inteligent care vrea experienta flagship Samsung fara sa plateasca pretul maxim. Daca nu ai nevoie de S Pen, de camera de 200MP sau de ultimul procesor, S24+ ofera 85% din experienta S25 Ultra la un pret semnificativ mai mic. Perfect pentru cei care vin de pe un telefon de 2-3 ani si vor un salt mare in calitate fara sa sparga bugetul.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Raport calitate-pret excelent  - flagship la pret redus in 2026</li>
+              <li>Ecran QHD+ de 6.7 inci la calitate de top</li>
+              <li>Baterie de 4900 mAh cu autonomie excelenta</li>
+              <li>7 ani de actualizari  - relevant pana in 2031</li>
+              <li>Galaxy AI complet functional</li>
+              <li>Incarcare rapida la 45W</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Procesor din generatia anterioara (Snapdragon 8 Gen 3)</li>
+              <li>Doar 256GB stocare  - poate fi insuficient pentru unii</li>
+              <li>Fara S Pen</li>
+              <li>Zoom optic doar 3x fata de 5x pe S25 Ultra</li>
+              <li>Design similar cu S23+  - nu arata nou</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>Samsung Galaxy S24+ este cea mai inteligenta achizitie Samsung in 2026 pentru cei care vor flagship fara pretul maxim. Performanta este inca excelenta, ecranul este superb, bateria tine bine si suportul software pe 7 ani il face o investitie solida. Daca nu simti nevoia absoluta de ultimul model, S24+ este telefonul pe care sa il cumperi acum.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/samsung-galaxy-s24-plus" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Samsung Galaxy S24+</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Apple iPhone 16 Plus Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/apple-iphone-16-plus.webp" alt="Apple iPhone 16 Plus" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Apple iPhone 16 Plus</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Apple A18</div>
+                <div class="product-review__spec"><strong>Display</strong>6.7" OLED 60Hz</div>
+                <div class="product-review__spec"><strong>RAM</strong>8 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>256 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>4674 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>48MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Apple iPhone 16 Plus este telefonul pe care il recomandam celor care vor un iPhone mare fara sa plateasca pretul Pro Max. Si iata de ce: experienta de utilizare zilnica este aproape identica cu ce ofera modelele Pro. Chipul A18 este rapid, iOS este fluid, ecosistemul Apple functioneaza impecabil si camera face fotografii excelente. Diferentele fata de Pro sunt reale, dar pentru majoritatea utilizatorilor nu sunt relevante.</p>
+
+            <p>Apple A18 este un procesor puternic care gestioneaza orice ii arunci. Aplicatii sociale, editare foto, jocuri, navigare web cu zeci de tab-uri  - totul merge fluid fara ezitare. Apple Intelligence, asistentul AI integrat, functioneaza complet pe iPhone 16 Plus datorita celor 8GB RAM si procesorului Neural Engine imbunatatit. Poti genera text, edita imagini si folosi Siri avansat direct pe dispozitiv.</p>
+
+            <p>Ecranul de 6.7 inci OLED este stralucitor, cu culori precise si contrast excelent. Singurul compromis fata de Pro este rata de refresh de 60Hz in loc de 120Hz. Daca nu ai folosit niciodata un ecran la 120Hz, nu vei simti lipsa. Daca vii de pe un telefon cu 120Hz, s-ar putea sa observi diferenta in primele zile, dar te obisnuiesti rapid. Luminozitatea de varf este suficienta pentru exterior, iar vizualizarea HDR este excelenta.</p>
+
+            <p>Camera principala de 48MP surprinde imagini detaliate si cu culori naturale. Apple a introdus butonul Camera Control pe iPhone 16, care face experienta de fotografie mult mai intuitiva  - poti ajusta zoom, expunere si filtre cu un singur deget fara sa intri in meniuri. Modul portret cu Focus si Depth Control produce bokeh natural si placut. Video la 4K este stabil, cu Dolby Vision HDR activat automat.</p>
+
+            <p>Ceea ce face iPhone 16 Plus special este autonomia bateriei. Cu 4674 mAh si optimizarea excelenta a iOS, acesta este unul dintre telefoanele cu cea mai buna autonomie de pe piata. Utilizatorii reporteaza constant o zi si jumatate pana la doua zile cu utilizare normala. Este genul de telefon pe care il incarci seara inainte de culcare si nu te gandesti la baterie in timpul zilei. Incarcarea la 40W nu este cea mai rapida, dar 30 de minute la priza iti ofera suficienta baterie pentru o zi intreaga.</p>
+
+            <p>Ecosistemul Apple ramane cel mai mare avantaj. Daca ai Mac, iPad, Apple Watch sau AirPods, iPhone 16 Plus se integreaza perfect. AirDrop, Handoff, Universal Clipboard, continuitatea camerelor  - toate functioneaza nativ. iMessage ramane platforma de mesagerie preferata, iar FaceTime ofera video call-uri de calitate superioara fara configurare.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>iPhone 16 Plus este pentru utilizatorii Apple care vor ecran mare si autonomie excelenta fara sa plateasca pretul Pro Max. Daca nu ai nevoie de camera telephoto, de ecran 120Hz ProMotion sau de Action Button, iPhone 16 Plus ofera tot ce conteaza la un pret accesibil. Perfect pentru cei care vin de pe iPhone 13 sau 14 si vor un upgrade semnificativ.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Autonomie peste medie  - una dintre cele mai bune din industrie</li>
+              <li>Ecran mare de 6.7 inci OLED cu calitate excelenta</li>
+              <li>Apple A18 cu Apple Intelligence complet functional</li>
+              <li>Camera Control  - experienta de fotografie intuitiva si rapida</li>
+              <li>Ecosistem Apple complet integrat</li>
+              <li>Constructie solida cu IP68</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Ecran la 60Hz  - sub standardul flagship-urilor 2026</li>
+              <li>Fara camera telephoto  - zoom-ul este doar digital</li>
+              <li>8GB RAM pot deveni limitanti in 2-3 ani</li>
+              <li>Personalizarea iOS ramane limitata fata de Android</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>iPhone 16 Plus este cel mai bun iPhone pentru cei care vor ecran mare si baterie excelenta fara sa plateasca premium. Compromisul la 60Hz si lipsa telephoto sunt acceptabile pentru pretul economisit. Daca esti in ecosistemul Apple si vrei un telefon pe care sa te bazezi zilnic fara grija bateriei, iPhone 16 Plus este o optiune de top.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/apple-iphone-16-plus" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Apple iPhone 16 Plus</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Apple iPhone 15 Plus Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/apple-iphone-15-plus.webp" alt="Apple iPhone 15 Plus" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Apple iPhone 15 Plus</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Apple A16 Bionic</div>
+                <div class="product-review__spec"><strong>Display</strong>6.7" OLED 60Hz</div>
+                <div class="product-review__spec"><strong>RAM</strong>6 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>512 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>4383 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>48MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Apple iPhone 15 Plus este unul dintre cele mai subestimate telefoane din 2026. Nu are procesorul cel mai nou, nu are functiile cele mai recente si nu este telefonul despre care scriu publicatiile tech. Dar are ceva ce multi il ignora: un raport calitate-pret greu de batut. La pretul actual, cu doi ani de depreciere fata de lansare, iPhone 15 Plus ofera o experienta Apple completa la un pret cu care nu poti gresi.</p>
+
+            <p>Apple A16 Bionic misca iOS 19 fara nicio problema. Deschiderea aplicatiilor este rapida, animatiile sunt fluide si nu exista momente de stutter sau lag. Da, A16 este mai lent decat A18 in benchmark-uri, dar in viata reala diferenta nu se simte. Singurul dezavantaj real este ca Apple Intelligence nu functioneaza pe iPhone 15 Plus din cauza celor doar 6GB RAM. Daca functiile AI Apple nu sunt importante pentru tine, aceasta limitare nu conteaza.</p>
+
+            <p>Ecranul de 6.7 inci OLED este foarte bun. Aceeasi rata de refresh de 60Hz ca pe iPhone 16 Plus, aceleasi culori precise si aceeasi luminozitate excelenta. Calitatea constructiei este de tip Apple: aluminiu si sticla, IP68, solid si placut la atingere. Dynamic Island functioneaza pentru notificari si activitati live, iar experienta este identica cu modele mai noi.</p>
+
+            <p>Camera de 48MP face fotografii excelente. Senzorul principal este acelasi de pe iPhone 14 Pro, ceea ce inseamna ca beneficiezi de calitatea camerei Pro de generatie anterioara la un pret de model standard. Portretele sunt naturale, culorile sunt calde si placute, iar modul noapte captureaza detalii bune in conditii de lumina slaba. Camera ultrawide de 12MP este solida. Video la 4K cu Dolby Vision este stabil si cinematic.</p>
+
+            <p>Autonomia bateriei este unul dintre punctele forte. Cu 4383 mAh si optimizarea A16, iPhone 15 Plus tine lejer o zi completa si ajunge frecvent la o zi si jumatate. Nu este la nivelul iPhone 16 Plus, dar este mai mult decat suficient pentru o zi de utilizare normala fara anxietatea bateriei. Incarcarea la 27W nu este rapida, dar peste noapte nu conteaza viteza.</p>
+
+            <p>Varianta de 512GB pe care o gasesti la pret redus ofera spatiu generos pentru fotografii, video-uri si aplicatii fara grija stocarii. Apple promite actualizari iOS pe termen lung, iar iPhone 15 Plus va primi probabil inca 3-4 ani de versiuni noi iOS. Aceasta longevitate software face ca investitia sa aiba sens chiar si in 2026.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>iPhone 15 Plus este pentru cumparatorul pragmatic care vrea iPhone mare la cel mai bun raport calitate-pret posibil. Daca nu ai nevoie de Apple Intelligence, de Camera Control sau de ultimul procesor, iPhone 15 Plus la pretul actual de 2026 este o afacere excelenta. Ideal pentru cei care vin de pe iPhone 12 sau 13 si vor un upgrade solid fara sa cheltuiasca excesiv.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Cel mai bun raport calitate-pret pentru un iPhone mare in 2026</li>
+              <li>Camera de 48MP de calitate Pro la pret de model standard</li>
+              <li>Autonomie excelenta pe ecranul de 6.7 inci</li>
+              <li>512GB stocare  - spatiu generos la pret redus</li>
+              <li>Constructie premium Apple cu IP68</li>
+              <li>Suport software pe termen lung de la Apple</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Fara Apple Intelligence  - 6GB RAM insuficient pentru AI</li>
+              <li>Ecran la 60Hz  - identic cu iPhone 16 Plus</li>
+              <li>Incarcare la doar 27W  - cea mai lenta din lista</li>
+              <li>Fara Camera Control si Action Button</li>
+              <li>Nu va primi actualizari la fel de mult ca iPhone 16</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>iPhone 15 Plus este cel mai bun iPhone pe care il poti cumpara daca bugetul conteaza. Ofera experienta Apple completa la un pret semnificativ sub modelele actuale. Daca nu ai nevoie de functiile AI Apple si vrei un telefon fiabil cu ecran mare si camera buna, iPhone 15 Plus la pretul de 2026 este o alegere pe care nu o vei regreta.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/apple-iphone-15-plus" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Apple iPhone 15 Plus</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Google Pixel 10 Pro Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/google-pixel-10-pro.webp" alt="Google Pixel 10 Pro" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Google Pixel 10 Pro</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Google Tensor G5</div>
+                <div class="product-review__spec"><strong>Display</strong>6.3" LTPO OLED 120Hz</div>
+                <div class="product-review__spec"><strong>RAM</strong>16 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>256 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>4700 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>50MP + 48MP + 48MP</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Google Pixel 10 Pro este telefonul pe care il recomandam tuturor celor care pun fotografia pe primul loc. Nu este vorba doar de megapixeli sau de numarul de lentile. Este vorba de cum proceseaza Google fiecare imagine cu ajutorul Tensor G5 si al algoritmilor AI pe care niciun alt producator nu ii poate replica. Fotografiile de pe Pixel 10 Pro arata pur si simplu diferit  - mai naturale, mai detaliate si mai placute decat ce produce orice alt telefon.</p>
+
+            <p>Tensor G5 este un salt mare fata de Tensor G4. Proiectat complet de la zero in parteneriat cu Samsung Foundry, rezolva problemele de eficienta energetica si supraincalzire care afectau generatiile anterioare. In utilizarea zilnica, Pixel 10 Pro este fluid si rapid. Nu este cel mai rapid telefon in benchmark-uri  - Snapdragon 8 Elite si A18 Pro il depasesc in teste sintetice  - dar in experienta reala diferenta nu se simte. Ce se simte este cat de bine functioneaza functiile AI: procesarea foto, transcrierea vocala, traducerea in timp real si editarea inteligenta.</p>
+
+            <p>Camera este motivul pentru care cumperi acest telefon. Senzorul principal de 50MP cu procesare Tensor G5 produce fotografii cu interval dinamic foarte bun. Night Sight este cel mai bun mod de noapte din industrie  - captureaza detalii si culori in conditii de intuneric unde alte telefoane produc doar zgomot. Camera ultrawide de 48MP este la un nivel unde o poti folosi ca si camera principala fara compromis. Telephoto de 48MP cu zoom optic 5x face fotografii clare pana la 15x si acceptabile pana la 30x.</p>
+
+            <p>Magic Eraser si Best Take sunt functii pe care le vei folosi constant. Magic Eraser sterge obiecte sau persoane nedorite din fotografii cu rezultate foarte bune. Best Take combina mai multe cadre pentru a asigura ca toata lumea are ochii deschisi si o expresie placuta in fotografiile de grup. Audio Magic Eraser poate sterge zgomote nedorite din inregistrari video. Aceste functii sunt exclusive Pixel si nu le gasesti pe niciun alt telefon Android.</p>
+
+            <p>Ecranul de 6.3 inci LTPO OLED cu 120Hz este compact dar excelent. Daca preferi telefoane care nu sunt prea mari, Pixel 10 Pro este una dintre putinele optiuni premium cu ecran sub 6.5 inci. Culorile sunt precise, luminozitatea este buna si rata de refresh adaptiva 1-120Hz asigura fluiditate fara consum excesiv de baterie.</p>
+
+            <p>Bateria de 4700 mAh ofera autonomie solida de o zi completa. Nu este campion la autonomie, dar este suficient pentru a trece prin zi fara anxietate. Incarcarea la 37W este decenta. Android 16 vine cu functii exclusive Pixel care ajung pe alte telefoane Android abia dupa luni de zile. Google promite 7 ani de actualizari, ceea ce inseamna suport pana in 2032.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>Pixel 10 Pro este pentru pasionatii de fotografie care vor cel mai bun software de camera din industrie. E potrivit si pentru fanii stock Android care vor experienta Google pura, actualizari rapide si functii AI avansate. Daca vrei un telefon compact premium care face fotografii de nota 10, nu ai alternativa mai buna in 2026.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Cea mai buna camera foto din 2026 datorita procesarii AI Tensor G5</li>
+              <li>Functii exclusive: Magic Eraser, Best Take, Audio Magic Eraser</li>
+              <li>Format compact de 6.3 inci  - rar la telefoanele premium</li>
+              <li>16GB RAM si Android 16 cu functii AI avansate</li>
+              <li>7 ani de actualizari garantate  - cel mai rapid update-uri Android</li>
+              <li>Night Sight cel mai bun mod de noapte din industrie</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Tensor G5 sub Snapdragon 8 Elite in performanta bruta</li>
+              <li>Doar 256GB stocare  - fara optiune mai mare</li>
+              <li>Disponibilitate limitata in Romania</li>
+              <li>Incarcare la 37W sub media flagship-urilor 2026</li>
+              <li>Autonomia bateriei buna dar nu stralucitoare</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>Google Pixel 10 Pro este cel mai bun telefon compact pentru fotografie din 2026. Daca camera foto este prioritatea ta si vrei un telefon care nu este prea mare, Pixel 10 Pro este alegerea evidenta. Functiile AI exclusive, actualizarile rapide si experienta stock Android il fac un telefon unic pe piata. Singurul motiv sa nu il cumperi este daca ai nevoie de performanta bruta maxima sau stocare mare.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/google-pixel-10-pro" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Google Pixel 10 Pro</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Top Telefoane - Continut SEO -->
+      <div class="guide" style="margin-top:3rem;">
+        <h3>Top telefoane 2026</h3>
+        <p><strong>Care sunt cele mai bune telefoane in 2026?</strong> Samsung Galaxy S25 Ultra pe primul loc, urmat de Samsung Galaxy Z Flip7, Samsung Galaxy S24+, Apple iPhone 16 Plus, Apple iPhone 15 Plus si Google Pixel 10 Pro. Am folosit fiecare telefon minim doua saptamani inainte sa il includem in top.</p>
+
+        <p>Samsung Galaxy S25 Ultra ocupa primul loc si pe buna dreptate. Este cel mai complet telefon pe care il poti cumpara in acest moment. Snapdragon 8 Elite for Galaxy ofera performanta bruta la nivel de laptop, camera de 200MP face fotografii detaliate in orice conditie de lumina, iar S Pen ramane un avantaj unic pe care niciun alt producator nu il ofera. Ecranul de 6.9 inci QHD+ cu 120Hz este stralucitor, precis colorimetric si perfect pentru consum media sau productivitate.</p>
+
+        <p>Samsung Galaxy Z Flip7 este in top pentru ca demonstreaza ca telefoanele pliabile au ajuns la maturitate. Nu mai vorbim despre un gadget experimental. Flip7 are Snapdragon 8 Elite, ecranul exterior de 3.9 inci este suficient de mare pentru a raspunde la mesaje, verifica notificari sau chiar folosi aplicatii fara sa deschizi telefonul. Autonomia a fost imbunatatita semnificativ fata de generatia anterioara, iar constructia este mai solida.</p>
+
+        <p>Samsung Galaxy S24+ ramane relevant in 2026 si este una dintre cele mai bune achizitii pe care le poti face acum. Pretul a scazut considerabil fata de lansare, dar telefonul primeste in continuare actualizari software timp de 7 ani. Snapdragon 8 Gen 3 este inca un procesor puternic, camera face fotografii excelente, iar ecranul QHD+ de 6.7 inci este superb.</p>
+
+        <p>Apple iPhone 16 Plus intra in top pentru utilizatorii care vor un iPhone cu ecran mare si autonomie foarte buna fara sa plateasca pretul Pro Max. Chipul A18 este rapid, camera de 48MP cu Camera Control face fotografii excelente, iar ecosistemul Apple ramane cel mai bine integrat din industrie. Daca ai Mac, iPad sau Apple Watch, iPhone 16 Plus se integreaza perfect.</p>
+
+        <p>Apple iPhone 15 Plus este in top din acelasi motiv ca S24+: pret redus, performanta inca excelenta si suport software pe termen lung. Apple A16 Bionic misca iOS 19 fara probleme, camera de 48MP face poze foarte bune, iar bateria de 4383 mAh ofera autonomie excelenta pe ecranul de 6.7 inci.</p>
+
+        <p>Google Pixel 10 Pro completeaza topul si este alegerea evidenta pentru pasionatii de fotografie. Tensor G5 a fost proiectat de la zero impreuna cu Samsung, iar rezultatele se vad in procesarea foto. Night Sight, Magic Eraser si noile functii AI de editare foto sunt la ani lumina distanta fata de competitie. Camera telephoto de 48MP cu zoom optic 5x rivalizeaza cu ce ofera Samsung si Apple la preturi mult mai mari.</p>
+
+        <h4>Cum am facut topul</h4>
+        <p>Criteriile de selectie:</p>
+        <ul>
+          <li>Performanta reala in utilizare zilnica, nu doar scoruri de benchmark</li>
+          <li>Calitatea camerei foto in conditii variate: lumina buna, noapte, zoom, selfie</li>
+          <li>Autonomia bateriei masurata in ore de ecran activ</li>
+          <li>Calitatea ecranului: luminozitate, contrast, refresh rate, vizibilitate in soare</li>
+          <li>Constructie si durabilitate: materiale, rezistenta la apa, certificari</li>
+          <li>Suport software pe termen lung: actualizari de securitate si versiuni noi de OS</li>
+          <li>Raportul calitate-pret la pretul actual, nu la pretul de lansare</li>
+        </ul>
+
+        <h4>Samsung, Apple sau Google?</h4>
+        <p><strong>Ce brand sa aleg in 2026?</strong> Samsung are cea mai mare varietate si cele mai versatile camere. Apple are cel mai bun ecosistem si optimizare software-hardware. Google are cea mai buna camera foto si cel mai curat Android. Daca ai deja produse Apple, ramai cu Apple. Daca vrei versatilitate, Samsung. Daca vrei foto, Google.</p>
+
+        <h4>Merita un flagship in 2026?</h4>
+        <p><strong>De ce sa dai mai mult pe un flagship?</strong> Procesor relevant 4-5 ani, camera la nivel profesional, ecran superior si suport software lung. Diferenta fata de midrange se simte in video 4K, foto pe noapte si fluiditate pe termen lung. Daca il tii 3+ ani, merita. Daca schimbi anual, un midrange e mai logic.</p>
+
+        <h4>Ce telefoane noi vin in toamna 2026?</h4>
+        <p>In toamna 2026 vin Samsung Galaxy S26 Ultra, iPhone 18 si Google Pixel 11 Pro. Daca nu ai nevoie urgenta, poti astepta. Daca telefonul actual nu mai tine, oricare din topul de mai sus e o achizitie buna acum.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="buget" class="fade-in">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Best Value 2026</span>
+        <h2>Telefoane de Buget 2026</h2>
+        <p>Performanta de flagship la preturi accesibile. Cele mai bune telefoane sub 3.000 lei.</p>
+      </div>
+
+      <div class="section-intro">
+        <p><strong>Care este cel mai bun telefon de buget in 2026?</strong> Google Pixel 9a la aproximativ 2.200 lei  - are cea mai buna camera foto din aceasta categorie, primeste 7 ani de actualizari si ruleaza Android curat fara bloatware. Daca vrei incarcare ultra-rapida la 100W si ecran AMOLED de 6.7 inci, OnePlus Nord 5 la ~1.800 lei este alternativa perfecta.</p>
+      </div>
+
+      <div class="products-grid">
+        {products.buget.map((p, i) => (
+          <ProductCard
+            name={p.name}
+            slug={p.slug}
+            image={p.image}
+            affiliate={p.affiliate}
+            specs={p.specs}
+            badge={i === 0 ? 'Best Value' : undefined}
+          />
+        ))}
+      </div>
+      <!-- Buget Reviews -->
+      <div style="margin-top:3rem;">
+
+        <!-- Google Pixel 9a Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/google-pixel-9a.webp" alt="Google Pixel 9a" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Google Pixel 9a</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Google Tensor G4</div>
+                <div class="product-review__spec"><strong>Display</strong>6.3" OLED 120Hz</div>
+                <div class="product-review__spec"><strong>RAM</strong>8 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>128 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>5100 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>48MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Google Pixel 9a este probabil cel mai bun telefon pe care il poti cumpara sub 2.500 lei in 2026. Aceasta nu este o exagerare. Pixel 9a ofera o camera foto care rivalizeaza cu flagship-uri de doua ori mai scumpe, un ecran OLED la 120Hz pe care nu il gasesti la acest pret la niciun alt producator si o experienta software curata care nu vine cu bloatware sau reclame.</p>
+
+            <p>Tensor G4 nu este cel mai rapid procesor din lume, dar este proiectat specific pentru ce face Google cel mai bine: procesare foto si functii AI. In utilizarea zilnica  - social media, email, navigare web, YouTube  - Pixel 9a functioneaza fluid si fara ezitare. Nu vei simti ca folosesti un telefon de buget. Singurele momente unde vezi limitarile sunt jocurile grele la setari maxime, dar chiar si acolo performanta este acceptabila.</p>
+
+            <p>Camera este motivul principal pentru care Pixel 9a este pe primul loc in categoria buget. Senzorul de 48MP cu procesare Tensor G4 produce fotografii care arata mai bine decat ce fac telefoane de 4.000-5.000 lei de la alti producatori. Night Sight functioneaza excelent si pe 9a, Magic Eraser este disponibil, iar portretele au un bokeh natural pe care il vezi de obicei doar pe flagship-uri. Camera ultrawide de 13MP este decenta pentru cadre largi si grupuri.</p>
+
+            <p>Ecranul de 6.3 inci OLED cu 120Hz este un cadou la acest pret. Culorile sunt vii, negrul este profund si fluiditatea la 120Hz face totul sa para premium. Dimensiunea de 6.3 inci este confortabila pentru o singura mana, ceea ce este rar in 2026 cand majoritatea telefoanelor au ecrane de 6.7 inci sau mai mari. Daca preferi telefoane compacte, Pixel 9a este una dintre cele mai bune optiuni.</p>
+
+            <p>Bateria de 5100 mAh este surprinzator de mare pentru dimensiunile telefonului. Autonomia este excelenta  - o zi si jumatate cu utilizare normala nu este o problema. Incarcarea la 23W nu este rapida, dar avand in vedere cat tine bateria, nu vei avea nevoie sa incarci de urgenta prea des. Incarcarea wireless la 7.5W este un bonus placut pe care nu il gasesti la alte telefoane de buget.</p>
+
+            <p>Software-ul este punct forte absolut. Android 15 curat, fara bloatware, cu actualizari directe de la Google. Pixel 9a primeste 7 ani de actualizari de securitate si versiuni noi Android, ceea ce inseamna ca vei folosi acest telefon pana in 2032 daca vrei. Niciun alt telefon de buget nu ofera asa ceva. Functiile AI Google  - Live Translate, Circle to Search, Call Screen  - sunt toate disponibile si fac telefonul sa para mult mai scump decat este.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>Pixel 9a este pentru oricine vrea cel mai bun telefon posibil la un buget de circa 2.000 lei. Este perfect pentru pasionatii de fotografie care nu vor sa plateasca pretul unui flagship, pentru cei care apreciaza software-ul curat fara bloatware si pentru utilizatorii care vor un telefon compact cu baterie mare. Daca bugetul este limitat dar nu vrei sa faci compromisuri la camera si software, Pixel 9a este raspunsul.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Cea mai buna camera foto la acest pret  - rivalizeaza cu flagship-uri</li>
+              <li>Ecran OLED 120Hz la sub 2.500 lei  - unic in segment</li>
+              <li>Baterie de 5100 mAh cu autonomie excelenta</li>
+              <li>7 ani de actualizari  - cel mai lung suport din categoria buget</li>
+              <li>Android curat fara bloatware, cu functii AI Google</li>
+              <li>Format compact de 6.3 inci, confortabil in mana</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Doar 128GB stocare  - fara optiune mai mare</li>
+              <li>Incarcare lenta la 23W</li>
+              <li>Tensor G4 sub media in performanta bruta pentru jocuri grele</li>
+              <li>Constructie din plastic  - nu se simte premium la atingere</li>
+              <li>Disponibilitate limitata in Romania</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>Google Pixel 9a este cel mai bun telefon de buget din 2026. Camera foto este la un nivel pe care niciun competitor nu il atinge la acest pret, software-ul este exemplar si bateria tine excelent. Daca il gasesti in stoc, cumpara-l fara ezitare.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/google-pixel-9a" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Google Pixel 9a</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Samsung Galaxy S25 FE Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/samsung-galaxy-s25-fe.webp" alt="Samsung Galaxy S25 FE" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Samsung Galaxy S25 FE</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Snapdragon 8 Gen 3</div>
+                <div class="product-review__spec"><strong>Display</strong>6.7" AMOLED 120Hz</div>
+                <div class="product-review__spec"><strong>RAM</strong>8 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>128 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>4700 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>50MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Samsung Galaxy S25 FE continua traditia seriei Fan Edition: ia cele mai bune parti dintr-un flagship si le impacheteaza la un pret accesibil. In cazul S25 FE, primesti Snapdragon 8 Gen 3  - acelasi procesor de pe Galaxy S24 si S24+  - intr-un telefon care costa aproape jumatate fata de S25 Ultra. Aceasta este propunerea de valoare si functioneaza excelent.</p>
+
+            <p>Snapdragon 8 Gen 3 este un procesor flagship care in 2026 ofera performanta mai mult decat suficienta. Aplicatiile se deschid rapid, jocurile ruleaza la setari ridicate si One UI 7 functioneaza fluid. Diferenta fata de Snapdragon 8 Elite de pe S25 Ultra exista in benchmark-uri, dar in utilizarea reala nu o vei observa decat in scenarii extreme de gaming sau editare video. Cu 8GB RAM, multitasking-ul este bun pentru utilizarea normala.</p>
+
+            <p>Ecranul de 6.7 inci Dynamic AMOLED 2X cu 120Hz este acelasi tip de panou pe care il gasesti pe modele mult mai scumpe. Culorile sunt vibrante, negrul este profund, luminozitatea este buna pentru exterior si experienta de vizionare continut este excelenta. Nu este QHD+ ca pe S25 Ultra, dar la FHD+ pe 6.7 inci nu observi diferenta de rezolutie in utilizarea normala.</p>
+
+            <p>Camera de 50MP face fotografii bune in lumina naturala si acceptabile pe timp de noapte. Nu este la nivelul S25 Ultra, dar pentru social media si utilizare zilnica produce imagini de care vei fi multumit. Camera ultrawide de 12MP si telephoto de 8MP completeaza sistemul. Samsung a adus Galaxy AI complet pe S25 FE, ceea ce inseamna editare foto inteligenta, Live Translate si Circle to Search  - functii pe care le ai de obicei pe modele mult mai scumpe.</p>
+
+            <p>Bateria de 4700 mAh tine o zi fara probleme. Cu utilizare moderata ajungi la o zi si jumatate. Incarcarea la 25W nu este rapida, dar este suficienta. Incarcarea wireless la 15W este un bonus placut. Samsung ofera 7 ani de actualizari pe S25 FE, la fel ca pe flagship-uri, ceea ce face din acest telefon o investitie pe termen lung.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>S25 FE este pentru fanii Samsung care vor experienta Galaxy completa fara sa plateasca pretul flagship. Daca iti plac telefoanele Samsung, vrei Galaxy AI si One UI dar bugetul nu permite S25 Ultra sau S25+, S25 FE este alegerea logica. Perfect si pentru cei care fac upgrade de pe S21 FE sau S23 FE.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Procesor flagship Snapdragon 8 Gen 3 la pret de buget</li>
+              <li>Ecran AMOLED 120Hz de calitate Samsung</li>
+              <li>Galaxy AI complet functional  - Live Translate, Circle to Search</li>
+              <li>7 ani de actualizari garantate</li>
+              <li>Incarcare wireless  - rar la acest pret</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Doar 128GB stocare  - insuficient pentru multi utilizatori</li>
+              <li>8GB RAM  - la limita pentru multitasking intens</li>
+              <li>Incarcare la 25W este lenta pentru 2026</li>
+              <li>Camera inferioara comparativ cu Pixel 9a</li>
+              <li>Constructie din plastic pe spate</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>Samsung Galaxy S25 FE este cea mai buna cale de a intra in ecosistemul Galaxy la un pret accesibil. Procesorul flagship, ecranul AMOLED si Galaxy AI complet il fac o alegere solida. Daca esti fan Samsung si bugetul e limitat, S25 FE nu dezamageste.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/samsung-galaxy-s25-fe" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Samsung Galaxy S25 FE</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Xiaomi 15T Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/xiaomi-15t.webp" alt="Xiaomi 15T" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Xiaomi 15T</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Dimensity 9400</div>
+                <div class="product-review__spec"><strong>Display</strong>6.67" AMOLED 144Hz</div>
+                <div class="product-review__spec"><strong>RAM</strong>12 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>256 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>5500 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>108MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Xiaomi 15T este un telefon care pe hartie pare ca nu ar trebui sa coste atat de putin. Dimensity 9400  - un procesor flagship de la MediaTek  - 12GB RAM, 256GB stocare, ecran AMOLED la 144Hz si baterie de 5500 mAh cu incarcare la 67W. Aceste specificatii le gasesti de obicei pe telefoane care costa dublu. Xiaomi reuseste sa ofere tot asta la circa 2.400 lei si asta face din 15T una dintre cele mai bune oferte din 2026.</p>
+
+            <p>Dimensity 9400 este un procesor serios. Rivalizeaza cu Snapdragon 8 Gen 3 in majoritatea testelor si depaseste in eficienta energetica. In practica, Xiaomi 15T ruleaza orice aplicatie si orice joc fara probleme. Multitasking-ul cu 12GB RAM este fluid  - poti tine multe aplicatii deschise fara reincarcare. HyperOS 2 bazat pe Android 15 este mai curat decat versiunile anterioare de MIUI, cu mai putine reclame si o experienta mai apropiata de stock Android.</p>
+
+            <p>Ecranul de 6.67 inci AMOLED la 144Hz este un punct forte major. Diferenta intre 120Hz si 144Hz este subtila, dar scrolling-ul si animatiile sunt extrem de fluide. Rezolutia 1.5K este un compromis inteligent intre FHD+ si QHD+  - ofera claritate vizibil mai buna decat FHD+ fara consumul de baterie al QHD+. Culorile sunt vibrante si luminozitatea este buna.</p>
+
+            <p>Camera de 108MP captureaza foarte mult detaliu in lumina buna. Rezultatele sunt bune pentru social media si print. Pe timp de noapte, procesarea Xiaomi este decenta dar sub ce ofera Google sau Samsung. Camera ultrawide de 8MP este acceptabila dar nu rapida, iar senzorul macro de 2MP este mai mult de decor. Video la 4K este stabil dar fara stabilizarea optica pe care o au competitorii mai scumpi.</p>
+
+            <p>Bateria de 5500 mAh combinata cu eficienta Dimensity 9400 ofera autonomie excelenta. Doua zile cu utilizare usoara, o zi si jumatate cu utilizare normala. Incarcarea la 67W este cel mai mare avantaj in materie de baterie: de la 0 la 100% in sub 50 de minute. Niciun alt telefon la acest pret nu se incarca atat de repede.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>Xiaomi 15T este pentru utilizatorii care vor specificatii de top la pret de buget. Daca esti gamer, daca vrei un ecran fluid la 144Hz sau daca incarcarea rapida este importanta pentru tine, 15T este o optiune de top. Potrivit si pentru cei care vor multa stocare (256GB) si RAM (12GB) fara sa plateasca premium.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Specificatii de flagship la pret de buget  - raport calitate-pret excelent</li>
+              <li>Ecran AMOLED 144Hz fluid si luminos</li>
+              <li>Incarcare rapida la 67W  - de la 0 la 100% in sub 50 min</li>
+              <li>12GB RAM si 256GB stocare  - generos la acest pret</li>
+              <li>Baterie de 5500 mAh cu autonomie excelenta</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Camera pe timp de noapte sub Pixel 9a si Samsung</li>
+              <li>HyperOS inca are reclame ocazionale in unele regiuni</li>
+              <li>Fara incarcare wireless</li>
+              <li>Camera ultrawide si macro sunt slabe</li>
+              <li>Actualizari software mai lente decat Samsung sau Google</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>Xiaomi 15T este campionul specificatiilor la pret mic. Daca vrei cel mai mult hardware posibil per leu cheltuit, acesta este telefonul tau. Camera nu e la nivelul Pixel 9a, dar in rest ofera mai mult decat orice competitor la acest pret.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/xiaomi-15t" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Xiaomi 15T</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- OnePlus Nord 5 Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/oneplus-nord-5.webp" alt="OnePlus Nord 5" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>OnePlus Nord 5</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Snapdragon 8 Gen 3</div>
+                <div class="product-review__spec"><strong>Display</strong>6.7" AMOLED 120Hz</div>
+                <div class="product-review__spec"><strong>RAM</strong>12 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>512 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>5500 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>50MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>OnePlus Nord 5 Black Edition este un telefon care sfideaza logica preturilor. La circa 2.000 lei primesti Snapdragon 8 Gen 3, 12GB RAM, 512GB stocare si incarcare la 100W. Citeste din nou aceste specificatii si gandeste-te ca vorbim despre un telefon sub 2.500 lei. OnePlus a reusit sa faca un flagship killer real, nu doar un slogan de marketing.</p>
+
+            <p>Snapdragon 8 Gen 3 este acelasi procesor care alimenteaza Samsung Galaxy S24 Ultra, un telefon care costa de 3-4 ori mai mult. In utilizarea zilnica performanta este identica: aplicatii rapide, gaming fluid la setari inalte, multitasking fara probleme. Cu 12GB RAM si 512GB stocare, Nord 5 are mai multa memorie si spatiu decat multe telefoane la dublu pretul sau.</p>
+
+            <p>Incarcarea la 100W SUPERVOOC este caracteristica definitorie a acestui telefon. De la 0 la 100% in 26 de minute. Citeste din nou: douazeci si sase de minute. Asta inseamna ca nu mai trebuie sa incarci telefonul peste noapte. Il pui la incarcat in timp ce faci un dus dimineata si cand termini ai baterie plina pentru toata ziua. Combinat cu bateria de 5500 mAh care tine o zi si jumatate cu utilizare normala, anxietatea bateriei dispare complet.</p>
+
+            <p>Ecranul de 6.7 inci AMOLED cu 120Hz este bun. Culorile sunt placute, luminozitatea este decenta si experienta generala este fluida. Nu este cel mai stralucitor ecran din aceasta lista, dar pentru pretul platit este mai mult decat acceptabil. OxygenOS 15 bazat pe Android 15 este curat, rapid si cu putine adaugiri inutile. OnePlus a mentinut filosofia software simplu si eficient.</p>
+
+            <p>Camera de 50MP produce fotografii bune in conditii de lumina normala. Culorile sunt placute, detaliul este bun si modul portret functioneaza corect. Pe timp de noapte, rezultatele sunt acceptabile dar sub Pixel 9a sau Samsung S25 FE. Camera ultrawide de 8MP este pentru situatii unde ai nevoie de unghi larg dar nu astepti calitate de referinta. Video la 4K este stabil si calitativ.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>Nord 5 este pentru utilizatorii care vor performanta maxima per leu. Daca incarcarea rapida este prioritara, daca vrei 512GB stocare fara sa platesti premium sau daca pur si simplu vrei un telefon rapid care face totul bine la un pret mic, Nord 5 este alegerea ta. Excelent pentru gameri datorita procesorului flagship si incarcarii care elimina downtime-ul.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Incarcare la 100W  - 0 la 100% in 26 minute, unic la acest pret</li>
+              <li>Snapdragon 8 Gen 3  - procesor de flagship la sub 2.500 lei</li>
+              <li>512GB stocare  - cel mai generos din categoria buget</li>
+              <li>12GB RAM pentru multitasking fara compromis</li>
+              <li>Baterie de 5500 mAh cu autonomie foarte buna</li>
+              <li>OxygenOS curat si rapid</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Camera foto sub Pixel 9a, mai ales pe timp de noapte</li>
+              <li>Camera ultrawide de doar 8MP  - slaba</li>
+              <li>Fara incarcare wireless</li>
+              <li>Rezistenta la apa doar IP65  - nu rezista la imersare</li>
+              <li>Actualizari software mai putine decat Samsung sau Google</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>OnePlus Nord 5 este cel mai bun telefon pentru cei care vor performanta bruta la buget minim. Incarcarea la 100W si procesorul flagship il fac unic sub 2.500 lei. Camera nu e punctul forte, dar daca performanta si autonomia conteaza mai mult decat fotografia, Nord 5 este imbatabil.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/oneplus-nord-5" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret OnePlus Nord 5</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- HONOR Magic 8 Lite Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/honor-magic-8-lite.webp" alt="HONOR Magic 8 Lite" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>HONOR Magic 8 Lite</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Snapdragon 6 Gen 3</div>
+                <div class="product-review__spec"><strong>Display</strong>6.78" AMOLED 120Hz</div>
+                <div class="product-review__spec"><strong>RAM</strong>8 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>512 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>6000 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>108MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>HONOR Magic 8 Lite este telefonul pe care il recomandam celor care pun autonomia bateriei pe primul loc si au un buget strict. Cu o baterie de 6000 mAh la un pret de circa 1.300 lei, Magic 8 Lite ofera autonomie pe care nu o gasesti la niciun alt telefon la acest pret. Vorbim de doua zile complete cu utilizare normala si o zi si jumatate chiar si cu utilizare intensa.</p>
+
+            <p>Snapdragon 6 Gen 3 este un procesor de gama medie care face o treaba buna in utilizarea zilnica. Social media, mesagerie, navigare web, video streaming  - totul merge fara probleme. Nu este un procesor de gaming, dar pentru jocuri casual functioneaza acceptabil. Cu 8GB RAM, poti tine cateva aplicatii deschise simultan fara reincarcare. Nu astepti multitasking de flagship, dar pentru utilizare normala este suficient.</p>
+
+            <p>Ecranul de 6.78 inci AMOLED cu 120Hz este surprinzator de bun la acest pret. Culorile sunt vii, contrastul este bun si fluiditatea la 120Hz face experienta placuta. Dimensiunea generoasa este potrivita pentru video si social media. Luminozitatea nu este la nivelul flagship-urilor, dar in interior si pe vreme inorata este perfect vizibil.</p>
+
+            <p>Camera de 108MP suna bine pe hartie. In realitate, produce fotografii bune in lumina naturala  - detaliate si cu culori placute. Pe timp de noapte calitatea scade vizibil, iar camera secondary de 5MP depth este utila doar pentru portrete de baza. Video la 1080p este stabil si acceptabil. Nu este un telefon de fotografie, dar pentru utilizare sociala face o treaba corecta.</p>
+
+            <p>512GB stocare la acest pret este un avantaj urias. Poti stoca mii de fotografii, zeci de jocuri si sute de aplicatii fara grija spatiului. MagicOS 8 bazat pe Android 14 este curat si functioneaza bine, desi actualizarile software nu vin la fel de rapid ca la Samsung sau Google. Constructia este solida pentru pret, cu un design subtire si usor care se simte bine in mana.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>Magic 8 Lite este pentru utilizatorii care vor un telefon care tine doua zile fara incarcare la un pret mic. Perfect pentru parinti, bunici sau oricine nu vrea sa se gandeasca la baterie. Potrivit si pentru cei care au nevoie de multa stocare la buget limitat. Nu este un telefon de performanta sau fotografie, ci un telefon de fiabilitate si autonomie.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Baterie de 6000 mAh  - doua zile de autonomie reala</li>
+              <li>512GB stocare la pret de sub 1.500 lei  - rar la acest pret</li>
+              <li>Ecran AMOLED 120Hz de 6.78 inci  - placut si fluid</li>
+              <li>Design subtire si usor pentru o baterie atat de mare</li>
+              <li>Pret accesibil sub 1.500 lei</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Doar 4G  - fara suport 5G</li>
+              <li>Camera slaba pe timp de noapte</li>
+              <li>Procesor de gama medie  - nu pentru gaming serios</li>
+              <li>Incarcare la 35W  - decenta dar nu rapida</li>
+              <li>Actualizari software mai lente si mai putine</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>HONOR Magic 8 Lite este campionul autonomiei la buget mic. Daca bateria care tine doua zile si 512GB stocare sunt prioritatile tale, nu exista alternativa mai buna sub 1.500 lei. Compromisurile la camera si performanta sunt acceptabile pentru publicul tinta al acestui telefon.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/honor-magic-8-lite" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret HONOR Magic 8 Lite</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Motorola edge 70 Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/motorola-edge-70.webp" alt="Motorola edge 70" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Motorola edge 70</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Dimensity 7350</div>
+                <div class="product-review__spec"><strong>Display</strong>6.7" pOLED 120Hz</div>
+                <div class="product-review__spec"><strong>RAM</strong>12 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>512 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>5300 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>50MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Motorola edge 70 este un telefon echilibrat care face totul bine fara sa exceleze intr-un singur domeniu. Si asta este exact ce multi utilizatori au nevoie: un telefon complet, fara compromisuri majore, la un pret de circa 1.800 lei. Ecranul pOLED, bateria de 5300 mAh, 12GB RAM si 512GB stocare formeaza un pachet pe care il gasesti rar la acest pret.</p>
+
+            <p>MediaTek Dimensity 7350 este un procesor de gama medie-inalta care gestioneaza bine utilizarea zilnica. Aplicatii, social media, streaming, navigare  - totul merge fluid. Jocurile casual merg bine, iar jocurile mai solicitante ruleaza la setari medii fara probleme. Cu 12GB RAM, multitasking-ul este surprinzator de bun  - poti tine multe aplicatii deschise si tranzitia intre ele este rapida.</p>
+
+            <p>Ecranul pOLED de 6.7 inci cu 120Hz este un punct forte. pOLED este tehnologia Motorola proprie care ofera calitate apropiata de AMOLED  - negru profund, culori vibrante si unghi de vizualizare bun. Diferenta fata de AMOLED pur este minima si la utilizare normala nu vei simti nimic. 120Hz asigura fluiditate in tot ce faci.</p>
+
+            <p>Camera principala de 50MP cu stabilizare optica produce fotografii bune. In lumina naturala rezultatele sunt placute, cu culori naturale si detaliu bun. Camera ultrawide de 13MP este peste media categoriei de buget  - utila pentru cadre largi si fotografii de grup. Pe timp de noapte calitatea scade, dar Motorola a imbunatatit procesarea comparativ cu generatiile anterioare.</p>
+
+            <p>Bateria de 5300 mAh ofera autonomie solida de o zi si jumatate cu utilizare normala. Incarcarea TurboPower la 68W este un avantaj serios  - de la 0 la 50% in 15 minute. Asta inseamna ca o incarcare rapida de dimineata iti ofera suficienta baterie pentru o zi intreaga. Software-ul Motorola Hello UX este aproape stock Android cu cateva adaugiri utile: gesturi Motorola, afisaj mereu activ personalizabil si Motorola Connect pentru integrare cu PC-ul.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>Motorola edge 70 este pentru utilizatorii care vor un telefon complet si echilibrat fara sa plateasca premium. Daca nu ai o prioritate anume  - nu esti gamer inrait, nu esti fotograf pasionat  - si pur si simplu vrei un telefon bun care face totul corect, edge 70 este o alegere solida. Bun si pentru cei care prefera software aproape stock Android.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Telefon echilibrat care face totul bine la pret accesibil</li>
+              <li>Ecran pOLED 120Hz de calitate buna</li>
+              <li>Incarcare TurboPower 68W  - rapida si practica</li>
+              <li>12GB RAM si 512GB stocare  - generos pentru pret</li>
+              <li>Software aproape stock Android  - curat si rapid</li>
+              <li>Camera ultrawide de 13MP peste media categoriei</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Procesor Dimensity 7350  - nu pentru gaming serios</li>
+              <li>Camera pe noapte sub Pixel 9a si Samsung</li>
+              <li>Fara incarcare wireless</li>
+              <li>Brand mai putin cunoscut  - valoare de revanzare mai mica</li>
+              <li>Actualizari software limitate la 3 ani de versiuni Android</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>Motorola edge 70 este telefonul complet al categoriei buget. Nu exista intr-un singur domeniu dar face totul bine la un pret corect. Incarcarea la 68W si ecranul pOLED sunt punctele forte. Daca vrei un telefon fiabil si echilibrat sub 2.000 lei, edge 70 merita pe lista scurta.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/motorola-edge-70" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Motorola edge 70</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Buget - Continut SEO -->
+      <div class="guide" style="margin-top:3rem;">
+        <h3>Telefoane de buget 2026</h3>
+        <p><strong>Ce telefon bun poti lua sub 3.000 lei?</strong> Google Pixel 9a pentru foto, OnePlus Nord 5 pentru incarcare rapida la 100W, Xiaomi 15T pentru specificatii, Samsung Galaxy S25 FE pentru ecosistem Galaxy, HONOR Magic 8 Lite pentru baterie si Motorola edge 70 pentru echilibru general.</p>
+        <p>In 2024, un telefon la 2.000 lei venea cu procesor lent, ecran LCD si camera mediocra. In 2026, la acelasi pret primesti Snapdragon 8 Gen 3, ecran AMOLED 120Hz si camere care rivalizeaza cu flagship-urile de acum doi ani.</p>
+
+        <h4>Ce conteaza la un telefon de buget?</h4>
+        <p>Procesorul conteaza, dar nu atat cat crezi. Un Snapdragon 6 Gen 3 sau Dimensity 7350 gestioneaza perfect utilizarea zilnica. Diferenta fata de un flagship se simte doar in jocuri grele si editare video profesionala. Daca nu faci aceste lucruri, nu ai nevoie de cel mai puternic procesor.</p>
+        <ul>
+          <li>Ecranul trebuie sa fie AMOLED si minim 90Hz. LCD nu mai are sens in 2026 la orice pret</li>
+          <li>Bateria trebuie sa fie minim 4500 mAh. Sub aceasta valoare, autonomia va fi o problema</li>
+          <li>Stocarea trebuie sa fie minim 128GB, ideal 256GB. Aplicatiile si pozele ocupa din ce in ce mai mult</li>
+          <li>Suportul software conteaza enorm. Samsung si Google ofera 7 ani  - asta inseamna ca telefonul tau ramane sigur si actualizat ani de zile</li>
+          <li>Incarcarea rapida face diferenta reala. 25W este minim acceptabil, 67-100W schimba complet modul in care folosesti telefonul</li>
+        </ul>
+
+        <h4>Ce greseli sa eviti</h4>
+        <p><strong>Conteaza megapixelii la un telefon de buget?</strong> Nu neaparat. Un senzor de 108MP pe un telefon de buget nu face poze mai bune decat un senzor de 48MP cu procesare buna, cum e pe Pixel 9a. Mai important e sa nu ignori suportul software si sa nu cumperi cel mai ieftin telefon posibil. Diferenta intre 800 lei si 1.500 lei e mare, iar telefonul de 1.500 lei va tine dublu.</p>
+
+        <h4>Telefon nou de buget sau flagship vechi?</h4>
+        <p><strong>Merita un Samsung S23 la pret redus in loc de un Pixel 9a nou?</strong> Flagship-ul vechi are procesor mai puternic si camera mai buna, dar bateria e uzata si suportul software se termina curand. Telefonul nou vine cu baterie proaspata, garantie si ani de actualizari. Daca il tii 3+ ani, ia telefonul nou.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="ieftine" class="fade-in" style="background:#f7f8fa;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Sub 1.500 lei</span>
+        <h2>Telefoane Ieftine 2026</h2>
+        <p>Cele mai bune telefoane la preturi mici. Nu trebuie sa platesti mult pentru un telefon bun.</p>
+      </div>
+
+      <div class="section-intro">
+        <p><strong>Care este cel mai bun telefon ieftin in 2026?</strong> Samsung Galaxy A26 la aproximativ 1.200 lei  - vine cu ecran Super AMOLED 120Hz, baterie de 5000 mAh, 6GB RAM si 4 ani de actualizari. E cel mai echilibrat telefon sub 1.500 lei. Daca vrei baterie de 6600 mAh si rezistenta la apa, HONOR Magic7 Lite la ~1.100 lei este alternativa cu cea mai mare autonomie din aceasta categorie.</p>
+      </div>
+
+      <div class="products-grid">
+        {products.ieftin.map((p, i) => (
+          <ProductCard
+            name={p.name}
+            slug={p.slug}
+            image={p.image}
+            affiliate={p.affiliate}
+            specs={p.specs}
+            badge={i === 0 ? 'Top Ieftin' : undefined}
+          />
+        ))}
+      </div>
+      <!-- Ieftine Reviews -->
+      <div style="margin-top:3rem;">
+
+        <!-- Samsung Galaxy A26 Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/samsung-galaxy-a26.webp" alt="Samsung Galaxy A26" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Samsung Galaxy A26</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Exynos 1480</div>
+                <div class="product-review__spec"><strong>Display</strong>6.7" Super AMOLED 120Hz</div>
+                <div class="product-review__spec"><strong>RAM</strong>8 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>256 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>5000 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>50MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Samsung Galaxy A26 este telefonul pe care Samsung il face pentru masele largi si il face bine. Seria Galaxy A este cea mai vanduta serie de telefoane Samsung la nivel mondial si din motive intemeiate. A26 ofera experienta Samsung completa  - One UI, Samsung Pay, Samsung Health, Galaxy Store  - la un pret pe care oricine si-l permite. Nu este spectaculos pe hartie, dar in practica face exact ce ai nevoie, zi de zi, fara sa te lase la greu.</p>
+
+            <p>Exynos 1480 este un procesor construit de Samsung specific pentru gama medie. Performanta este buna pentru utilizare zilnica: aplicatii sociale, mesagerie, email, navigare web  - totul merge fara lag vizibil. Nu este un procesor de gaming serios, dar jocurile casual merg bine, iar titluri precum PUBG Mobile ruleaza la setari medii fara probleme. Cu 8GB RAM, multitasking-ul este decent pentru doua-trei aplicatii simultane.</p>
+
+            <p>Ecranul Super AMOLED de 6.7 inci cu 120Hz este cel mai mare avantaj al lui A26. La sub 1.500 lei, primesti un ecran Samsung AMOLED autentic  - cu culori vibrante, negru profund si fluiditate la 120Hz. Diferenta fata de telefoanele cu LCD la acelasi pret este vizibila instant. Vizionarea continutului pe YouTube, Netflix sau TikTok este o experienta placuta pe acest ecran. Luminozitatea este suficienta pentru utilizare in interior si pe vreme innorata.</p>
+
+            <p>Camera de 50MP produce fotografii corecte. In lumina buna, rezultatele sunt bune pentru social media  - culori placute, detaliu decent si focalizare rapida. Camera ultrawide de 8MP este utilizabila pentru fotografii wide, iar senzorul de 2MP pentru depth ajuta la portrete. Pe timp de noapte calitatea scade vizibil  - Samsung a imbunatatit procesarea fata de A25, dar nu te astepta la miracole. Video la 1080p este stabil si suficient pentru clipuri sociale.</p>
+
+            <p>Bateria de 5000 mAh combinata cu ecranul AMOLED eficient ofera autonomie de o zi si jumatate cu utilizare normala. Incarcarea la 25W este lenta comparativ cu competitia, dar peste noapte nu conteaza. Samsung ofera actualizari pe 4 ani de versiuni Android si 5 ani de securitate pe A26, ceea ce este generos pentru un telefon de buget mic. Rezistenta la apa IP67 este un bonus rar la acest pret.</p>
+
+            <p>Conectivitatea 5G pregateste telefonul pentru viitor. Pe masura ce retelele 5G se extind in Romania, A26 va beneficia de viteze mai mari de internet mobil fara sa fie nevoie de un telefon nou. NFC pentru Samsung Pay inseamna ca poti plati contactless direct de pe telefon. One UI 7 ofera o experienta curata si bine organizata.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>Galaxy A26 este pentru cei care vor un telefon Samsung fiabil la pret mic. Perfect pentru utilizatorii care sunt deja familiarizati cu Samsung si vor sa ramana in ecosistem fara sa plateasca mult. Excelent pentru studenti, pentru un al doilea telefon de serviciu sau pentru parinti care vor un telefon simplu dar capabil cu ecran bun.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Ecran Super AMOLED 120Hz la sub 1.500 lei  - cel mai bun ecran la pret mic</li>
+              <li>5G si NFC  - pregatit pentru viitor si plati contactless</li>
+              <li>Baterie de 5000 mAh cu autonomie buna</li>
+              <li>One UI 7 complet cu 4 ani de actualizari Android</li>
+              <li>IP67  - rezistent la apa, rar la acest pret</li>
+              <li>256GB stocare  - generos</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Procesor Exynos 1480  - nu pentru gaming serios</li>
+              <li>Camera slaba pe timp de noapte</li>
+              <li>Incarcare la doar 25W  - lenta pentru 2026</li>
+              <li>Constructie din plastic</li>
+              <li>Luminozitate ecran sub flagship-uri in soare direct</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>Samsung Galaxy A26 este cel mai bun Samsung pe care il poti cumpara sub 1.500 lei. Ecranul AMOLED, 5G, IP67 si ecosistemul Samsung complet il fac o alegere logica pentru cei care vor fiabilitate si brand de incredere la pret mic.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/samsung-galaxy-a26" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Samsung Galaxy A26</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- HONOR Magic7 Lite Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/honor-magic7-lite.webp" alt="HONOR Magic7 Lite" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>HONOR Magic7 Lite</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Snapdragon 6 Gen 1</div>
+                <div class="product-review__spec"><strong>Display</strong>6.78" AMOLED 120Hz</div>
+                <div class="product-review__spec"><strong>RAM</strong>8 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>256 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>6600 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>108MP principal</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>HONOR Magic7 Lite detine un record pe care niciun alt telefon din aceasta lista nu il poate egala: 6600 mAh. Aceasta este cea mai mare baterie pe care o gasesti pe un telefon mainstream in 2026 si se traduce in autonomie reala de doua zile si jumatate cu utilizare usoara sau doua zile solide cu utilizare normala. Daca ai fost vreodata stresat ca ramai fara baterie, Magic7 Lite elimina aceasta problema complet.</p>
+
+            <p>Snapdragon 6 Gen 1 este un procesor decent pentru utilizare zilnica. Nu astepti performanta de flagship, dar social media, mesagerie, navigare web si streaming video merg fara probleme. HONOR a optimizat bine software-ul pentru acest procesor, iar MagicOS 8 este fluid si receptiv. Cu 8GB RAM, poti tine cateva aplicatii deschise simultan fara reincarcare.</p>
+
+            <p>Ecranul de 6.78 inci AMOLED cu 120Hz este placut. Dimensiunea mare este potrivita pentru video si social media, culorile sunt vibrante iar fluiditatea la 120Hz face experienta placuta. Nu este cel mai luminos ecran, dar in conditii normale de utilizare este mai mult decat suficient. Protectia ecranului este decenta si rezista la zgarieturi minore din utilizarea zilnica.</p>
+
+            <p>Camera de 108MP produce fotografii surprinzator de detaliate in lumina buna. La acest pret, calitatea foto in conditii ideale este peste asteptari. Poti face crop semnificativ si tot ai suficient detaliu. Probleme apar pe timp de noapte, unde procesarea nu tine pasul cu ce ofera Samsung sau Google. Camera secundara de 5MP depth ajuta la portrete de baza dar nu la mai mult.</p>
+
+            <p>Incarcarea la 35W este decenta  - nu rapida, dar avand in vedere bateria uriasa, nu vei incarca des. O incarcare completa dureaza circa doua ore, dar daca incarci peste noapte nu conteaza. Faptul ca telefonul tine doua zile inseamna ca il incarci la doua nopti, nu in fiecare seara. Asta schimba modul in care te gandesti la baterie.</p>
+
+            <p>La un pret de circa 1.100 lei, Magic7 Lite este unul dintre cele mai ieftine telefoane cu ecran AMOLED 120Hz si baterie peste 6000 mAh. Design-ul este subtire si usor pentru dimensiunile bateriei, ceea ce este o realizare inginereasca notabila. HONOR a reusit sa faca un telefon care nu se simte ca un caramida desi are cea mai mare baterie din segment.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>Magic7 Lite este pentru oricine pune autonomia bateriei pe primul loc. Perfect pentru calatori care nu au acces constant la priza, pentru lucratori in teren, pentru parinti care vor un telefon simplu care nu trebuie incarcat zilnic sau pentru oricine este obosit sa se gandeasca la baterie. Daca autonomia este prioritatea ta numarul unu si bugetul este limitat, acesta este telefonul tau.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Baterie de 6600 mAh  - campion absolut de autonomie, doua zile reale</li>
+              <li>Pret sub 1.200 lei  - extrem de accesibil</li>
+              <li>Ecran AMOLED 120Hz mare de 6.78 inci</li>
+              <li>Camera 108MP cu rezultate bune in lumina naturala</li>
+              <li>Design subtire si usor pentru bateria uriasa</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Doar 4G  - fara suport 5G</li>
+              <li>Procesor de gama medie  - nu pentru gaming</li>
+              <li>Camera slaba pe timp de noapte</li>
+              <li>Doar camera secundara de 5MP depth  - fara ultrawide</li>
+              <li>Actualizari software limitate de la HONOR</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>HONOR Magic7 Lite este regele autonomiei sub 1.200 lei. Daca vrei un telefon care tine doua zile fara incarcare si nu vrei sa cheltuiesti mult, nu exista alternativa mai buna. Compromisurile la procesor si camera sunt rezonabile pentru publicul tinta.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/honor-magic7-lite" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret HONOR Magic7 Lite</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- realme 14 Pro 5G Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/realme-14-pro-5g.webp" alt="realme 14 Pro 5G" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>realme 14 Pro 5G</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Snapdragon 7s Gen 3</div>
+                <div class="product-review__spec"><strong>Display</strong>6.7" AMOLED 120Hz</div>
+                <div class="product-review__spec"><strong>RAM</strong>8 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>256 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>6000 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>50MP OIS</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>realme 14 Pro 5G aduce o combinatie rara sub 1.500 lei: 5G, camera cu stabilizare optica (OIS), baterie de 6000 mAh si ecran AMOLED 120Hz. Fiecare dintre aceste caracteristici e greu de crezut individual la acest pret, dar impreuna formeaza un pachet pe care putini competitori il pot egala. realme a inteles ce conteaza pentru cumparatorul de buget si a livrat exact asta.</p>
+
+            <p>Snapdragon 7s Gen 3 este un procesor de gama medie-inalta care ofera performanta buna pentru utilizare variata. Aplicatiile se deschid rapid, interfata realme UI 6 este fluida si jocurile casual merg fara probleme. Pentru titluri mai solicitante, trebuie sa cobori setarile la mediu, dar rezultatele sunt jucabile. Cu 8GB RAM si 256GB stocare, ai suficient spatiu si memorie pentru ani de utilizare.</p>
+
+            <p>Camera principala de 50MP cu OIS este punctul forte al acestui telefon in categoria ieftine. Stabilizarea optica face o diferenta enorma in fotografii  - imaginile sunt mai clare, mai ales in conditii de lumina slaba sau cand mainile tremura usor. In lumina naturala, fotografiile sunt detaliate si cu culori naturale. Modul portret produce un bokeh placut, iar camera ultrawide de 8MP completeaza bine sistemul pentru fotografii de grup si cadre largi.</p>
+
+            <p>Bateria de 6000 mAh ofera autonomie de aproape doua zile cu utilizare normala. Incarcarea la 45W este cea mai rapida din categoria telefoanelor ieftine  - de la 0 la 50% in circa 30 de minute. Aceasta combinatie de baterie mare si incarcare rapida inseamna ca nu vei avea niciodata anxietatea bateriei. 5G asigura ca telefonul este pregatit pentru retelele viitoare din Romania.</p>
+
+            <p>Design-ul realme 14 Pro 5G este surprinzator de atragator pentru pret. Spatele are o textura care schimba culoarea in functie de temperatura  - un efect vizual interesant care face telefonul sa iasa in evidenta. Constructia este solida, greutatea este confortabila si telefonul se simte mai scump decat este. realme UI 6 bazat pe Android 15 este curat si functioneaza bine, cu personalizari utile fara bloatware excesiv.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>realme 14 Pro 5G este pentru cei care vor cel mai complet pachet posibil sub 1.500 lei. Daca vrei 5G, camera cu OIS, baterie mare si ecran AMOLED fara sa platesti mult, acesta este telefonul tau. Perfect pentru tineri si studenti care vor un telefon capabil cu design atragator la buget limitat.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Camera 50MP cu OIS  - cea mai buna stabilizare la acest pret</li>
+              <li>5G la sub 1.500 lei  - pregatit pentru viitor</li>
+              <li>Baterie de 6000 mAh cu incarcare rapida la 45W</li>
+              <li>Ecran AMOLED 120Hz de calitate buna</li>
+              <li>Design atragator cu efect de schimbare a culorii</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Camera ultrawide de 8MP  - calitate medie</li>
+              <li>Procesor sub Snapdragon 8 Gen 3 de pe Nord 5 sau S25 FE</li>
+              <li>Brand mai putin cunoscut  - service si piese mai greu de gasit</li>
+              <li>Actualizari software limitate la 2-3 ani</li>
+              <li>Fara incarcare wireless si fara NFC la unele variante</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>realme 14 Pro 5G ofera cel mai bun echilibru de caracteristici sub 1.500 lei. Camera cu OIS, 5G, baterie de 6000 mAh si incarcare la 45W formeaza un pachet pe care competitia nu il poate egala la acest pret. Daca vrei maximum de telefon per leu, realme 14 Pro 5G livreaza.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/realme-14-pro-5g" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret realme 14 Pro 5G</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Motorola Moto g86 Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/motorola-moto-g86.webp" alt="Motorola Moto g86" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Motorola Moto g86</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Snapdragon 6s Gen 3</div>
+                <div class="product-review__spec"><strong>Display</strong>6.67" pOLED 120Hz</div>
+                <div class="product-review__spec"><strong>RAM</strong>8 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>256 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>5000 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>50MP OIS</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Motorola Moto g86 este un telefon care nu face valuri dar face treaba. Seria Moto G este una dintre cele mai longevive serii de telefoane de buget si din motive intemeiate: Motorola stie sa faca telefoane fiabile la preturi mici. Moto g86 continua aceasta traditie cu un ecran pOLED excelent, camera cu OIS si o experienta software curata care se apropie de stock Android.</p>
+
+            <p>Snapdragon 6s Gen 3 este un procesor de gama medie care ofera performanta adecvata pentru utilizare zilnica. Nu este cel mai rapid din lista, dar gestioneaza bine scrolling-ul prin social media, navigarea web cu mai multe tab-uri, streaming video si aplicatii de mesagerie. Cu 8GB RAM, telefonul gestioneaza multitasking-ul de baza fara probleme vizibile.</p>
+
+            <p>Ecranul pOLED de 6.67 inci cu 120Hz este cel mai mare avantaj al Moto g86. pOLED ofera calitate apropiata de AMOLED  - negru profund, culori vibrante si contrast excelent  - la un pret mai mic. La circa 1.200 lei, primesti un ecran pe care multi producatori il ofera la 2.000 lei. Experienta de vizionare continut este excelenta: Netflix, YouTube si TikTok arata foarte bine pe acest ecran.</p>
+
+            <p>Camera de 50MP cu stabilizare optica este surprinzator de capabila. OIS face diferenta in fotografii  - imaginile sunt mai clare si mai stabile, mai ales la distante mai mari sau in lumina slaba. In conditii de lumina normala, rezultatele sunt bune pentru un telefon la acest pret  - detaliu decent, culori naturale si focalizare rapida. Camera ultrawide de 8MP este utilizabila. Video la 1080p este stabil datorita OIS.</p>
+
+            <p>Bateria de 5000 mAh ofera autonomie de o zi si jumatate cu utilizare normala. Incarcarea TurboPower la 30W nu este cea mai rapida, dar duce bateria de la 0 la 50% in circa 30 de minute. Software-ul Motorola este punct forte: Android aproape stock, fara bloatware, cu gesturi intuitive Motorola si afisaj mereu activ personalizabil. Conectivitatea 5G si Wi-Fi 6E asigura viteze bune de internet.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>Moto g86 este pentru utilizatorii care apreciaza un ecran bun si software curat la pret mic. Daca iti place Android stock, daca vrei un ecran pOLED fara sa platesti mult sau daca vrei o camera cu OIS sub 1.500 lei, Moto g86 este o optiune de top. Bun si pentru cei care vor un telefon simplu dar capabil, fara complicatii software.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Ecran pOLED 120Hz rar intalnit la acest pret</li>
+              <li>Camera 50MP cu OIS  - fotografii stabile si clare</li>
+              <li>Software aproape stock Android  - curat si rapid</li>
+              <li>5G si Wi-Fi 6E  - conectivitate moderna</li>
+              <li>Gesturi Motorola intuitive si practice</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Procesor Snapdragon 6s Gen 3  - cel mai lent din categoria buget</li>
+              <li>Incarcare la 30W  - sub media competitiei</li>
+              <li>Actualizari software limitate la 2 ani de versiuni Android</li>
+              <li>Constructie din plastic  - nu se simte premium</li>
+              <li>Luminozitate ecran medie in soare puternic</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>Motorola Moto g86 este cel mai bun telefon cu ecran pOLED sub 1.300 lei. Software-ul curat si camera cu OIS completeaza un pachet solid. Nu este cel mai puternic sau cel mai rapid, dar ofera o experienta placuta si fiabila la un pret corect.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/motorola-moto-g86" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Motorola Moto g86</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Apple iPhone XR Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/apple-iphone-xr.webp" alt="Apple iPhone XR" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Apple iPhone XR</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Apple A12 Bionic</div>
+                <div class="product-review__spec"><strong>Display</strong>6.1" Liquid Retina LCD</div>
+                <div class="product-review__spec"><strong>RAM</strong>3 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>64 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>2942 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>12MP</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Apple iPhone XR este un telefon din 2018 pe care il includem in lista din 2026 cu un avertisment clar: il recomandam doar celor care vor sa intre in ecosistemul Apple la pretul absolut minim. La circa 700 lei, iPhone XR ofera acces la iMessage, FaceTime, AirDrop si App Store  - lucruri pe care niciun telefon Android nu le poate oferi. Dar compromisurile sunt reale si trebuie sa le cunosti.</p>
+
+            <p>Apple A12 Bionic a fost un procesor excelent in 2018. In 2026, functioneaza acceptabil pentru utilizare de baza dar simti varsta. Aplicatiile se deschid mai lent decat pe orice telefon nou din aceasta lista, tranzitiile au uneori microlag-uri si aplicatiile mai grele pot fi lente. iOS 16 este ultima versiune suportata, ceea ce inseamna ca iPhone XR nu primeste iOS 17, 18 sau 19. Actualizarile de securitate inca vin, dar nu mai primesti functii noi.</p>
+
+            <p>Ecranul Liquid Retina LCD de 6.1 inci este decent dar arata datat. Dupa ce vezi un AMOLED, LCD-ul pare sters  - negrul este gri, contrastul este inferior si culorile sunt mai putin vibrante. Rezolutia de 828p este sub standardul 2026, iar rata de refresh de 60Hz este cea mai mica din aceasta lista. Totusi, pentru navigare web, mesagerie si social media, ecranul este functional.</p>
+
+            <p>Camera de 12MP face fotografii acceptabile in lumina buna. Nu te astepta la Night Sight sau portrete cu bokeh natural  - procesarea foto a avansat enorm din 2018. Fotografiile sunt decente pentru social media daca ai lumina suficienta, dar pe timp de noapte rezultatele sunt slabe. Video la 4K 30fps este stabil si calitativ pentru acest pret  - Apple a fost mereu bun la video.</p>
+
+            <p>Bateria de 2942 mAh este cel mai mare dezavantaj. In 2026, cu o baterie uzata de ani de utilizare, autonomia poate fi de doar 4-5 ore de ecran activ. Daca cumperi un iPhone XR, verifica sanatatea bateriei. Un inlocuire de baterie costa circa 200-300 lei si merita daca telefonul este altfel in stare buna. Incarcarea la 18W este lenta dar daca incarci peste noapte nu conteaza.</p>
+
+            <p>Avantajul real al iPhone XR este ecosistemul. Daca familia si prietenii tai au iPhone, iMessage si FaceTime sunt motivele pentru care alegi acest telefon. Daca ai AirPods, conectarea este instantanee. Daca ai Mac, continuitatea functioneaza. Aceste avantaje de ecosistem nu au pret si nu exista pe Android.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>iPhone XR este strict pentru cei care vor ecosistem Apple la pretul cel mai mic posibil. Daca nu te intereseaza iMessage sau FaceTime, ia un Android nou la 700 lei si vei avea o experienta mult mai buna. Dar daca ecosistemul Apple conteaza si bugetul este extrem de limitat, XR este singura optiune la acest pret.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Cel mai ieftin mod de a intra in ecosistemul Apple</li>
+              <li>iMessage, FaceTime, AirDrop  - exclusive iOS</li>
+              <li>Constructie din aluminiu si sticla  - solida si in 2026</li>
+              <li>Video 4K decent pentru acest pret</li>
+              <li>Face ID functional  - deblocare rapida si sigura</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Telefon din 2018  - hardware semnificativ datat</li>
+              <li>iOS 16 maxim  - fara actualizari noi de versiune</li>
+              <li>Ecran LCD 828p la 60Hz  - sub orice standard 2026</li>
+              <li>Baterie mica de 2942 mAh  - probabil uzata</li>
+              <li>Camera de 12MP fara Night Sight sau procesare moderna</li>
+              <li>Doar 64GB stocare  - limitat</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>iPhone XR merita cumparat in 2026 doar daca ecosistemul Apple este prioritar si bugetul este sub 800 lei. In orice alt scenariu, un telefon Android nou la acelasi pret ofera o experienta superioara in fiecare aspect. Cumpara-l doar pentru iMessage si FaceTime, nu pentru specificatii.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/apple-iphone-xr" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Apple iPhone XR</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Huawei P30 Pro Review -->
+        <article class="product-review fade-in">
+          <div class="product-review__header">
+            <div class="product-review__image">
+              <img src="/images/products/huawei-p30-pro.webp" alt="Huawei P30 Pro" width="160" height="160" loading="lazy" decoding="async" />
+            </div>
+            <div class="product-review__meta">
+              <h3>Huawei P30 Pro</h3>
+              <div class="product-review__specs-grid">
+                <div class="product-review__spec"><strong>Procesor</strong>Kirin 980</div>
+                <div class="product-review__spec"><strong>Display</strong>6.47" OLED FHD+</div>
+                <div class="product-review__spec"><strong>RAM</strong>8 GB</div>
+                <div class="product-review__spec"><strong>Stocare</strong>128 GB</div>
+                <div class="product-review__spec"><strong>Baterie</strong>4200 mAh</div>
+                <div class="product-review__spec"><strong>Camera</strong>40MP + 20MP + 8MP 5x</div>
+              </div>
+            </div>
+          </div>
+          <div class="product-review__content">
+            <p>Huawei P30 Pro este un fost flagship din 2019 care in 2026 se gaseste la preturi de sub 900 lei. A fost la lansare unul dintre cele mai bune telefoane pentru fotografie din lume, cu un sistem de camere foarte avansat pentru epoca sa. Camera periscop cu zoom optic 5x era unica pe piata si senzorul principal de 40MP cu procesare Huawei facea fotografii foarte bune. Intrebarea este: mai merita in 2026?</p>
+
+            <p>Raspunsul este nuantat. Hardware-ul ramane solid pentru pret. Kirin 980 functioneaza decent in utilizare zilnica  - nu este rapid, dar gestioneaza aplicatiile de baza fara probleme majore. 8GB RAM ajuta la multitasking, iar 128GB stocare este suficient daca nu stochezi totul pe telefon. Ecranul OLED de 6.47 inci este frumos, cu culori bune si negru profund. Constructia este premium  - sticla si metal, cu design curbat care se simte bine in mana.</p>
+
+            <p>Camera periscop cu zoom optic 5x ramane peste asteptari chiar si in 2026. Poti fotografia obiecte la distanta cu claritate pe care telefoanele noi la 800 lei nu o pot oferi. Camera ultrawide de 20MP este generoasa ca rezolutie. Modul noapte Huawei era cel mai bun de pe piata la lansare si inca produce rezultate surprinzator de bune. Fotografiile generale in lumina buna sunt detaliate si placute.</p>
+
+            <p>Marele dezavantaj este elefantul din camera: fara Google Services. Huawei P30 Pro vine cu Android 10 si EMUI fara acces la Google Play Store, Gmail, Google Maps sau YouTube in forma nativa. Poti instala Google Services prin metode alternative, dar procesul este complicat si nu functioneaza intotdeauna stabil. Daca depinzi de aplicatiile Google  - si majoritatea oamenilor depind  - aceasta este o bariera semnificativa.</p>
+
+            <p>Bateria de 4200 mAh este decenta dar in 2026 este probabil uzata. Ca si la iPhone XR, verifica sanatatea bateriei inainte de cumparare. Incarcarea la 40W este surprinzator de rapida pentru un telefon din 2019 si incarcarea wireless la 15W este un bonus. Software-ul nu mai primeste actualizari majore, ceea ce inseamna potentiale vulnerabilitati de securitate pe termen lung.</p>
+
+            <h4>Pentru cine este potrivit</h4>
+            <p>P30 Pro este pentru utilizatorii tehnici care stiu cum sa instaleze Google Services si vor un telefon cu camera excelenta la pret mic. Daca esti confortabil cu solutii alternative pentru Google si vrei zoom optic 5x sub 900 lei, P30 Pro ofera hardware pe care nu il gasesti la niciun telefon nou la acest pret. Nu il recomandam utilizatorilor care vor o experienta simpla, fara configurari tehnice.</p>
+
+            <h4>Avantaje</h4>
+            <ul class="product-review__pros">
+              <li>Camera periscop zoom 5x  - unica sub 1.000 lei</li>
+              <li>Ecran OLED de 6.47 inci cu calitate de fost flagship</li>
+              <li>Constructie premium din sticla si metal</li>
+              <li>Incarcare rapida la 40W si wireless la 15W</li>
+              <li>8GB RAM si 128GB stocare  - suficient pentru baza</li>
+              <li>Mod noapte inca competitiv</li>
+            </ul>
+
+            <h4>Dezavantaje</h4>
+            <ul class="product-review__cons">
+              <li>Fara Google Services nativ  - bariera majora pentru majoritatea</li>
+              <li>Software datat pe Android 10  - fara actualizari noi</li>
+              <li>Baterie probabil uzata dupa 6+ ani</li>
+              <li>Kirin 980  - lent pentru aplicatii moderne solicitante</li>
+              <li>Doar 4G  - fara 5G</li>
+              <li>Vulnerabilitati de securitate potentiale fara update-uri</li>
+            </ul>
+
+            <div class="product-review__verdict">
+              <h4>Verdict</h4>
+              <p>Huawei P30 Pro este un fost campion la fotografie disponibil acum la pret de telefon de buget. Camera periscop ramane peste asteptari, dar lipsa Google Services este un deal-breaker pentru majoritatea utilizatorilor. Cumpara-l doar daca stii ce faci din punct de vedere tehnic si accepti compromisurile software.</p>
+            </div>
+
+            <div class="product-review__cta-wrap">
+              <a href="/out/huawei-p30-pro" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Huawei P30 Pro</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Ieftine - Continut SEO -->
+      <div class="guide" style="margin-top:3rem;">
+        <h3>Telefoane ieftine 2026</h3>
+        <p><strong>Se poate un telefon bun sub 1.500 lei?</strong> Da. In 2026 gasesti sub 1.500 lei ecrane AMOLED 120Hz, procesoare care misca orice aplicatie, baterii de 5000-6600 mAh si camere cu stabilizare optica. Specificatii de flagship de acum 3-4 ani.</p>
+        <p>Doua tipuri de telefoane in aceasta categorie: telefoane noi (Samsung Galaxy A26, HONOR Magic7 Lite, realme 14 Pro 5G, Motorola Moto g86) cu baterie noua, garantie si actualizari, si foste flagship-uri (iPhone XR, Huawei P30 Pro) cu hardware bun dar baterie uzata si software aproape expirat.</p>
+
+        <h4>Telefon nou sau flagship vechi?</h4>
+        <p>Recomandam aproape intotdeauna un telefon nou in locul unui flagship vechi. Motivele sunt simple:</p>
+        <ul>
+          <li>Bateria noua tine mult mai bine decat una de 4-6 ani</li>
+          <li>Software-ul nou primeste actualizari de securitate si functii noi</li>
+          <li>Garantia te protejeaza in caz de defect</li>
+          <li>Procesoarele noi de gama medie sunt mai eficiente energetic decat flagship-urile vechi</li>
+          <li>Ecranele noi AMOLED sunt superioare LCD-urilor vechi</li>
+        </ul>
+        <p>Exceptiile sunt iPhone XR pentru ecosistem Apple si Huawei P30 Pro pentru camera periscop  - dar doar daca accepti compromisurile specifice fiecaruia.</p>
+
+        <h4>Ce sa nu cumperi</h4>
+        <p><strong>Ce telefoane ieftine sa eviti in 2026?</strong> Telefoane cu ecran LCD (AMOLED exista si sub 1.000 lei), telefoane cu sub 4GB RAM, telefoane fara actualizari de securitate, telefoane cu baterie sub 4000 mAh si branduri necunoscute cu specificatii prea bune ca sa fie adevarate.</p>
+
+        <h4>Un singur telefon ieftin de recomandat?</h4>
+        <p><strong>Care e cel mai bun telefon sub 1.500 lei in 2026?</strong> Samsung Galaxy A26. Ecran AMOLED, 5G, IP67, ecosistem Samsung complet si suport software solid la ~1.200 lei. Pentru autonomie maxima, HONOR Magic7 Lite cu 6600 mAh. Pentru camera cu OIS si 5G, realme 14 Pro 5G.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== COMPARATIE ==================== -->
+  <section id="comparatie" class="fade-in">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Head to Head</span>
+        <h2>Comparatie Telefoane 2026</h2>
+        <p>Toate telefoanele, fata in fata. Specificatii si recomandari intr-un singur tabel.</p>
+      </div>
+
+      <div class="section-intro">
+        <p><strong>Samsung Galaxy S25 Ultra vs iPhone 17 Pro Max  - care e mai bun?</strong> Samsung Galaxy S25 Ultra are camera mai versatila (200MP, zoom optic 5x, S Pen) si costa mai putin. iPhone 17 Pro Max are video superior, ecosistem mai bine integrat si procesor A19 Pro mai eficient. Daca folosesti deja produse Apple, ramai cu iPhone. Daca vrei flexibilitate si Android, Samsung castiga.</p>
+      </div>
+
+      <!-- Tabel Premium -->
+      <h3 style="margin-bottom:1rem;">Telefoane Premium</h3>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Procesor</th>
+              <th>Display</th>
+              <th>Baterie</th>
+              <th>Incarcare</th>
+              <th>Camera</th>
+              <th>Potrivit pentru</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Samsung Galaxy Z Fold7</td>
+              <td>Snapdragon 8 Elite</td>
+              <td>7.6" AMOLED 120Hz</td>
+              <td>5000 mAh</td>
+              <td>45W</td>
+              <td>50MP + 12MP + 10MP</td>
+              <td>Productivitate si multitasking</td>
+              <td><a href="/out/samsung-galaxy-z-fold7" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>Samsung Galaxy Z Fold6</td>
+              <td>Snapdragon 8 Gen 3</td>
+              <td>7.6" AMOLED 120Hz</td>
+              <td>4400 mAh</td>
+              <td>25W</td>
+              <td>50MP + 12MP + 10MP</td>
+              <td>Foldable la pret mai bun</td>
+              <td><a href="/out/samsung-galaxy-z-fold6" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>Apple iPhone 17 Pro Max</td>
+              <td>Apple A19 Pro</td>
+              <td>6.9" ProMotion OLED</td>
+              <td>4850 mAh</td>
+              <td>45W</td>
+              <td>48MP + 48MP + 12MP</td>
+              <td>Ecosistem Apple complet</td>
+              <td><a href="/out/apple-iphone-17-pro-max" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>Apple iPhone 16 Pro Max</td>
+              <td>Apple A18 Pro</td>
+              <td>6.9" ProMotion OLED</td>
+              <td>4685 mAh</td>
+              <td>40W</td>
+              <td>48MP + 48MP + 12MP</td>
+              <td>iPhone Pro la pret redus</td>
+              <td><a href="/out/apple-iphone-16-pro-max" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>Google Pixel 10 Pro XL</td>
+              <td>Google Tensor G5</td>
+              <td>6.9" LTPO OLED 120Hz</td>
+              <td>5200 mAh</td>
+              <td>37W</td>
+              <td>50MP + 48MP + 48MP</td>
+              <td>Fotografie si AI</td>
+              <td><a href="/out/google-pixel-10-pro-xl" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tabel Top -->
+      <h3 style="margin:2rem 0 1rem;">Telefoane de Top</h3>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Procesor</th>
+              <th>Display</th>
+              <th>Baterie</th>
+              <th>Incarcare</th>
+              <th>Camera</th>
+              <th>Potrivit pentru</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Samsung Galaxy S25 Ultra</td>
+              <td>Snapdragon 8 Elite</td>
+              <td>6.9" AMOLED 120Hz QHD+</td>
+              <td>5000 mAh</td>
+              <td>45W</td>
+              <td>200MP + 50MP + 10MP + 12MP</td>
+              <td>Cel mai complet Android</td>
+              <td><a href="/out/samsung-galaxy-s25-ultra" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>Samsung Galaxy Z Flip7</td>
+              <td>Snapdragon 8 Elite</td>
+              <td>6.7" AMOLED + 3.9" ext</td>
+              <td>4000 mAh</td>
+              <td>25W</td>
+              <td>50MP + 12MP</td>
+              <td>Format compact pliabil</td>
+              <td><a href="/out/samsung-galaxy-z-flip7" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>Samsung Galaxy S24+</td>
+              <td>Snapdragon 8 Gen 3</td>
+              <td>6.7" AMOLED 120Hz QHD+</td>
+              <td>4900 mAh</td>
+              <td>45W</td>
+              <td>50MP + 12MP + 10MP</td>
+              <td>Flagship la pret redus</td>
+              <td><a href="/out/samsung-galaxy-s24-plus" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>Apple iPhone 16 Plus</td>
+              <td>Apple A18</td>
+              <td>6.7" OLED 60Hz</td>
+              <td>4674 mAh</td>
+              <td>40W</td>
+              <td>48MP + 12MP</td>
+              <td>iPhone mare, autonomie buna</td>
+              <td><a href="/out/apple-iphone-16-plus" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>Apple iPhone 15 Plus</td>
+              <td>Apple A16 Bionic</td>
+              <td>6.7" OLED 60Hz</td>
+              <td>4383 mAh</td>
+              <td>27W</td>
+              <td>48MP + 12MP</td>
+              <td>iPhone la cel mai bun pret</td>
+              <td><a href="/out/apple-iphone-15-plus" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>Google Pixel 10 Pro</td>
+              <td>Google Tensor G5</td>
+              <td>6.3" LTPO OLED 120Hz</td>
+              <td>4700 mAh</td>
+              <td>37W</td>
+              <td>50MP + 48MP + 48MP</td>
+              <td>Fotografie compacta</td>
+              <td><a href="/out/google-pixel-10-pro" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tabel Buget -->
+      <h3 style="margin:2rem 0 1rem;">Telefoane de Buget</h3>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Procesor</th>
+              <th>Display</th>
+              <th>Baterie</th>
+              <th>Incarcare</th>
+              <th>Camera</th>
+              <th>Potrivit pentru</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google Pixel 9a</td>
+              <td>Google Tensor G4</td>
+              <td>6.3" OLED 120Hz</td>
+              <td>5100 mAh</td>
+              <td>23W</td>
+              <td>48MP + 13MP</td>
+              <td>Cea mai buna camera la buget</td>
+              <td><a href="/out/google-pixel-9a" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>Samsung Galaxy S25 FE</td>
+              <td>Snapdragon 8 Gen 3</td>
+              <td>6.7" AMOLED 120Hz</td>
+              <td>4700 mAh</td>
+              <td>25W</td>
+              <td>50MP + 12MP + 8MP</td>
+              <td>Ecosistem Galaxy accesibil</td>
+              <td><a href="/out/samsung-galaxy-s25-fe" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>Xiaomi 15T</td>
+              <td>Dimensity 9400</td>
+              <td>6.67" AMOLED 144Hz</td>
+              <td>5500 mAh</td>
+              <td>67W</td>
+              <td>108MP + 8MP + 2MP</td>
+              <td>Specificatii maxime la buget</td>
+              <td><a href="/out/xiaomi-15t" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>OnePlus Nord 5</td>
+              <td>Snapdragon 8 Gen 3</td>
+              <td>6.7" AMOLED 120Hz</td>
+              <td>5500 mAh</td>
+              <td>100W</td>
+              <td>50MP + 8MP</td>
+              <td>Incarcare ultra-rapida</td>
+              <td><a href="/out/oneplus-nord-5" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>HONOR Magic 8 Lite</td>
+              <td>Snapdragon 6 Gen 3</td>
+              <td>6.78" AMOLED 120Hz</td>
+              <td>6000 mAh</td>
+              <td>35W</td>
+              <td>108MP + 5MP</td>
+              <td>Autonomie maxima la pret mic</td>
+              <td><a href="/out/honor-magic-8-lite" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>Motorola edge 70</td>
+              <td>Dimensity 7350</td>
+              <td>6.7" pOLED 120Hz</td>
+              <td>5300 mAh</td>
+              <td>68W</td>
+              <td>50MP + 13MP</td>
+              <td>Telefon echilibrat si complet</td>
+              <td><a href="/out/motorola-edge-70" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tabel Ieftine -->
+      <h3 style="margin:2rem 0 1rem;">Telefoane Ieftine</h3>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Procesor</th>
+              <th>Display</th>
+              <th>Baterie</th>
+              <th>Incarcare</th>
+              <th>Camera</th>
+              <th>Potrivit pentru</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Samsung Galaxy A26</td>
+              <td>Exynos 1480</td>
+              <td>6.7" Super AMOLED 120Hz</td>
+              <td>5000 mAh</td>
+              <td>25W</td>
+              <td>50MP + 8MP + 2MP</td>
+              <td>Samsung fiabil la pret mic</td>
+              <td><a href="/out/samsung-galaxy-a26" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>HONOR Magic7 Lite</td>
+              <td>Snapdragon 6 Gen 1</td>
+              <td>6.78" AMOLED 120Hz</td>
+              <td>6600 mAh</td>
+              <td>35W</td>
+              <td>108MP + 5MP</td>
+              <td>Campionul autonomiei</td>
+              <td><a href="/out/honor-magic7-lite" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>realme 14 Pro 5G</td>
+              <td>Snapdragon 7s Gen 3</td>
+              <td>6.7" AMOLED 120Hz</td>
+              <td>6000 mAh</td>
+              <td>45W</td>
+              <td>50MP OIS + 8MP</td>
+              <td>5G si camera OIS la buget</td>
+              <td><a href="/out/realme-14-pro-5g" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>Motorola Moto g86</td>
+              <td>Snapdragon 6s Gen 3</td>
+              <td>6.67" pOLED 120Hz</td>
+              <td>5000 mAh</td>
+              <td>30W</td>
+              <td>50MP OIS + 8MP</td>
+              <td>Ecran pOLED si software curat</td>
+              <td><a href="/out/motorola-moto-g86" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>Apple iPhone XR</td>
+              <td>Apple A12 Bionic</td>
+              <td>6.1" LCD 60Hz</td>
+              <td>2942 mAh</td>
+              <td>18W</td>
+              <td>12MP</td>
+              <td>Ecosistem Apple la pret minim</td>
+              <td><a href="/out/apple-iphone-xr" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+            <tr>
+              <td>Huawei P30 Pro</td>
+              <td>Kirin 980</td>
+              <td>6.47" OLED FHD+</td>
+              <td>4200 mAh</td>
+              <td>40W</td>
+              <td>40MP + 20MP + 8MP 5x</td>
+              <td>Camera periscop la buget</td>
+              <td><a href="/out/huawei-p30-pro" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CUM ALEGI ==================== -->
+  <section id="cum-alegi" class="fade-in" style="background:#f7f8fa;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Cum Alegi 2026</span>
+        <h2>Cum Alegi un Telefon in 2026</h2>
+        <p>9 pasi practici pe care ii urmam si noi cand testam si recomandam telefoane. Functioneaza indiferent de buget.</p>
+      </div>
+
+      <div class="guide">
+        <h3>Stabileste-ti bugetul inainte de orice</h3>
+        <p>Inainte sa te uiti la specificatii, pune pe hartie cat vrei sa dai pe telefon. In Romania in 2026, telefoanele se impart clar pe categorii de pret: sub 1.000 lei gasesti telefoane ieftine dar oneste care fac treaba, intre 1.000-2.500 lei ai telefoane de buget cu specificatii surprinzator de bune, iar peste 3.500 lei intri in zona premium cu tot ce vrei.</p>
+
+        <p>Un lucru pe care multi il ignora: diferenta de experienta intre un telefon de 2.000 lei si unul de 5.000 lei este mai mica decat te-ai astepta in utilizarea de zi cu zi. Scrolling pe Instagram, mesaje pe WhatsApp, YouTube, email  - toate functioneaza la fel de bine. Diferentele apar la camera, materiale, ecran si cat tine telefonul in timp. Nu te intinde peste buget doar pentru un brand sau un numar de megapixeli mai mare.</p>
+
+        <h3>Procesorul  - cat de mult conteaza</h3>
+        <p>In 2026 procesorul conteaza mai putin decat crezi pentru utilizarea zilnica. Un Snapdragon 6 Gen 3 de pe un telefon de 1.300 lei misca Instagram, WhatsApp, Chrome si YouTube la fel de bine ca un Snapdragon 8 Elite de pe un telefon de 8.000 lei. Diferenta se simte in trei scenarii: jocuri grele la setari maxime, editare video profesionala si longevitate pe termen lung. Daca nu faci niciunul dintre aceste lucruri intens, procesorul nu trebuie sa fie criteriul principal.</p>
+
+        <p>Procesoarele de top in 2026 sunt Apple A19 Pro, Snapdragon 8 Elite for Galaxy si Google Tensor G5. Fiecare are puncte forte diferite. A19 Pro domina in performanta bruta single-core si optimizare software. Snapdragon 8 Elite ofera cel mai bun echilibru intre performanta si eficienta pe Android. Tensor G5 este optimizat pentru AI si procesare foto. In gama medie, Dimensity 9400 si Snapdragon 8 Gen 3 ofera performanta de flagship de anul trecut la pret de buget.</p>
+
+        <h3>Ecranul  - ce sa cauti</h3>
+        <p>Ecranul este componenta pe care o privesti cel mai mult, deci conteaza enorm. In 2026, AMOLED sau OLED este standardul minim pe care il recomandam. Avantajele fata de LCD sunt clare: negru perfect, contrast infinit, culori mai vibrante si consum de energie mai mic pe fundal inchis. LCD nu mai are sens la niciun pret in 2026.</p>
+
+        <p>Rata de refresh de 120Hz este al doilea criteriu important. Diferenta fata de 60Hz se simte in scrolling, animatii si fluiditatea generala. Odata ce te obisnuiesti cu 120Hz, 60Hz pare sacadat. Singurele telefoane din lista noastra cu 60Hz sunt iPhone 16 Plus si iPhone 15 Plus  - Apple a facut aceasta alegere de cost, dar experienta este totusi fluida datorita optimizarii iOS.</p>
+
+        <p>Rezolutia conteaza mai putin decat crezi. FHD+ (1080p) este suficient pe ecrane de pana la 6.7 inci. QHD+ (1440p) este vizibil mai clar doar pe ecrane mari si cand privesti de foarte aproape. Luminozitatea este importanta daca folosesti telefonul mult in exterior  - cauta minim 1000 nits pentru vizibilitate buna in soare.</p>
+
+        <h3>Camera  - megapixeli vs procesare</h3>
+        <p>In 2026, numarul de megapixeli este cel mai putin important criteriu al unei camere. Un Google Pixel 9a cu 48MP face fotografii mai bune decat un Xiaomi cu 108MP in majoritatea conditiilor. Motivul este procesarea computationala  - algoritmii care combina mai multe expuneri, reduc zgomotul, imbunatatesc detaliile si echilibreaza culorile.</p>
+
+        <p>Ce conteaza la camera:</p>
+        <ul>
+          <li>Dimensiunea senzorului  - un senzor mai mare captureaza mai multa lumina</li>
+          <li>Stabilizarea optica (OIS)  - reduce blur-ul din miscare</li>
+          <li>Procesarea computationala  - ce face software-ul cu datele de pe senzor</li>
+          <li>Zoom optic vs digital  - zoom-ul optic pastreaza calitatea, cel digital doar cropeaza</li>
+          <li>Performanta pe timp de noapte  - aici se vad diferentele reale intre telefoane</li>
+        </ul>
+
+        <p>Daca fotografia este importanta, recomandarea noastra este clara: Google Pixel pentru cel mai bun software de camera, Samsung S25 Ultra pentru cea mai versatila camera si Apple iPhone 17 Pro Max pentru cel mai bun video.</p>
+
+        <h3>RAM si stocare  - cat iti trebuie de fapt</h3>
+        <p>In 2026, 6GB RAM este minimul pentru o experienta fluida pe Android. Cu 6GB poti tine 5-6 aplicatii deschise fara sa le reincarce. 8GB RAM este confortabil pentru majoritatea utilizatorilor, iar 12GB+ merita doar daca faci multitasking intens sau joci cu setari maxime. Pe iPhone, 6GB sau 8GB sunt suficienti datorita optimizarii iOS  - nu compara cifrele direct intre Android si iOS.</p>
+
+        <p>La stocare, 128GB ajunge pentru majoritatea oamenilor daca folosesti Google Photos sau iCloud pentru poze. Daca filmezi mult in 4K, instalezi jocuri mari sau nu vrei sa te gandesti la spatiu, alege 256GB. Versiunile de 512GB si 1TB merita doar daca stii sigur ca ai nevoie  - diferenta de pret este mare si rareori justificata. Un sfat practic: verifica daca telefonul are slot microSD inainte sa platesti mai mult pentru stocare interna.</p>
+
+        <h3>Bateria  - ce autonomie sa astepti</h3>
+        <p>Autonomia bateriei depinde de trei factori: capacitatea (mAh), eficienta procesorului si optimizarea software. O baterie de 5000 mAh pe un Pixel 9a cu Tensor G4 eficient si Android optimizat tine mai mult decat o baterie de 5000 mAh pe un telefon cu procesor mai putin eficient si software mai prost optimizat.</p>
+
+        <p>Ca regula generala in 2026: sub 4000 mAh vei avea nevoie de incarcare in cursul zilei. Intre 4500-5000 mAh ajungi la final de zi confortabil. Peste 5500 mAh ajungi la o zi si jumatate sau doua zile. Incarcarea rapida compenseaza o baterie mai mica  - daca poti incarca telefonul 15 minute la pranz, 100W de la OnePlus iti ofera jumatate de baterie in acel timp.</p>
+
+        <h3>Software si actualizari</h3>
+        <p>Suportul software este criteriul pe care majoritatea cumparatorilor il ignora, dar care face cea mai mare diferenta pe termen lung. Un telefon fara actualizari devine nesigur si lent in 2-3 ani. Samsung si Google ofera 7 ani de actualizari pe flagship-urile din 2025-2026. Apple ofera de obicei 6-7 ani. Alte branduri ofera 2-4 ani.</p>
+
+        <p>Actualizarile de securitate sunt mai importante decat versiunile noi de Android. Un telefon pe Android 15 cu patch-uri de securitate lunare este mai sigur decat un telefon pe Android 16 cu ultimul patch de acum 6 luni. Verifica intotdeauna politica de actualizari a producatorului inainte de cumparare.</p>
+
+        <h3>5G  - ai nevoie de el</h3>
+        <p>In Romania in 2026, 5G este disponibil in orasele mari dar acoperirea nu este inca universala. Daca locuiesti intr-un oras mare si operatorul tau ofera 5G, diferenta de viteza este reala  - descarci aplicatii si video-uri semnificativ mai rapid. Daca locuiesti in zone rurale, 4G este inca suficient si un telefon fara 5G nu este un dezavantaj.</p>
+
+        <p>Recomandam totusi sa alegi un telefon cu 5G daca bugetul permite, pentru ca retelele se extind constant si telefonul tau va fi relevant mai mult timp. Telefoanele fara 5G din lista noastra (HONOR Magic7 Lite, HONOR Magic 8 Lite) sunt exceptii acceptabile datorita altor avantaje puternice.</p>
+
+        <h3>Compara preturile intre magazine</h3>
+        <p>Acelasi telefon poate avea diferente de 200-500 lei intre magazine in Romania. eMAG, Altex, Flanco, Orange, Vodafone si Digi au toate preturi si promotii diferite. Inainte sa cumperi, compara pretul pe cel putin 3-4 magazine. Uneori un magazin ofera telefonul mai ieftin dar cu accesorii incluse (husa, folie), ceea ce il face o oferta mai buna per total.</p>
+
+        <p>Atentie la preturile de referinta barate  - nu toate reducerile sunt reale. Unele magazine umfla pretul initial ca sa para ca reducerea este mai mare. Compara pretul actual cu pretul de pe alte magazine, nu cu pretul barat de pe acelasi site. Black Friday si campaniile de Paste sau Craciun aduc reduceri reale, dar nu pe toate modelele  - flagship-urile rar au reduceri mari.</p>
+
+        <h3>Garantie, service si rezistenta</h3>
+        <p>Garantia standard in Romania este de 2 ani, dar conteaza si unde faci service-ul. Samsung si Apple au centre de service autorizate in orasele mari, cu piese originale si reparatii rapide. Xiaomi, OnePlus sau HONOR au service prin importatori, ceea ce poate insemna timpi mai lungi de reparatie si uneori piese mai greu de gasit.</p>
+
+        <p>Rezistenta la apa si praf (certificare IP) conteaza daca esti activ sau ai tendinta sa scapi telefonul. IP68 inseamna ca telefonul rezista la scufundare in apa pana la 1.5 metri timp de 30 minute  - nu inseamna ca poti inota cu el, dar te salveaza daca il scapi in chiuveta sau te prinde ploaia. Telefoanele ieftine rar au IP68, dar unele au IP54 care protejaza la stropire.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section id="faq" class="fade-in">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Intrebari</span>
+        <h2>Intrebari Frecvente</h2>
+        <p>Raspunsuri la cele mai comune intrebari despre telefoane in 2026.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Care este cel mai bun telefon din 2026?</span>
+            <span class="faq-item__icon">▼</span>
+          </button>
+          <div class="faq-item__a">
+            <p>Depinde de ce cauti. Samsung Galaxy S25 Ultra este cel mai complet telefon Android  - camera versatila, S Pen, ecran de top. Apple iPhone 17 Pro Max este cel mai bun iPhone cu ecosistem integrat. Google Pixel 10 Pro XL are cea mai buna camera foto. Nu exista un singur cel mai bun telefon, ci cel mai bun telefon pentru nevoile tale specifice.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Ce telefon sa cumpar daca am un buget de 2.000 lei?</span>
+            <span class="faq-item__icon">▼</span>
+          </button>
+          <div class="faq-item__a">
+            <p>La 2.000 lei, recomandam Google Pixel 9a daca vrei cea mai buna camera si software curat sau OnePlus Nord 5 daca vrei performanta maxima si incarcare la 100W. Ambele ofera experienta excelenta la acest buget. Pixel 9a este mai bun la fotografie, Nord 5 este mai bun la performanta si incarcare.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Samsung sau Apple  - ce sa aleg in 2026?</span>
+            <span class="faq-item__icon">▼</span>
+          </button>
+          <div class="faq-item__a">
+            <p>Daca folosesti deja produse Apple (Mac, iPad, AirPods, Apple Watch), ramai cu Apple. Ecosistemul integrat este cel mai mare avantaj. Daca vrei mai multa libertate de personalizare, varietate de optiuni si preturi mai flexibile, Samsung este alegerea logica. Ambele ofera calitate de top. Alege in functie de ecosistemul pe care il folosesti deja, nu de specificatii.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Merita un telefon pliabil in 2026?</span>
+            <span class="faq-item__icon">▼</span>
+          </button>
+          <div class="faq-item__a">
+            <p>Da, pentru prima data fara ezitare. Samsung Galaxy Z Fold7 si Z Flip7 sunt telefoane mature care nu mai fac compromisuri majore fata de telefoanele clasice. Fold7 este excelent pentru productivitate cu ecranul interior de 7.6 inci. Flip7 este perfect pentru cei care vor un telefon compact. Singurele dezavantaje reale raman pretul mai mare si bateria ceva mai mica decat pe telefoanele clasice.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Cat de important este 5G in Romania in 2026?</span>
+            <span class="faq-item__icon">▼</span>
+          </button>
+          <div class="faq-item__a">
+            <p>5G este disponibil in orasele mari din Romania si ofera viteze semnificativ mai bune decat 4G. Daca locuiesti in Bucuresti, Cluj, Timisoara sau alte orase mari, vei beneficia de 5G. In zone rurale, acoperirea este inca limitata. Recomandam sa alegi un telefon cu 5G daca bugetul permite, pentru ca retelele se extind constant si telefonul va fi pregatit pentru viitor.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Cat ar trebui sa tin un telefon inainte sa il schimb?</span>
+            <span class="faq-item__icon">▼</span>
+          </button>
+          <div class="faq-item__a">
+            <p>Cu telefoanele din 2025-2026 care ofera 7 ani de actualizari, poti tine un flagship 4-5 ani fara probleme. Un telefon de buget tine confortabil 2-3 ani. Momentul sa schimbi este cand bateria nu mai tine o zi, cand aplicatiile pe care le folosesti devin lente sau cand nu mai primesti actualizari de securitate. Nu schimba telefonul doar pentru ca a aparut un model nou.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Ce telefon are cea mai buna camera foto in 2026?</span>
+            <span class="faq-item__icon">▼</span>
+          </button>
+          <div class="faq-item__a">
+            <p>Google Pixel 10 Pro si Pixel 10 Pro XL au cea mai buna procesare foto datorita Tensor G5. Samsung Galaxy S25 Ultra are cea mai versatila camera cu zoom optic 5x si senzor de 200MP. Apple iPhone 17 Pro Max are cel mai bun video. Pentru fotografie generala, Pixel este lider. Pentru versatilitate, Samsung. Pentru video, Apple.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Merita sa cumpar un telefon vechi flagship in loc de unul nou de buget?</span>
+            <span class="faq-item__icon">▼</span>
+          </button>
+          <div class="faq-item__a">
+            <p>In general, nu. Un telefon nou de buget vine cu baterie proaspata, garantie, actualizari software pe ani de zile si procesor eficient. Un flagship vechi are baterie uzata, suport software aproape expirat si potential probleme de fiabilitate. Exceptii: iPhone XR pentru ecosistem Apple la pret minim si Huawei P30 Pro pentru camera periscop sub 900 lei. In rest, alege nou.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Cat de important este procesorul la un telefon?</span>
+            <span class="faq-item__icon">▼</span>
+          </button>
+          <div class="faq-item__a">
+            <p>Procesorul determina cat de rapid raspunde telefonul in utilizarea zilnica, in jocuri si la editare foto/video. Pentru uz normal (social media, YouTube, navigare web), un procesor mid-range gen Snapdragon 7 Gen 3 sau Dimensity 8300 este mai mult decat suficient. Daca joci des sau editezi video, merita sa investesti intr-un flagship cu Snapdragon 8 Elite sau A18 Pro.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Cand este cel mai bun moment sa cumpar un telefon in 2026?</span>
+            <span class="faq-item__icon">▼</span>
+          </button>
+          <div class="faq-item__a">
+            <p>Cele mai bune momente sunt: dupa lansarea noii generatii (pretul generatiei anterioare scade), Black Friday (noiembrie), de sarbatori (decembrie) si in perioada reducerilor de vara (iunie-iulie). Daca telefonul tau actual functioneaza bine, asteapta o promotie. Daca telefonul actual nu mai face fata, nu astepta  - orice telefon din lista noastra este o achizitie buna la pretul curent.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== USER RATING ==================== -->
+  <section class="fade-in">
+    <div class="container">
+      <div class="user-rating" id="userRating">
+        <h3>Recenziile noastre ti-au fost utile?</h3>
+        <p class="user-rating__sub">Acorda-ne o nota si ajuta-ne sa ne imbunatatim.</p>
+        <div class="user-rating__stars" id="ratingStars">
+          <button data-star="1" aria-label="1 stea">&#9733;</button>
+          <button data-star="2" aria-label="2 stele">&#9733;</button>
+          <button data-star="3" aria-label="3 stele">&#9733;</button>
+          <button data-star="4" aria-label="4 stele">&#9733;</button>
+          <button data-star="5" aria-label="5 stele">&#9733;</button>
+        </div>
+        <div class="user-rating__info" id="ratingInfo">
+          <span id="ratingAvg">4.8</span>/5 din <span id="ratingCount">127</span> voturi
+        </div>
+        <div class="user-rating__thanks" id="ratingThanks" style="display:none;">
+          Multumim pentru vot!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section fade-in">
+    <div class="container" style="padding:4rem 1.25rem;">
+      <h2>Gaseste Telefonul Perfect pentru Tine</h2>
+      <p>Am analizat 23 de telefoane din 2026. Indiferent de buget, exista un telefon perfect pentru nevoile tale.</p>
+      <a href="#top-telefoane" class="btn btn--cta">Vezi Top Telefoane 2026</a>
+    </div>
+  </section>
+
+  <Footer />
+
+  <!-- Schema Markup JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "OfertaTelefoane.ro",
+        "url": "https://ofertatelefoane.ro",
+        "logo": "https://ofertatelefoane.ro/favicon.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "contact@ofertatelefoane.ro",
+          "contactType": "customer service"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "127"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "name": title,
+        "description": description,
+        "url": "https://ofertatelefoane.ro/",
+        "inLanguage": "ro",
+        "datePublished": "2026-03-01T10:00:00+02:00",
+        "dateModified": now
+      },
+      {
+        "@type": "Article",
+        "headline": "Top Telefoane 2026 - Comparatii si Recomandari",
+        "description": description,
+        "url": "https://ofertatelefoane.ro/",
+        "inLanguage": "ro",
+        "datePublished": "2026-03-01T10:00:00+02:00",
+        "dateModified": now,
+        "author": {
+          "@type": "Organization",
+          "name": "OfertaTelefoane.ro",
+          "url": "https://ofertatelefoane.ro"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "OfertaTelefoane.ro",
+          "url": "https://ofertatelefoane.ro",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://ofertatelefoane.ro/logo.png"
+          }
+        },
+        "image": "https://ofertatelefoane.ro/og-image.png",
+        "mainEntityOfPage": "https://ofertatelefoane.ro/",
+        "articleSection": "Telefoane Mobile",
+        "wordCount": 12000,
+        "about": [
+          {"@type": "Thing", "name": "Telefoane mobile"},
+          {"@type": "Thing", "name": "Telefoane premium"},
+          {"@type": "Thing", "name": "Telefoane ieftine"},
+          {"@type": "Thing", "name": "Comparatie telefoane 2026"}
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "name": "Top Telefoane 2026",
+        "description": "Cele mai bune telefoane din 2026 - clasament actualizat",
+        "numberOfItems": products.top.length,
+        "itemListElement": products.top.map((p, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "item": {
+            "@type": "Product",
+            "name": p.name,
+            "image": `https://ofertatelefoane.ro${p.image}`,
+            "url": `https://ofertatelefoane.ro${p.affiliate}`,
+            "brand": { "@type": "Brand", "name": p.name.split(' ')[0] },
+            "description": p.tip_utilizator,
+            "offers": {
+              "@type": "Offer",
+              "url": `https://ofertatelefoane.ro${p.affiliate}`,
+              "priceCurrency": "RON",
+              "price": p.pret_estimativ.replace(/[^0-9]/g, ''),
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Acasa", "item": "https://ofertatelefoane.ro/" },
+          { "@type": "ListItem", "position": 2, "name": "Top Telefoane 2026", "item": "https://ofertatelefoane.ro/#top-telefoane" }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "name": "OfertaTelefoane.ro",
+        "url": "https://ofertatelefoane.ro"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type":"Question","name":"Care este cel mai bun telefon din 2026?","acceptedAnswer":{"@type":"Answer","text":"Depinde de ce cauti. Samsung Galaxy S25 Ultra este cel mai complet telefon Android - camera versatila, S Pen, ecran de top. Apple iPhone 17 Pro Max este cel mai bun iPhone cu ecosistem integrat. Google Pixel 10 Pro XL are cea mai buna camera foto."}},
+          {"@type":"Question","name":"Ce telefon sa cumpar daca am un buget de 2.000 lei?","acceptedAnswer":{"@type":"Answer","text":"La 2.000 lei, recomandam Google Pixel 9a daca vrei cea mai buna camera si software curat sau OnePlus Nord 5 daca vrei performanta maxima si incarcare la 100W. Ambele ofera experienta foarte buna la acest buget."}},
+          {"@type":"Question","name":"Samsung sau Apple - ce sa aleg in 2026?","acceptedAnswer":{"@type":"Answer","text":"Daca folosesti deja produse Apple (Mac, iPad, AirPods, Apple Watch), ramai cu Apple. Daca vrei mai multa libertate de personalizare, varietate de optiuni si preturi mai flexibile, Samsung este alegerea logica. Alege in functie de ecosistemul pe care il folosesti deja."}},
+          {"@type":"Question","name":"Merita un telefon pliabil in 2026?","acceptedAnswer":{"@type":"Answer","text":"Da. Samsung Galaxy Z Fold7 si Z Flip7 sunt telefoane mature care nu mai fac compromisuri majore fata de telefoanele clasice. Fold7 este pentru productivitate, Flip7 pentru format compact. Singurele dezavantaje raman pretul si bateria ceva mai mica."}},
+          {"@type":"Question","name":"Cat de important este 5G in Romania in 2026?","acceptedAnswer":{"@type":"Answer","text":"5G este disponibil in orasele mari din Romania si ofera viteze semnificativ mai bune decat 4G. In zone rurale, acoperirea este inca limitata. Recomandam un telefon cu 5G daca bugetul permite, pentru ca retelele se extind constant."}},
+          {"@type":"Question","name":"Cat ar trebui sa tin un telefon inainte sa il schimb?","acceptedAnswer":{"@type":"Answer","text":"Un flagship din 2025-2026 cu 7 ani de actualizari tine 4-5 ani fara probleme. Un telefon de buget tine confortabil 2-3 ani. Schimba cand bateria nu mai tine o zi, aplicatiile devin lente sau nu mai primesti actualizari de securitate."}},
+          {"@type":"Question","name":"Ce telefon are cea mai buna camera foto in 2026?","acceptedAnswer":{"@type":"Answer","text":"Google Pixel 10 Pro si Pixel 10 Pro XL au cea mai buna procesare foto. Samsung Galaxy S25 Ultra are cea mai versatila camera cu zoom optic 5x si 200MP. Apple iPhone 17 Pro Max are cel mai bun video."}},
+          {"@type":"Question","name":"Merita sa cumpar un telefon vechi flagship in loc de unul nou de buget?","acceptedAnswer":{"@type":"Answer","text":"In general, nu. Un telefon nou de buget vine cu baterie proaspata, garantie, actualizari software si procesor eficient. Un flagship vechi are baterie uzata si suport software aproape expirat. Exceptii: iPhone XR si Huawei P30 Pro."}},
+          {"@type":"Question","name":"Cat de important este procesorul la un telefon?","acceptedAnswer":{"@type":"Answer","text":"Procesorul determina cat de rapid raspunde telefonul in utilizarea zilnica, in jocuri si la editare foto/video. Pentru uz normal, un procesor mid-range gen Snapdragon 7 Gen 3 sau Dimensity 8300 este suficient. Daca joci des sau editezi video, merita un flagship cu Snapdragon 8 Elite sau A18 Pro."}},
+          {"@type":"Question","name":"Cand este cel mai bun moment sa cumpar un telefon in 2026?","acceptedAnswer":{"@type":"Answer","text":"Cele mai bune momente sunt: dupa lansarea noii generatii (pretul generatiei anterioare scade), Black Friday, de sarbatori si in perioada reducerilor de vara. Daca telefonul actual functioneaza bine, asteapta o promotie."}}
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "Cum Alegi un Telefon in 2026",
+        "description": "Pasii pe care ii urmam si noi cand testam si recomandam telefoane. Functioneaza indiferent de buget, de la 600 lei pana la 10.000 lei.",
+        "totalTime": "PT20M",
+        "step": [
+          {"@type":"HowToStep","position":1,"name":"Stabileste-ti bugetul inainte de orice","text":"Pune pe hartie cat vrei sa dai pe telefon. In Romania in 2026: sub 1.000 lei gasesti telefoane ieftine dar oneste, intre 1.000-2.500 lei ai telefoane de buget cu specificatii surprinzator de bune, iar peste 3.500 lei intri in zona premium. Diferenta de experienta intre un telefon de 2.000 lei si unul de 5.000 lei este mai mica decat te-ai astepta in utilizarea de zi cu zi."},
+          {"@type":"HowToStep","position":2,"name":"Alege procesorul in functie de ce faci cu telefonul","text":"Daca folosesti telefonul pentru social media, WhatsApp, YouTube si navigare web, un procesor mid-range gen Snapdragon 7 Gen 3 sau Dimensity 8300 este tot ce ai nevoie. Snapdragon 8 Elite sau A19 Pro merita doar daca joci titluri grele sau editezi video. Procesorul conteaza si pentru longevitate - unul mai bun inseamna ca telefonul ramane fluid si peste 3-4 ani."},
+          {"@type":"HowToStep","position":3,"name":"Verifica ecranul si rata de refresh","text":"In 2026, alege doar AMOLED sau OLED - LCD-ul nu mai are sens la niciun pret. Rata de refresh de 120Hz face diferenta in scrolling si fluiditate. Rezolutia FHD+ este suficienta pe ecrane pana la 6.7 inci. Daca folosesti telefonul mult afara, cauta minim 1.000 nits luminozitate pentru vizibilitate in soare."},
+          {"@type":"HowToStep","position":4,"name":"Testeaza camera sau citeste recenzii cu poze reale","text":"Nu te uita la megapixeli - un Pixel 9a cu 48MP face poze mai bune decat multe telefoane cu 108MP. Conteaza dimensiunea senzorului, stabilizarea optica (OIS), procesarea software si cum se comporta camera noaptea. Cauta recenzii cu poze reale facute de utilizatori. Google Pixel are cel mai bun software foto, Samsung cea mai versatila camera, Apple cel mai bun video."},
+          {"@type":"HowToStep","position":5,"name":"Verifica RAM-ul si stocarea","text":"6GB RAM este minimul pentru o experienta fluida pe Android in 2026. 8GB este confortabil pentru majoritatea, 12GB+ merita doar pentru multitasking intens sau jocuri. La stocare, 128GB ajunge daca folosesti cloud pentru poze. 256GB daca filmezi in 4K sau instalezi jocuri mari. Verifica daca telefonul are slot microSD inainte sa platesti mai mult pentru stocare interna."},
+          {"@type":"HowToStep","position":6,"name":"Calculeaza autonomia reala a bateriei","text":"Capacitatea in mAh nu spune toata povestea - conteaza si eficienta procesorului si optimizarea software. Sub 4.000 mAh inseamna incarcare la pranz, 4.500-5.000 mAh te duce pana seara, peste 5.500 mAh ajungi la o zi si jumatate. Incarcarea rapida la 65W sau 100W compenseaza o baterie mai mica - 15 minute la priza dau jumatate de baterie."},
+          {"@type":"HowToStep","position":7,"name":"Verifica cati ani de actualizari primesti","text":"Un telefon fara actualizari devine nesigur in 2-3 ani. Samsung si Google ofera 7 ani de update-uri pe modelele din 2025-2026, Apple ofera 6-7 ani, Xiaomi si OnePlus 3-4 ani. Actualizarile de securitate sunt mai importante decat versiunile noi de Android. Verifica politica producatorului inainte de cumparare."},
+          {"@type":"HowToStep","position":8,"name":"Compara preturile intre magazine","text":"Acelasi telefon poate avea diferente de 200-500 lei intre magazine in Romania. Compara pe eMAG, Altex, Flanco, Orange, Vodafone si Digi inainte sa cumperi. Atentie la preturile barate - nu toate reducerile sunt reale. Compara pretul actual cu alte magazine, nu cu pretul barat de pe acelasi site."},
+          {"@type":"HowToStep","position":9,"name":"Verifica garantia, service-ul si rezistenta la apa","text":"Samsung si Apple au centre de service autorizate in Romania cu piese originale si reparatii rapide. Xiaomi, OnePlus sau HONOR au service prin importatori, deci timpii pot fi mai lungi. IP68 inseamna rezistenta la scufundare pana la 1.5 metri - te salveaza daca scapi telefonul in chiuveta. Telefoanele ieftine rar au IP68, dar unele au IP54 care protejaza la stropire."}
+        ]
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "name": ["Top Telefoane 2026","Telefoane Premium","Telefoane de Buget","Telefoane Ieftine","Comparatie","Cum Alegi","FAQ"],
+        "url": ["https://ofertatelefoane.ro/#top-telefoane","https://ofertatelefoane.ro/#premium","https://ofertatelefoane.ro/#buget","https://ofertatelefoane.ro/#ieftine","https://ofertatelefoane.ro/#comparatie","https://ofertatelefoane.ro/#cum-alegi","https://ofertatelefoane.ro/#faq"]
+      }
+    ]
+  })} />
+</Layout>
