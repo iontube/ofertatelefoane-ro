@@ -1,4 +1,5 @@
 ---
+const updated = new Date().toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 <footer class="footer">
   <div class="container">
@@ -32,6 +33,7 @@
     </div>
     <div class="footer__bottom">
       <span>&copy; 2026 OfertaTelefoane.ro  - Toate drepturile rezervate</span>
+      <span>Actualizat {updated}</span>
     </div>
     <div class="footer__disclaimer">
       Acest site contine link-uri de afiliere. Daca achizitionezi un produs prin link-urile noastre, putem primi un comision fara niciun cost suplimentar pentru tine. Preturile afisate sunt estimative si pot varia. Verificati pretul final pe site-ul magazinului.

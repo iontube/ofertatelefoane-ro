@@ -1,8 +1,9 @@
 ---
+const updated = new Date().toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 <section class="hero">
   <div class="container hero__content">
-    <div class="hero__badge">Actualizat Martie 2026</div>
+    <div class="hero__badge">Actualizat {updated}</div>
     <h1>Top Telefoane 2026<br/>Comparatii si <span>Recomandari Reale</span></h1>
     <p class="hero__subtitle">Am testat si analizat cele mai bune telefoane din 2026. De la flagship-uri premium pana la telefoane ieftine care merita fiecare leu. Alege informat.</p>
     <div class="hero__actions">
