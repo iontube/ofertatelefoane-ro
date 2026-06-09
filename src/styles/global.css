@@ -341,7 +341,7 @@ button.product-card__cta,button.po__cta,button.offer__btn,button.btn,button.btn-
 .pc__cta{display:block;text-align:center;padding:.6rem;background:#0055b8;color:#fff;border-radius:10px;font-weight:600;font-size:.88rem;margin-top:auto}
 .pc__cta:hover{background:#004196}
 .po{display:grid;grid-template-columns:1fr;gap:1.5rem;background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:1.25rem;margin-bottom:1.8rem}
-.po__media{background:#fff;border:1px solid #f1f3f5;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:1.25rem;min-height:280px}
+.po__media{background:transparent;border:0;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:1.25rem;min-height:280px}
 .po__media img{max-width:100%;max-height:380px;object-fit:contain;mix-blend-mode:multiply}
 .po__tags{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.6rem}
 .po__brand{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:#0055b8;font-weight:800;text-decoration:none}
@@ -354,7 +354,7 @@ a.po__brand:hover{text-decoration:underline}
 .po__off{background:#e25822;color:#fff;font-weight:700;font-size:.78rem;padding:.15rem .5rem;border-radius:50px}
 .po__stock{color:#4b5563;font-size:.9rem;margin-bottom:.9rem}
 a.po__merch{color:#0055b8}a.po__merch:hover{text-decoration:underline}
-.po__cta{display:inline-block;background:linear-gradient(135deg,#e25822,#c44a1a);color:#fff;font-weight:700;font-size:1rem;padding:.85rem 1.6rem;border-radius:12px;box-shadow:0 4px 15px rgba(226,88,34,.3)}
+.po__cta{display:block;width:100%;max-width:420px;text-align:center;background:linear-gradient(135deg,#e25822,#c44a1a);color:#fff;font-weight:700;font-size:1rem;padding:.85rem 1.6rem;border-radius:12px;box-shadow:0 4px 15px rgba(226,88,34,.3)}
 .po__cta:hover{filter:brightness(1.05)}
 .po__note{font-size:.74rem;color:#9ca3af;margin-top:.6rem}
 .po-block{padding:0;margin-bottom:2rem}
