@@ -5,14 +5,32 @@ import Hero from '../components/Hero.astro';
 import ProductCard from '../components/ProductCard.astro';
 import Footer from '../components/Footer.astro';
 import products from '../data/products.json';
+import oferte from '../data/telefoane.json';
+import PhoneCard from '../components/PhoneCard.astro';
 
 const title = 'Top Telefoane 2026 | Cele Mai Bune Telefoane Premium, Ieftine si de Buget';
 const description = 'Top telefoane 2026 testate si comparate. Cele mai bune telefoane premium, telefoane ieftine si telefoane de buget. Recenzii oneste, comparatii pe categorii si oferte actualizate.';
-const now = new Date().toISOString();
+const ofTotal = oferte.length;
+const topOferte = [...oferte].filter((p) => p.oldPrice && p.smart && p.condition === 'nou').sort((a, b) => (1 - b.price / b.oldPrice) - (1 - a.price / a.oldPrice)).slice(0, 6);
+const smartFill = [...oferte].filter((p) => p.smart && p.condition === 'nou');
+while (topOferte.length < 6 && smartFill[topOferte.length]) topOferte.push(smartFill[topOferte.length]);
+const mainModified = topOferte.reduce((m, p) => (p.modified && p.modified > m ? p.modified : m), '2026-04-01');
+const now = `${mainModified}T08:00:00+03:00`;   // honest dateModified for JSON-LD (real data change, not build time)
 ---
-<Layout title={title} description={description}>
+<Layout title={title} description={description} modified={mainModified}>
   <Nav />
   <Hero />
+
+  {ofTotal > 0 && (
+  <section class="ph-sec">
+    <div class="container">
+      <div class="section-header"><span class="section-header__tag">Oferte actualizate</span><h2>Cele mai bune oferte la telefoane</h2></div>
+      <p class="section-intro">{ofTotal} de telefoane noi și refurbished din magazinele partenere, cu cel mai mic preț pe fiecare model. Mai jos câteva dintre cele cu cea mai mare reducere acum.</p>
+      <div class="products-grid">{topOferte.map((p) => <PhoneCard p={p} />)}</div>
+      <div style="text-align:center;margin-top:1.6rem"><a href="/oferte/" class="btn btn--cta">Vezi toate cele {ofTotal} de oferte →</a></div>
+    </div>
+  </section>
+  )}
 
   <!-- ==================== INTRO ==================== -->
   <section class="intro fade-in">
@@ -109,7 +127,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/samsung-galaxy-z-fold7" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Samsung Galaxy Z Fold7</a>
+              <button class="btn btn--cta" data-o={Buffer.from("samsung-galaxy-z-fold7",'utf8').toString('base64')} type="button">Vezi Pret Samsung Galaxy Z Fold7</button>
             </div>
           </div>
         </article>
@@ -167,7 +185,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/samsung-galaxy-z-fold6" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Samsung Galaxy Z Fold6</a>
+              <button class="btn btn--cta" data-o={Buffer.from("samsung-galaxy-z-fold6",'utf8').toString('base64')} type="button">Vezi Pret Samsung Galaxy Z Fold6</button>
             </div>
           </div>
         </article>
@@ -229,7 +247,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/apple-iphone-17-pro-max" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Apple iPhone 17 Pro Max</a>
+              <button class="btn btn--cta" data-o={Buffer.from("apple-iphone-17-pro-max",'utf8').toString('base64')} type="button">Vezi Pret Apple iPhone 17 Pro Max</button>
             </div>
           </div>
         </article>
@@ -288,7 +306,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/apple-iphone-16-pro-max" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Apple iPhone 16 Pro Max</a>
+              <button class="btn btn--cta" data-o={Buffer.from("apple-iphone-16-pro-max",'utf8').toString('base64')} type="button">Vezi Pret Apple iPhone 16 Pro Max</button>
             </div>
           </div>
         </article>
@@ -349,7 +367,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/google-pixel-10-pro-xl" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Google Pixel 10 Pro XL</a>
+              <button class="btn btn--cta" data-o={Buffer.from("google-pixel-10-pro-xl",'utf8').toString('base64')} type="button">Vezi Pret Google Pixel 10 Pro XL</button>
             </div>
           </div>
         </article>
@@ -473,7 +491,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/samsung-galaxy-s25-ultra" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Samsung Galaxy S25 Ultra</a>
+              <button class="btn btn--cta" data-o={Buffer.from("samsung-galaxy-s25-ultra",'utf8').toString('base64')} type="button">Vezi Pret Samsung Galaxy S25 Ultra</button>
             </div>
           </div>
         </article>
@@ -536,7 +554,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/samsung-galaxy-z-flip7" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Samsung Galaxy Z Flip7</a>
+              <button class="btn btn--cta" data-o={Buffer.from("samsung-galaxy-z-flip7",'utf8').toString('base64')} type="button">Vezi Pret Samsung Galaxy Z Flip7</button>
             </div>
           </div>
         </article>
@@ -600,7 +618,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/samsung-galaxy-s24-plus" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Samsung Galaxy S24+</a>
+              <button class="btn btn--cta" data-o={Buffer.from("samsung-galaxy-s24-plus",'utf8').toString('base64')} type="button">Vezi Pret Samsung Galaxy S24+</button>
             </div>
           </div>
         </article>
@@ -663,7 +681,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/apple-iphone-16-plus" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Apple iPhone 16 Plus</a>
+              <button class="btn btn--cta" data-o={Buffer.from("apple-iphone-16-plus",'utf8').toString('base64')} type="button">Vezi Pret Apple iPhone 16 Plus</button>
             </div>
           </div>
         </article>
@@ -727,7 +745,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/apple-iphone-15-plus" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Apple iPhone 15 Plus</a>
+              <button class="btn btn--cta" data-o={Buffer.from("apple-iphone-15-plus",'utf8').toString('base64')} type="button">Vezi Pret Apple iPhone 15 Plus</button>
             </div>
           </div>
         </article>
@@ -791,7 +809,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/google-pixel-10-pro" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Google Pixel 10 Pro</a>
+              <button class="btn btn--cta" data-o={Buffer.from("google-pixel-10-pro",'utf8').toString('base64')} type="button">Vezi Pret Google Pixel 10 Pro</button>
             </div>
           </div>
         </article>
@@ -926,7 +944,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/google-pixel-9a" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Google Pixel 9a</a>
+              <button class="btn btn--cta" data-o={Buffer.from("google-pixel-9a",'utf8').toString('base64')} type="button">Vezi Pret Google Pixel 9a</button>
             </div>
           </div>
         </article>
@@ -987,7 +1005,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/samsung-galaxy-s25-fe" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Samsung Galaxy S25 FE</a>
+              <button class="btn btn--cta" data-o={Buffer.from("samsung-galaxy-s25-fe",'utf8').toString('base64')} type="button">Vezi Pret Samsung Galaxy S25 FE</button>
             </div>
           </div>
         </article>
@@ -1048,7 +1066,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/xiaomi-15t" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Xiaomi 15T</a>
+              <button class="btn btn--cta" data-o={Buffer.from("xiaomi-15t",'utf8').toString('base64')} type="button">Vezi Pret Xiaomi 15T</button>
             </div>
           </div>
         </article>
@@ -1110,7 +1128,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/oneplus-nord-5" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret OnePlus Nord 5</a>
+              <button class="btn btn--cta" data-o={Buffer.from("oneplus-nord-5",'utf8').toString('base64')} type="button">Vezi Pret OnePlus Nord 5</button>
             </div>
           </div>
         </article>
@@ -1171,7 +1189,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/honor-magic-8-lite" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret HONOR Magic 8 Lite</a>
+              <button class="btn btn--cta" data-o={Buffer.from("honor-magic-8-lite",'utf8').toString('base64')} type="button">Vezi Pret HONOR Magic 8 Lite</button>
             </div>
           </div>
         </article>
@@ -1233,7 +1251,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/motorola-edge-70" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Motorola edge 70</a>
+              <button class="btn btn--cta" data-o={Buffer.from("motorola-edge-70",'utf8').toString('base64')} type="button">Vezi Pret Motorola edge 70</button>
             </div>
           </div>
         </article>
@@ -1352,7 +1370,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/samsung-galaxy-a26" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Samsung Galaxy A26</a>
+              <button class="btn btn--cta" data-o={Buffer.from("samsung-galaxy-a26",'utf8').toString('base64')} type="button">Vezi Pret Samsung Galaxy A26</button>
             </div>
           </div>
         </article>
@@ -1415,7 +1433,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/honor-magic7-lite" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret HONOR Magic7 Lite</a>
+              <button class="btn btn--cta" data-o={Buffer.from("honor-magic7-lite",'utf8').toString('base64')} type="button">Vezi Pret HONOR Magic7 Lite</button>
             </div>
           </div>
         </article>
@@ -1476,7 +1494,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/realme-14-pro-5g" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret realme 14 Pro 5G</a>
+              <button class="btn btn--cta" data-o={Buffer.from("realme-14-pro-5g",'utf8').toString('base64')} type="button">Vezi Pret realme 14 Pro 5G</button>
             </div>
           </div>
         </article>
@@ -1537,7 +1555,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/motorola-moto-g86" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Motorola Moto g86</a>
+              <button class="btn btn--cta" data-o={Buffer.from("motorola-moto-g86",'utf8').toString('base64')} type="button">Vezi Pret Motorola Moto g86</button>
             </div>
           </div>
         </article>
@@ -1601,7 +1619,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/apple-iphone-xr" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Apple iPhone XR</a>
+              <button class="btn btn--cta" data-o={Buffer.from("apple-iphone-xr",'utf8').toString('base64')} type="button">Vezi Pret Apple iPhone XR</button>
             </div>
           </div>
         </article>
@@ -1664,7 +1682,7 @@ const now = new Date().toISOString();
             </div>
 
             <div class="product-review__cta-wrap">
-              <a href="/out/huawei-p30-pro" class="btn btn--cta" target="_blank" rel="nofollow noopener sponsored">Vezi Pret Huawei P30 Pro</a>
+              <button class="btn btn--cta" data-o={Buffer.from("huawei-p30-pro",'utf8').toString('base64')} type="button">Vezi Pret Huawei P30 Pro</button>
             </div>
           </div>
         </article>
@@ -1736,7 +1754,7 @@ const now = new Date().toISOString();
               <td>45W</td>
               <td>50MP + 12MP + 10MP</td>
               <td>Productivitate si multitasking</td>
-              <td><a href="/out/samsung-galaxy-z-fold7" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("samsung-galaxy-z-fold7",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>Samsung Galaxy Z Fold6</td>
@@ -1746,7 +1764,7 @@ const now = new Date().toISOString();
               <td>25W</td>
               <td>50MP + 12MP + 10MP</td>
               <td>Foldable la pret mai bun</td>
-              <td><a href="/out/samsung-galaxy-z-fold6" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("samsung-galaxy-z-fold6",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>Apple iPhone 17 Pro Max</td>
@@ -1756,7 +1774,7 @@ const now = new Date().toISOString();
               <td>45W</td>
               <td>48MP + 48MP + 12MP</td>
               <td>Ecosistem Apple complet</td>
-              <td><a href="/out/apple-iphone-17-pro-max" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("apple-iphone-17-pro-max",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>Apple iPhone 16 Pro Max</td>
@@ -1766,7 +1784,7 @@ const now = new Date().toISOString();
               <td>40W</td>
               <td>48MP + 48MP + 12MP</td>
               <td>iPhone Pro la pret redus</td>
-              <td><a href="/out/apple-iphone-16-pro-max" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("apple-iphone-16-pro-max",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>Google Pixel 10 Pro XL</td>
@@ -1776,7 +1794,7 @@ const now = new Date().toISOString();
               <td>37W</td>
               <td>50MP + 48MP + 48MP</td>
               <td>Fotografie si AI</td>
-              <td><a href="/out/google-pixel-10-pro-xl" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("google-pixel-10-pro-xl",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
           </tbody>
         </table>
@@ -1807,7 +1825,7 @@ const now = new Date().toISOString();
               <td>45W</td>
               <td>200MP + 50MP + 10MP + 12MP</td>
               <td>Cel mai complet Android</td>
-              <td><a href="/out/samsung-galaxy-s25-ultra" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("samsung-galaxy-s25-ultra",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>Samsung Galaxy Z Flip7</td>
@@ -1817,7 +1835,7 @@ const now = new Date().toISOString();
               <td>25W</td>
               <td>50MP + 12MP</td>
               <td>Format compact pliabil</td>
-              <td><a href="/out/samsung-galaxy-z-flip7" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("samsung-galaxy-z-flip7",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>Samsung Galaxy S24+</td>
@@ -1827,7 +1845,7 @@ const now = new Date().toISOString();
               <td>45W</td>
               <td>50MP + 12MP + 10MP</td>
               <td>Flagship la pret redus</td>
-              <td><a href="/out/samsung-galaxy-s24-plus" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("samsung-galaxy-s24-plus",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>Apple iPhone 16 Plus</td>
@@ -1837,7 +1855,7 @@ const now = new Date().toISOString();
               <td>40W</td>
               <td>48MP + 12MP</td>
               <td>iPhone mare, autonomie buna</td>
-              <td><a href="/out/apple-iphone-16-plus" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("apple-iphone-16-plus",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>Apple iPhone 15 Plus</td>
@@ -1847,7 +1865,7 @@ const now = new Date().toISOString();
               <td>27W</td>
               <td>48MP + 12MP</td>
               <td>iPhone la cel mai bun pret</td>
-              <td><a href="/out/apple-iphone-15-plus" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("apple-iphone-15-plus",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>Google Pixel 10 Pro</td>
@@ -1857,7 +1875,7 @@ const now = new Date().toISOString();
               <td>37W</td>
               <td>50MP + 48MP + 48MP</td>
               <td>Fotografie compacta</td>
-              <td><a href="/out/google-pixel-10-pro" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("google-pixel-10-pro",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
           </tbody>
         </table>
@@ -1888,7 +1906,7 @@ const now = new Date().toISOString();
               <td>23W</td>
               <td>48MP + 13MP</td>
               <td>Cea mai buna camera la buget</td>
-              <td><a href="/out/google-pixel-9a" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("google-pixel-9a",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>Samsung Galaxy S25 FE</td>
@@ -1898,7 +1916,7 @@ const now = new Date().toISOString();
               <td>25W</td>
               <td>50MP + 12MP + 8MP</td>
               <td>Ecosistem Galaxy accesibil</td>
-              <td><a href="/out/samsung-galaxy-s25-fe" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("samsung-galaxy-s25-fe",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>Xiaomi 15T</td>
@@ -1908,7 +1926,7 @@ const now = new Date().toISOString();
               <td>67W</td>
               <td>108MP + 8MP + 2MP</td>
               <td>Specificatii maxime la buget</td>
-              <td><a href="/out/xiaomi-15t" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("xiaomi-15t",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>OnePlus Nord 5</td>
@@ -1918,7 +1936,7 @@ const now = new Date().toISOString();
               <td>100W</td>
               <td>50MP + 8MP</td>
               <td>Incarcare ultra-rapida</td>
-              <td><a href="/out/oneplus-nord-5" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("oneplus-nord-5",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>HONOR Magic 8 Lite</td>
@@ -1928,7 +1946,7 @@ const now = new Date().toISOString();
               <td>35W</td>
               <td>108MP + 5MP</td>
               <td>Autonomie maxima la pret mic</td>
-              <td><a href="/out/honor-magic-8-lite" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("honor-magic-8-lite",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>Motorola edge 70</td>
@@ -1938,7 +1956,7 @@ const now = new Date().toISOString();
               <td>68W</td>
               <td>50MP + 13MP</td>
               <td>Telefon echilibrat si complet</td>
-              <td><a href="/out/motorola-edge-70" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("motorola-edge-70",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
           </tbody>
         </table>
@@ -1969,7 +1987,7 @@ const now = new Date().toISOString();
               <td>25W</td>
               <td>50MP + 8MP + 2MP</td>
               <td>Samsung fiabil la pret mic</td>
-              <td><a href="/out/samsung-galaxy-a26" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("samsung-galaxy-a26",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>HONOR Magic7 Lite</td>
@@ -1979,7 +1997,7 @@ const now = new Date().toISOString();
               <td>35W</td>
               <td>108MP + 5MP</td>
               <td>Campionul autonomiei</td>
-              <td><a href="/out/honor-magic7-lite" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("honor-magic7-lite",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>realme 14 Pro 5G</td>
@@ -1989,7 +2007,7 @@ const now = new Date().toISOString();
               <td>45W</td>
               <td>50MP OIS + 8MP</td>
               <td>5G si camera OIS la buget</td>
-              <td><a href="/out/realme-14-pro-5g" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("realme-14-pro-5g",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>Motorola Moto g86</td>
@@ -1999,7 +2017,7 @@ const now = new Date().toISOString();
               <td>30W</td>
               <td>50MP OIS + 8MP</td>
               <td>Ecran pOLED si software curat</td>
-              <td><a href="/out/motorola-moto-g86" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("motorola-moto-g86",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>Apple iPhone XR</td>
@@ -2009,7 +2027,7 @@ const now = new Date().toISOString();
               <td>18W</td>
               <td>12MP</td>
               <td>Ecosistem Apple la pret minim</td>
-              <td><a href="/out/apple-iphone-xr" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("apple-iphone-xr",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
             <tr>
               <td>Huawei P30 Pro</td>
@@ -2019,7 +2037,7 @@ const now = new Date().toISOString();
               <td>40W</td>
               <td>40MP + 20MP + 8MP 5x</td>
               <td>Camera periscop la buget</td>
-              <td><a href="/out/huawei-p30-pro" class="table-cta" target="_blank" rel="nofollow noopener sponsored">Oferta</a></td>
+              <td><button class="table-cta" data-o={Buffer.from("huawei-p30-pro",'utf8').toString('base64')} type="button">Oferta</button></td>
             </tr>
           </tbody>
         </table>

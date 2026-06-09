@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import PhoneCard from '../../components/PhoneCard.astro';
+import products from '../../data/telefoane.json';
+
+export function getStaticPaths({ paginate }) {
+  const sorted = [...products].sort((a, b) => (b.smart - a.smart) || (a.price - b.price));
+  return paginate(sorted, { pageSize: 48 });
+}
+const { page } = Astro.props;
+const total = products.length;
+const pageMod = page.data.reduce((m, p) => (p.modified && p.modified > m ? p.modified : m), '2026-04-01');
+const brandList = Object.values(products.reduce((a, p) => { if (p.brandSlug) { (a[p.brandSlug] ||= { n: p.brand, s: p.brandSlug, c: 0 }).c++; } return a; }, {})).filter((b) => b.c >= 4).sort((a, b) => b.c - a.c).slice(0, 18);
+const merchSet = {}; for (const p of products) for (const o of p.offers) (merchSet[o.merchantSlug] ||= { n: o.merchantName, s: o.merchantSlug, c: 0 }).c++;
+const merchList = Object.values(merchSet).filter((m) => m.c >= 8).sort((a, b) => b.c - a.c);
+const title = page.currentPage === 1 ? `Oferte telefoane: ${total} modele și prețuri ${new Date().getFullYear()} | OfertaTelefoane.ro` : `Oferte telefoane – pagina ${page.currentPage} | OfertaTelefoane.ro`;
+const desc = `Toate ofertele de telefoane din magazinele partenere: ${total} de modele noi și refurbished, de la Apple, Samsung, Xiaomi și Motorola, cu cele mai mici prețuri.${page.currentPage > 1 ? ` Pagina ${page.currentPage}.` : ''}`;
+---
+<Layout title={title} description={desc} modified={pageMod}>
+  <Nav />
+  <section class="ph-sec">
+    <div class="container">
+      <nav class="crumb"><a href="/">Acasă</a> › <span>Oferte telefoane</span></nav>
+      <div class="section-header"><span class="section-header__tag">Oferte</span><h1>Oferte telefoane — {total} de modele</h1></div>
+      <p class="section-intro">Toate telefoanele din magazinele partenere, noi și refurbished, cu cel mai mic preț pe fiecare model. Pagina {page.currentPage} din {page.lastPage}.</p>
+
+      <div class="products-grid">{page.data.map((p) => <PhoneCard p={p} />)}</div>
+
+      <nav class="pager" aria-label="Paginare">
+        {page.url.prev ? <a class="pg" href={page.url.prev}>← Anterioarele</a> : <span class="pg pg--off">← Anterioarele</span>}
+        <span class="pg-now">Pagina {page.currentPage} / {page.lastPage}</span>
+        {page.url.next ? <a class="pg" href={page.url.next}>Următoarele →</a> : <span class="pg pg--off">Următoarele →</span>}
+      </nav>
+
+      <div class="hub">
+        <div class="hub__col"><h2>După stare</h2><div class="hub__row"><a class="pg" href="/stare/noi/">Telefoane noi</a><a class="pg" href="/stare/refurbished/">Refurbished</a></div></div>
+        <div class="hub__col"><h2>După gamă</h2><div class="hub__row"><a class="pg" href="/gama/flagship/">Flagship</a><a class="pg" href="/gama/premium/">Premium</a><a class="pg" href="/gama/mediu/">Gamă medie</a><a class="pg" href="/gama/buget/">Buget</a></div></div>
+        <div class="hub__col"><h2>După brand</h2><div class="hub__row">{brandList.map((b) => <a class="pg" href={`/brand/${b.s}/`}>{b.n} <span>({b.c})</span></a>)}</div></div>
+        <div class="hub__col"><h2>După magazin</h2><div class="hub__row">{merchList.map((m) => <a class="pg" href={`/magazin/${m.s}/`}>{m.n} <span>({m.c})</span></a>)}</div></div>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

@@ -1,0 +1,44 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Nav from '../../../components/Nav.astro';
+import Footer from '../../../components/Footer.astro';
+import PhoneCard from '../../../components/PhoneCard.astro';
+import products from '../../../data/telefoane.json';
+
+export function getStaticPaths() {
+  const PAGE = 48;
+  const MAP = { flagship: { label: 'Telefoane flagship', tag: 'Flagship', intro: 'cele mai puternice modele, top de gamă' }, premium: { label: 'Telefoane premium', tag: 'Premium', intro: 'modele premium cu specificații generoase' }, mediu: { label: 'Telefoane gamă medie', tag: 'Gamă medie', intro: 'cel mai bun raport calitate-preț' }, buget: { label: 'Telefoane buget', tag: 'Buget', intro: 'cele mai accesibile modele' } };
+  const paths = [];
+  for (const [tier, cfg] of Object.entries(MAP)) {
+    const items = products.filter((p) => p.band === tier).sort((a, b) => (b.smart - a.smart) || (a.price - b.price));
+    const last = Math.max(1, Math.ceil(items.length / PAGE));
+    for (let pg = 1; pg <= last; pg++) paths.push({ params: { tier, page: pg === 1 ? undefined : String(pg) }, props: { cfg, tier, items: items.slice((pg - 1) * PAGE, pg * PAGE), currentPage: pg, lastPage: last, total: items.length } });
+  }
+  return paths;
+}
+const { cfg, tier, items, currentPage, lastPage, total } = Astro.props;
+const base = `/gama/${tier}/`;
+const pageMod = items.reduce((m, p) => (p.modified && p.modified > m ? p.modified : m), '2026-04-01');
+const title = currentPage === 1 ? `${cfg.label}: ${total} modele și prețuri ${new Date().getFullYear()} | OfertaTelefoane.ro` : `${cfg.label} – pagina ${currentPage} | OfertaTelefoane.ro`;
+const desc = `${cfg.label} din magazinele partenere: ${total} de modele ${cfg.intro}, noi și refurbished, cu cele mai mici prețuri.`;
+---
+<Layout title={title} description={desc} modified={pageMod}>
+  <Nav />
+  <section class="ph-sec">
+    <div class="container">
+      <nav class="crumb"><a href="/">Acasă</a> › <a href="/oferte/">Oferte telefoane</a> › <span>{cfg.label}</span></nav>
+      <div class="section-header"><span class="section-header__tag">{cfg.tag}</span><h1>{cfg.label}</h1></div>
+      <p class="section-intro"><strong>{total}</strong> de telefoane {cfg.intro}, cu prețuri actualizate periodic.{lastPage > 1 ? ` Pagina ${currentPage} din ${lastPage}.` : ''}</p>
+      <div class="products-grid">{items.map((p) => <PhoneCard p={p} />)}</div>
+      {lastPage > 1 && (
+        <nav class="pager" aria-label="Paginare">
+          {currentPage > 1 ? <a class="pg" href={currentPage === 2 ? base : `${base}${currentPage - 1}/`}>← Anterioarele</a> : <span class="pg pg--off">← Anterioarele</span>}
+          <span class="pg-now">Pagina {currentPage} / {lastPage}</span>
+          {currentPage < lastPage ? <a class="pg" href={`${base}${currentPage + 1}/`}>Următoarele →</a> : <span class="pg pg--off">Următoarele →</span>}
+        </nav>
+      )}
+      <p class="po-back"><a href="/oferte/">← Vezi toate ofertele</a></p>
+    </div>
+  </section>
+  <Footer />
+</Layout>

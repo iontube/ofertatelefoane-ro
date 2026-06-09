@@ -1,0 +1,46 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Nav from '../../../components/Nav.astro';
+import Footer from '../../../components/Footer.astro';
+import PhoneCard from '../../../components/PhoneCard.astro';
+import products from '../../../data/telefoane.json';
+
+export function getStaticPaths() {
+  const PAGE = 48, MIN = 4;
+  const by = {};
+  for (const p of products) if (p.brandSlug) (by[p.brandSlug] ||= []).push(p);
+  const paths = [];
+  for (const [bslug, items] of Object.entries(by)) {
+    if (items.length < MIN) continue;
+    items.sort((a, b) => (b.smart - a.smart) || (a.price - b.price));
+    const last = Math.ceil(items.length / PAGE);
+    for (let pg = 1; pg <= last; pg++) paths.push({ params: { brand: bslug, page: pg === 1 ? undefined : String(pg) }, props: { brandName: items[0].brand, bslug, items: items.slice((pg - 1) * PAGE, pg * PAGE), currentPage: pg, lastPage: last, total: items.length } });
+  }
+  return paths;
+}
+const { brandName, bslug, items, currentPage, lastPage, total } = Astro.props;
+const base = `/brand/${bslug}/`;
+const pageMod = items.reduce((m, p) => (p.modified && p.modified > m ? p.modified : m), '2026-04-01');
+const title = currentPage === 1 ? `Telefoane ${brandName}: ${total} modele și prețuri ${new Date().getFullYear()} | OfertaTelefoane.ro` : `Telefoane ${brandName} – pagina ${currentPage} | OfertaTelefoane.ro`;
+const desc = `Toate telefoanele ${brandName} din magazinele partenere: ${total} de modele noi și refurbished, cu cele mai mici prețuri pe fiecare model.`;
+---
+<Layout title={title} description={desc} modified={pageMod}>
+  <Nav />
+  <section class="ph-sec">
+    <div class="container">
+      <nav class="crumb"><a href="/">Acasă</a> › <a href="/oferte/">Oferte telefoane</a> › <span>{brandName}</span></nav>
+      <div class="section-header"><span class="section-header__tag">Brand</span><h1>Telefoane {brandName}</h1></div>
+      <p class="section-intro"><strong>{total}</strong> de telefoane {brandName} noi și refurbished, cu prețuri actualizate periodic.{lastPage > 1 ? ` Pagina ${currentPage} din ${lastPage}.` : ''}</p>
+      <div class="products-grid">{items.map((p) => <PhoneCard p={p} />)}</div>
+      {lastPage > 1 && (
+        <nav class="pager" aria-label="Paginare">
+          {currentPage > 1 ? <a class="pg" href={currentPage === 2 ? base : `${base}${currentPage - 1}/`}>← Anterioarele</a> : <span class="pg pg--off">← Anterioarele</span>}
+          <span class="pg-now">Pagina {currentPage} / {lastPage}</span>
+          {currentPage < lastPage ? <a class="pg" href={`${base}${currentPage + 1}/`}>Următoarele →</a> : <span class="pg pg--off">Următoarele →</span>}
+        </nav>
+      )}
+      <p class="po-back"><a href="/oferte/">← Vezi toate ofertele</a></p>
+    </div>
+  </section>
+  <Footer />
+</Layout>

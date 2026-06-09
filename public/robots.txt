@@ -1,5 +1,5 @@
 User-agent: *
+Disallow: /out/
 Allow: /
-Disallow:
 
 Sitemap: https://ofertatelefoane.ro/sitemap.xml

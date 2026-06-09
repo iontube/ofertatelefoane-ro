@@ -1,0 +1,45 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Nav from '../../../components/Nav.astro';
+import Footer from '../../../components/Footer.astro';
+import PhoneCard from '../../../components/PhoneCard.astro';
+import products from '../../../data/telefoane.json';
+
+export function getStaticPaths() {
+  const PAGE = 48;
+  const by = {};
+  for (const p of products) for (const o of p.offers) { (by[o.merchantSlug] ||= { name: o.merchantName, items: [] }); if (!by[o.merchantSlug].items.includes(p)) by[o.merchantSlug].items.push(p); }
+  const paths = [];
+  for (const [mslug, { name, items }] of Object.entries(by)) {
+    items.sort((a, b) => (b.smart - a.smart) || (a.price - b.price));
+    const last = Math.ceil(items.length / PAGE);
+    for (let pg = 1; pg <= last; pg++) paths.push({ params: { merchant: mslug, page: pg === 1 ? undefined : String(pg) }, props: { mName: name, mslug, items: items.slice((pg - 1) * PAGE, pg * PAGE), currentPage: pg, lastPage: last, total: items.length } });
+  }
+  return paths;
+}
+const { mName, mslug, items, currentPage, lastPage, total } = Astro.props;
+const base = `/magazin/${mslug}/`;
+const pageMod = items.reduce((m, p) => (p.modified && p.modified > m ? p.modified : m), '2026-04-01');
+const title = currentPage === 1 ? `Telefoane la ${mName}: ${total} oferte și prețuri ${new Date().getFullYear()} | OfertaTelefoane.ro` : `Telefoane la ${mName} – pagina ${currentPage} | OfertaTelefoane.ro`;
+const desc = `Toate telefoanele disponibile la ${mName}: ${total} de modele noi și refurbished, cu prețuri actualizate. Apple, Samsung, Xiaomi și altele.`;
+---
+<Layout title={title} description={desc} modified={pageMod}>
+  <Nav />
+  <section class="ph-sec">
+    <div class="container">
+      <nav class="crumb"><a href="/">Acasă</a> › <a href="/oferte/">Oferte telefoane</a> › <span>{mName}</span></nav>
+      <div class="section-header"><span class="section-header__tag">Magazin</span><h1>Telefoane la {mName}</h1></div>
+      <p class="section-intro"><strong>{total}</strong> de telefoane disponibile la {mName}, cu prețuri actualizate periodic.{lastPage > 1 ? ` Pagina ${currentPage} din ${lastPage}.` : ''}</p>
+      <div class="products-grid">{items.map((p) => <PhoneCard p={p} />)}</div>
+      {lastPage > 1 && (
+        <nav class="pager" aria-label="Paginare">
+          {currentPage > 1 ? <a class="pg" href={currentPage === 2 ? base : `${base}${currentPage - 1}/`}>← Anterioarele</a> : <span class="pg pg--off">← Anterioarele</span>}
+          <span class="pg-now">Pagina {currentPage} / {lastPage}</span>
+          {currentPage < lastPage ? <a class="pg" href={`${base}${currentPage + 1}/`}>Următoarele →</a> : <span class="pg pg--off">Următoarele →</span>}
+        </nav>
+      )}
+      <p class="po-back"><a href="/oferte/">← Vezi toate ofertele</a></p>
+    </div>
+  </section>
+  <Footer />
+</Layout>

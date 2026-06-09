@@ -22,6 +22,6 @@ const { name, slug, image, affiliate, specs, badge } = Astro.props;
       <span class="product-card__spec">{specs.baterie}</span>
       <span class="product-card__spec">{specs.ram} RAM</span>
     </div>
-    <a href={affiliate} class="product-card__cta" target="_blank" rel="nofollow noopener sponsored">Vezi Oferta</a>
+    <button class="product-card__cta" data-o={Buffer.from(slug, 'utf8').toString('base64')} type="button">Vezi Oferta</button>
   </div>
 </article>

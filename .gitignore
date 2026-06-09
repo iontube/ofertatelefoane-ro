@@ -2,3 +2,13 @@ node_modules/
 dist/
 .astro/
 .wrangler/
+
+# server-generated (rebuilt nightly from the catalog DB — never commit)
+.cache/
+src/data/telefoane.json
+functions/
+public/sitemap.xml
+public/_redirects
+
+# server-only operational script (contains CF Global Key — never commit to a public repo)
+deploy.sh
